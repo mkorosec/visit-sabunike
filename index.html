@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Apartments Napros · Sabunike, Croatia</title>
+    <meta name="description" content="Four apartments a short walk from the shallow sandy beaches of Sabunike, near Nin and Zadar. Book directly with the owners." />
+    <meta name="theme-color" content="#fbfaf7" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5d8c'/%3E%3Cpath d='M6 20c3-2 5-2 8 0s5 2 8 0 4-2 4-2v6H6z' fill='%23fff'/%3E%3Cpath d='M9 15 16 8l7 7v3H9z' fill='%23f3ead9'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <!-- Fonts of the other themes are added by main.js (themeFonts) when one is chosen. -->
+    <script>
+      // Start the hero photo (the LCP image) before main.js has loaded. The map
+      // must match AUDIENCES[*].hero.photo (tests/hero-preload.test.mjs).
+      (function () {
+        var M = {"general":"20210810_184724.jpg","families":"napros/20210918_155653.jpg","cyclists":"napros/20210918_110141.jpg","retreats":"20210720_171634.jpg","kite":"napros/20210918_155421.jpg","reunion":"grillarea.jpg","remote":"app2-terrace.jpg","wellness":"napros/20210918_155653.jpg","nature":"napros/20210918_110141.jpg","dogs":"napros/20210720_171714.jpg","naturists":"napros/20210918_152134.jpg","fieldtrips":"napros/20210918_155421.jpg"};
+        var q = new URLSearchParams(location.search), s = {};
+        try { s = JSON.parse(localStorage.getItem('visit-sabunike:state:v1') || '{}'); } catch (e) {}
+        var a = String(q.get('for') || q.get('audience') || s.audience || 'general').toLowerCase();
+        if ((q.get('hero') || s.hero || 'photo') === 'villa3d') return;
+        var l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'image';
+        l.fetchPriority = 'high';
+        l.href = './photos/web/' + (M[a] || M.general);
+        document.head.appendChild(l);
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-skip>Skip to content</a>
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#top" aria-label="Apartments Napros, back to top">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor" /><path d="M6 20c3-2 5-2 8 0s5 2 8 0 4-2 4-2v6H6z" fill="#fff" /><path d="M9 15 16 8l7 7v3H9z" fill="#f3ead9" /></svg>
+        <span><strong>Apartments Napros</strong><small>Sabunike · Croatia</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Sections"></nav>
+      <div class="header-actions">
+        <button type="button" class="btn btn-ghost nav-toggle" id="btn-menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg><span>Menu</span></button>
+        <button type="button" class="btn btn-ghost" id="btn-lab" aria-haspopup="dialog" aria-controls="lab" aria-expanded="false" hidden>Versions</button>
+        <a class="btn btn-primary" href="#inquiry" data-cta="header">Ask about dates</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <div id="sections"></div>
+    </main>
+
+    <div id="lab-root"></div>
+    <div id="overlay-root"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <noscript><p class="noscript">This page needs JavaScript for maps and the 3D model. You can still reach us by email.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

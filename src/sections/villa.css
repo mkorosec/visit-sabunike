@@ -1,0 +1,524 @@
+/* The house: 3D stage + apartment cards, shared amenities, gallery. */
+
+.villa-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(20px, 2.6vw, 36px);
+  align-items: start;
+}
+.villa-stage {
+  position: sticky;
+  top: var(--header-h, 84px);
+  display: grid;
+  gap: 12px;
+}
+.villa-viewer {
+  position: relative;
+  height: min(620px, calc(100svh - 300px));
+  min-height: 380px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--surface-3);
+  box-shadow: var(--shadow);
+}
+.villa-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+.villa-viewer.is-ready .villa-poster {
+  opacity: 0;
+}
+.villa-viewer .vv-failed ~ .villa-poster,
+.villa-viewer:has(.vv-failed) .villa-poster {
+  display: none;
+}
+.villa-loading {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.94);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.villa-stage-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.villa-stage-foot p {
+  margin: 0;
+}
+.villa-twin {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  max-width: 100%;
+  min-height: 44px;
+}
+.villa-twin:hover {
+  border-color: var(--brand);
+  color: var(--ink);
+}
+.villa-twin > .icon:first-child {
+  color: var(--brand);
+}
+.villa-twin span {
+  display: grid;
+  line-height: 1.3;
+}
+.villa-twin strong {
+  font-size: 0.95rem;
+}
+.villa-twin small {
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+}
+
+.villa-shared-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.villa-shared-head h3 {
+  margin: 0;
+}
+
+/* Apartment cards */
+.villa-units {
+  display: grid;
+  gap: 14px;
+}
+.villa-card {
+  --c-strong: color-mix(in srgb, var(--c) 72%, #000);
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.villa-card.is-selected {
+  border-color: var(--c);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 28%, transparent), var(--shadow);
+}
+.villa-pick {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 64px;
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.villa-pick:hover,
+.villa-card.is-selected .villa-pick {
+  background: color-mix(in srgb, var(--c) 9%, var(--surface));
+}
+.villa-num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--c-strong);
+  color: #fff;
+  font: 700 1.05rem/1 var(--font-head);
+}
+.villa-pick-text {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+}
+.villa-floor {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-strong);
+}
+.villa-name {
+  font-family: var(--font-head);
+  font-weight: var(--head-weight);
+  font-size: 1.14rem;
+  line-height: 1.25;
+}
+.villa-3d {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--line-strong);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.villa-card.is-selected .villa-3d {
+  background: var(--c-strong);
+  border-color: var(--c-strong);
+  color: #fff;
+}
+.villa-card-body {
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 12px;
+}
+.villa-card-body > * {
+  margin: 0;
+}
+.villa-meta {
+  color: var(--ink);
+  font-weight: 600;
+}
+.villa-meta .icon {
+  color: var(--ink-2);
+}
+.villa-highlight {
+  color: var(--ink-2);
+}
+.villa-extras {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+.villa-extras li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+.villa-extras .icon {
+  margin-top: 2px;
+  color: var(--c-strong);
+}
+.villa-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+.villa-thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+  cursor: zoom-in;
+}
+.villa-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.villa-thumb:hover img {
+  transform: scale(1.06);
+}
+.villa-more {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(15 31 42 / 0.55);
+  color: #fff;
+  font-weight: 700;
+}
+.villa-nophotos {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--ink-2);
+}
+.villa-morephotos {
+  margin-top: -6px !important;
+}
+.villa-ask {
+  justify-self: start;
+  white-space: normal;
+  text-align: left;
+}
+
+/* Whole-house strip (retreats) */
+.villa-whole {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: clamp(20px, 3vw, 32px);
+  padding: 18px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--brand-soft);
+  border: 1px solid color-mix(in srgb, var(--brand) 25%, transparent);
+}
+.villa-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin: 0;
+}
+.villa-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.villa-stats dd {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: var(--head-weight);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2.1rem);
+  line-height: 1.1;
+  color: var(--brand-strong);
+}
+.villa-stats dt {
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  font-weight: 600;
+}
+.villa-whole-side {
+  display: grid;
+  gap: 8px;
+  max-width: 420px;
+}
+.villa-whole-side .btn {
+  justify-self: start;
+}
+.villa-whole-side p {
+  margin: 0;
+}
+
+/* Shared amenities */
+.villa-shared {
+  margin-top: clamp(36px, 5vw, 64px);
+}
+.villa-shared-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 14px;
+}
+.villa-shared-list li {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.villa-shared-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Gallery: CSS-columns masonry keeps every photo's own aspect ratio. */
+.villa-gallery-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: clamp(36px, 5vw, 64px) 0 16px;
+}
+.villa-gallery-head h3 {
+  margin: 0;
+}
+.villa-gallery {
+  columns: 3 260px;
+  column-gap: 12px;
+}
+.villa-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+  break-inside: avoid;
+  cursor: zoom-in;
+}
+.villa-photo[hidden] {
+  display: none;
+}
+.villa-photo img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+.villa-photo:hover img {
+  transform: scale(1.04);
+}
+.villa-gallery-more {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+/* Carousel controls, only shown when the cards become a carousel (<= 900px). */
+.villa-units-nav {
+  display: none;
+}
+.villa-nav-btn,
+.villa-dot {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  font: 700 0.95rem/1 var(--font-head);
+  cursor: pointer;
+}
+.villa-nav-btn {
+  border: 1.5px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+}
+.villa-nav-btn:hover {
+  border-color: var(--ink);
+}
+.villa-nav-prev .icon {
+  transform: scaleX(-1);
+}
+.villa-dots {
+  display: flex;
+  gap: 6px;
+}
+.villa-dot {
+  --c-strong: color-mix(in srgb, var(--c) 72%, #000);
+  border: 2px solid var(--c);
+  background: var(--surface);
+  color: var(--c-strong);
+}
+.villa-dot[aria-pressed='true'] {
+  background: var(--c-strong);
+  border-color: var(--c-strong);
+  color: #fff;
+}
+
+.villa-photo-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 12px 10px;
+  background: linear-gradient(180deg, rgb(8 20 30 / 0) 0%, rgb(8 20 30 / 0.78) 100%);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+}
+
+/* Tablet & phone: stack; the cards become a swipeable carousel under the model. */
+@media (max-width: 900px) {
+  .villa-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .villa-stage {
+    position: static;
+  }
+  .villa-viewer {
+    height: clamp(320px, 78vw, 520px);
+    min-height: 0;
+  }
+  .villa-units {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    padding: 4px 2px 14px;
+    margin-inline: -2px;
+    overscroll-behavior-x: contain;
+  }
+  .villa-card {
+    flex: 0 0 min(86%, 420px);
+    scroll-snap-align: start;
+  }
+  .villa-units-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: -4px;
+  }
+}
+@media (max-width: 520px) {
+  .villa-3d span {
+    display: none;
+  }
+  .villa-3d {
+    padding: 6px;
+  }
+  .villa-stage-foot p {
+    display: none;
+  }
+  .villa-twin {
+    width: 100%;
+  }
+  .villa-twin small {
+    display: none;
+  }
+  .villa-gallery-head .chip {
+    min-height: 44px;
+  }
+  .villa-gallery {
+    columns: 2;
+    column-gap: 8px;
+  }
+  .villa-photo {
+    margin-bottom: 8px;
+  }
+  /* The lightbox shows the caption; on two narrow columns it would cover the photo. */
+  .villa-photo-cap {
+    display: none;
+  }
+}

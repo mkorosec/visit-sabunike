@@ -1,0 +1,883 @@
+{
+  "topic": "Niche / underserved audiences and direct-booking marketing for Apartments Napros, Sabunike (Privlaka)",
+  "generatedAt": "2026-10-16",
+  "method": "Web research (WebSearch/WebFetch) plus OpenStreetMap Overpass queries. Distances are straight-line (haversine) from the owner-supplied villa coordinates 44.25871, 15.15892 to OSM feature centroids; road distances are longer. The villa's house number 60 is not mapped in OSM; Put Kandelica 129 is mapped at 44.26186, 15.16177, which agrees with the street location.",
+  "keyDistancesFromVilla": [
+    {
+      "name": "Plaža Sabunike FKK (south naturist section)",
+      "lat": 44.26616,
+      "lon": 15.15879,
+      "straightLineKm": 0.83,
+      "sources": [
+        "https://www.openstreetmap.org/way/1209174534"
+      ],
+      "confidence": "high",
+      "notes": "About 1.1 km / 17 minutes on foot (OSRM). OSM tags the surface as gravel."
+    },
+    {
+      "name": "Plaža Sabunike - FKK (north)",
+      "lat": 44.27057,
+      "lon": 15.15175,
+      "straightLineKm": 1.44,
+      "sources": [
+        "https://www.openstreetmap.org/way/1209174533"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Kraljičina plaža (Queen's Beach, Nin lagoon, healing mud)",
+      "lat": 44.25143,
+      "lon": 15.17422,
+      "straightLineKm": 1.46,
+      "sources": [
+        "https://www.openstreetmap.org/way/231022098"
+      ],
+      "confidence": "high",
+      "notes": "Centroid is 1.46 km away, but the beach is long. Its nearest (north-west) end is about 0.9 km straight-line and about 1.4 km / 18 minutes on foot (OSRM foot routing)."
+    },
+    {
+      "name": "Plaža Ždrijac (Nin, kite spot)",
+      "lat": 44.24757,
+      "lon": 15.18535,
+      "straightLineKm": 2.44,
+      "sources": [
+        "https://www.openstreetmap.org/way/229300369"
+      ],
+      "confidence": "high",
+      "notes": "About 4.8 km on foot or 5.0 km by bike (about 25 minutes) by OSRM routing; not walking distance in practice."
+    },
+    {
+      "name": "Plaža Bilotinjak",
+      "lat": 44.23465,
+      "lon": 15.15349,
+      "straightLineKm": 2.71,
+      "sources": [
+        "https://www.openstreetmap.org/node/9941930381"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Solana Nin (salt pans, ornithological reserve)",
+      "lat": 44.23985,
+      "lon": 15.19113,
+      "straightLineKm": 3.31,
+      "sources": [
+        "https://www.openstreetmap.org/relation/9904654"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Duboka Draga beach",
+      "lat": 44.26883,
+      "lon": 15.24614,
+      "straightLineKm": 7.04,
+      "sources": [
+        "https://www.openstreetmap.org/way/827364306"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Dog beach tagged in OSM (Povljana, island of Pag)",
+      "lat": 44.35324,
+      "lon": 15.09569,
+      "straightLineKm": 11.65,
+      "sources": [
+        "https://www.openstreetmap.org/way/1559853964"
+      ],
+      "confidence": "medium",
+      "notes": "Tagged dog=designated in OSM. The road trip goes via the Pag bridge and is much longer than the straight line."
+    },
+    {
+      "name": "Zadar Airport (approx. terminal position)",
+      "lat": 44.1083,
+      "lon": 15.3467,
+      "straightLineKm": 22.45,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zadar_Airport",
+        "https://routing.openstreetmap.de/"
+      ],
+      "confidence": "medium",
+      "notes": "Coordinates match the published airport position (44°06'N 15°20'E). OSRM car routing on OSM data gives about 25 km and 35-40 minutes by road; the neighbour site says about 40 minutes.",
+      "roadKm": 25.1
+    }
+  ],
+  "items": [
+    {
+      "id": "kitesurfers",
+      "name": "Kitesurfers and windsurfers (beginners and improvers)",
+      "whyItFits": [
+        "Nin's lagoon beaches are close: the nearest end of Kraljičina plaža is about 1.4 km (18 minutes) on foot, and Ždrijac beach is about 5 km by bike (about 25 minutes) via OSRM routing on OSM data.",
+        "A German Croatia guide describes two schools. Surfmania runs windsurfing on Kraljičina plaža (the Sabunike side, next to a beach bar) and kitesurfing on Ždrijac beach, with VDWS licences. Kiteboarding Croatia, an IKO member, teaches on the sandy Ždrijac beach.",
+        "The Surfmania page names April, May, September and October as the months with the best wind. In summer the maestral is a thermal north-westerly of 8–12 kn (per the same page), which suits beginners on shallow water.",
+        "A third-party beach listing says a kite and windsurf school operates on Ždrijac beach. A Kitejungle guide calls Nin a large shallow lagoon with consistent winds."
+      ],
+      "listingNeeds": [
+        "Lockable, shaded gear storage and an outdoor rinse shower for kites, boards and wetsuits",
+        "Live wind widget (Windguru/Windy) and a 'how far to the spot' map: about 1.4 km on foot to Queen's Beach (windsurf), about 5 km by bike or car to Ždrijac (kite)",
+        "Flexible minimum stay and short-notice booking when a wind window opens (spring/autumn)",
+        "Drying line, a washing machine, and parking for a car with a roof box"
+      ],
+      "seasonality": "Beginners: summer maestral (thermal, roughly June–September). April–May and September–October are named by the Surfmania page as the best-wind months. These months fall in the villa's shoulder season.",
+      "messages": [
+        "Windsurf from Queen's Beach, 18 minutes on foot; kite at Ždrijac, a 25-minute bike ride: Nin's shallow, sandy lagoon",
+        "Learn to kite in waist-deep water, then rinse your gear in our garden shower",
+        "Wind window opened? Book 3 nights at short notice in spring and autumn"
+      ],
+      "channels": [
+        "Referral or partnership with the Nin kite schools (Surfmania, Kiteboarding Croatia). Confirm they still operate in 2026.",
+        "Kitejungle Croatia spot guide (kitejungle.com/kite-places/croatia)",
+        "IKO and VDWS school ecosystems: students often need accommodation near the course",
+        "Spot pages on wind-forecast platforms (Windguru, Windy) and the comments and communities attached to them"
+      ],
+      "risks": [
+        "Sources disagree on wind strength (8–12 kn vs 15–25 kn) and wind is never guaranteed; avoid promising wind days.",
+        "School names, prices and 2026 operation are unverified (undated German guide).",
+        "The lagoon is a protected NATURA 2000 / ornithological area; kite zones may be regulated. Do not advertise riding outside marked zones."
+      ],
+      "sources": [
+        "https://www.kroati.de/kroatien-infos/surfcenter-surfmania-nin.html",
+        "https://www.kroati.de/kroatien-infos/kitesurfcenter-kiteboarding-croatia-nin.html",
+        "https://kitejungle.com/kite-places/croatia",
+        "https://www.beachatlas.com/hr/zdrijac",
+        "https://turistickeprice.hr/en/friends-of-the-wind%2C-nin-is-an-ideal-place-for-kitesurfing/",
+        "https://www.openstreetmap.org/way/231022098",
+        "https://www.openstreetmap.org/way/229300369",
+        "https://routing.openstreetmap.de/"
+      ],
+      "confidence": "high",
+      "notes": "The spot's suitability is well supported. School details are medium confidence. The turistickeprice.hr article returned HTTP 403 when fetched and was used only through search snippets (season early May to end of October). Fact-check 2026-10-16: the earlier claim that the kite spot is a 20-minute walk was wrong. Surfmania kites at Ždrijac (about 4.8 km on foot), and only its windsurf station is on Kraljičina plaža."
+    },
+    {
+      "id": "multigen-family-reunion",
+      "name": "Multi-generation family reunions and friend groups booking the whole villa",
+      "whyItFits": [
+        "There are four separate apartments in one building (2+2+1+1 bedrooms), a shared grill area, a separate outdoor kitchen at Apt1 and driveway parking. Each household gets its own apartment and everyone can still eat together.",
+        "Shallow, sandy, warm-water beaches are within 1–3 km (Kraljičina, Bilotinjak, Sabunike), suiting toddlers and grandparents.",
+        "The official Zadar Bike Magic map lists flat family loops from the door: T&F Nin 1 via Privlaka–Sabunike (12.6 km, 32 m climbing) and T&F Privlaka 1 via Sabunike (17.0 km, 72 m)."
+      ],
+      "listingNeeds": [
+        "A 'book the whole villa' option with one price, one contract and one deposit",
+        "A sleeping plan showing which beds are in which apartment, plus cot and high-chair availability",
+        "A long table for 15–20 at the grill area, and a photo of it set",
+        "A floor plan or 3D preview to assign grandparents (ground floor?) and families"
+      ],
+      "seasonality": "July–August for school holidays. Also Easter, Pentecost/Whitsun (German and Austrian holidays) and late June / early September for groups with pre-school children or retirees.",
+      "messages": [
+        "Four apartments, one long table: the whole family under one roof, each with its own front door",
+        "Grandparents on the terrace, kids in the shallows, dinner at the grill"
+      ],
+      "channels": [
+        "Past guests and word of mouth: a 'bring your family next year' rebooking offer",
+        "German-, Slovenian- and Austrian-language pages (the owner company is Slovenian, napros.si)",
+        "Google Business Profile with a 'whole villa' photo set"
+      ],
+      "risks": [
+        "Total capacity (beds, sofa beds) is not yet known.",
+        "Whole-villa demand clusters in peak weeks; protect those weeks or set a whole-villa minimum stay.",
+        "Noise and house rules for large groups."
+      ],
+      "sources": [
+        "https://www.zadar.hr/datastore/filestore/10/ZBM_2024_Zadar_Nin_Riviera_2024.pdf",
+        "https://www.zadarbikemagic.com",
+        "https://secretcroatia.blog/2009/09/05/sand-beaches-in-croatia-kraljicina-queens-beach-in-nin/"
+      ],
+      "confidence": "medium",
+      "notes": "The fit is a reasoned inference from the villa layout. The claim that OTAs serve multi-unit buyouts poorly is practitioner knowledge, not a sourced fact."
+    },
+    {
+      "id": "cyclists-and-clubs",
+      "name": "Road and gravel cyclists, small clubs and training camps (spring/autumn)",
+      "whyItFits": [
+        "The Zadar County Tourist Board bike map (Zadar Bike Magic, with GPS tracks and an offline-navigation app) has several routes that start in Privlaka. Examples: T&F Privlaka 1 via Sabunike (17.0 km, 72 m), T&F Privlaka 3_4 (9.9 km, 55 m), MTB Vrsi 1 (15.9 km, 105 m) and Road Zadar via Vrsi–Nin (44.7 km, 181 m).",
+        "Flat coastal riding is near the house. Velebit offers serious climbs: the Majstorska cesta (Master's Road, completed 1832, designed for a maximum gradient of 5.5% per Velebit Nature Park) and the 1,044 m Mali Alan pass, whose upper section is gravel per riders on quaeldich.de.",
+        "The Zadar Granfondo (56 km and 112 km) starts and finishes at Falkensteiner Resort Borik in Zadar. The 2026 edition is on 18 October 2026, with a cycling camp on 16–18 October. This shows autumn demand for organised cycling.",
+        "Zadar's spring and autumn climate suits riding: mean air temperature about 13 °C in April and 17 °C in October (Zadar Puntamika station)."
+      ],
+      "listingNeeds": [
+        "Lockable bike room with a workstand, pump, tools and a bike-wash point",
+        "GPX library from the door (flat recovery loops, Nin–Vir, Velebit climbs) and a Komoot collection",
+        "Laundry and drying for kit; big kitchen for high-calorie cooking; early check-in for arrival-day rides",
+        "Group pricing for 8–14 riders taking the whole villa, plus airport transfer with a bike-box van"
+      ],
+      "seasonality": "March–May and late September–November. These are the villa's empty months.",
+      "messages": [
+        "Flat coast for base miles, Velebit for climbing: your spring camp starts at our driveway",
+        "Lock your bike, rinse it, plug in the GPX: 17 flat km to Privlaka and back before breakfast",
+        "Club camp? Take all four apartments: 1 contract, 1 invoice, 0 OTA fees"
+      ],
+      "channels": [
+        "Komoot: existing guides 'Cycling around Privlaka' and 'Attractions around Privlaka'; publish an owner collection",
+        "Strava: create a club or segment around the villa routes",
+        "quaeldich.de: German climbing-pass portal covering Mali Alan and Velebit",
+        "Granfondo Guide (Zadar Granfondo listing) and Zadar Bike Magic (zadarbikemagic.com)",
+        "Direct outreach to cycling clubs in Slovenia, Austria and Germany for spring camps"
+      ],
+      "risks": [
+        "Landmine-suspected areas remain in parts of Velebit (a 2020 account describes riders straying into a minefield on a fire road; clearance status is not current). Riders must stay on paved roads and marked routes, respect warning signs and check MINE.info. Include this on any Velebit route page.",
+        "Zadar Airport flights are mainly seasonal. Ryanair operates a summer base there, with only a few winter routes in past years; check the current schedule. Spring and late-autumn camp guests may need to fly into Split or Zagreb or drive.",
+        "The Mali Alan surface may be unpaved or degraded; road-bike suitability varies."
+      ],
+      "sources": [
+        "https://www.zadar.hr/datastore/filestore/10/ZBM_2024_Zadar_Nin_Riviera_2024.pdf",
+        "https://epicroadrides.com/destinations/cycling-croatia/zadar-region/",
+        "https://www.quaeldich.de/paesse/mali-alan/",
+        "https://www.granfondoguide.com/Events/Index/8778/zadar-granfondo",
+        "https://www.komoot.com/guide/2639207/cycling-around-privlaka",
+        "https://www.zaton.hr/en/blog/great-cycling-routes-in-zadar-region",
+        "https://climate-zone.com/climate/croatia/celsius/zadar-puntamika.htm",
+        "https://pp-velebit.hr/en/about-park/cultural-heritage/historical-roads-of-velebit/majstorska-road-velebit/",
+        "https://www.welovecycling.com/wide/2020/05/06/dodging-landmines-in-the-mountains-of-croatia/",
+        "https://exyuaviation.com/2021/07/ryanair-opens-zadar-base.html",
+        "https://exyuaviation.com/2022/04/ryanair-to-expand-croatia-winter.html"
+      ],
+      "confidence": "high",
+      "notes": "The route figures come from the official county PDF (re-checked against its text on 2026-10-16). The Majstorska cesta year and gradient come from Velebit Nature Park; the epicroadrides page gives neither. The Mali Alan elevation comes from quaeldich.de only."
+    },
+    {
+      "id": "remote-workers-monthly",
+      "name": "Remote workers and digital nomads on monthly off-season stays",
+      "whyItFits": [
+        "Croatia's MUP grants non-EU/EEA digital nomads temporary stay of up to 18 months. The 2026 requirement is at least EUR 3,622.50/month, or EUR 43,470 in savings for 12 months (EUR 65,205 for 18 months). Their foreign work income is exempt from Croatian income tax per secondary sources.",
+        "After arrival, nomads must register an address within 3 days of entry. Registration requires a lease contract with the landlord, a title deed or an owner statement. A direct-booking villa can issue a lease contract; an OTA booking cannot.",
+        "Off-season (October–May) apartments are empty and a monthly rate fills them. COIN Zadar coworking (Put Murvice 16, about 35 workstations) is within driving distance.",
+        "Mild shoulder months: mean air temperature about 17 °C in October, sea about 20 °C (model estimate)."
+      ],
+      "listingNeeds": [
+        "A measured internet speed test (download, upload, latency) shown on the page, and a real desk and chair",
+        "Monthly rate with utilities stated (heating/AC in winter)",
+        "A lease contract template for MUP address registration (Form 16a support)",
+        "Honest 'village in winter' guidance: open shops, need for a car, distance to Zadar"
+      ],
+      "seasonality": "October–May, with monthly stays of 1–6 months.",
+      "messages": [
+        "Work from the Adriatic for a month: fibre-speed Wi-Fi, a real desk, sea-view walks at lunch",
+        "Applying for Croatia's digital nomad permit? We provide the lease contract you need to register your address"
+      ],
+      "channels": [
+        "Digital Nomad Association Croatia (community and events)",
+        "nomads.com (formerly Nomad List) Zadar city page and community",
+        "COIN Zadar coworking: cross-promotion or day-pass bundle",
+        "LinkedIn and remote-work newsletters; long-stay platforms are an alternative OTA, but direct is cheaper"
+      ],
+      "risks": [
+        "Internet speed and winter heating at the villa are unverified.",
+        "Monthly residential leases may fall under a different tax and legal regime than tourist accommodation (and tourist tax treatment differs). The owner must confirm with an accountant.",
+        "EU and EEA citizens do not need the permit, so the permit message targets non-EU nomads (US, UK, Canada, Australia and others).",
+        "Sources disagree on the extension rules; quote MUP only."
+      ],
+      "sources": [
+        "https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-digital-nomads/286833",
+        "https://wiki.private.law/en/croatia-nomad-visa",
+        "https://www.taxesforexpats.com/country-guides/hr/croatia-digital-nomad-visa.html",
+        "https://freakingnomads.com/workspace/coin-zadar",
+        "https://www.coworker.com/croatia/zadar/coin-zadar",
+        "https://bookiscout.com/en/guides/zadar-digital-nomads"
+      ],
+      "confidence": "high",
+      "notes": "The permit facts were taken from the live MUP page (fetched 2026-10-16). Coworking prices (about EUR 15/day, EUR 120/month desk) are from a third-party guide and are unverified, so they are not used in messaging. Fact-check 2026-10-16: MUP figures re-confirmed on the live page. The COIN address and capacity come from coworker/freakingnomads listings only (medium)."
+    },
+    {
+      "id": "healing-mud-wellness-seniors",
+      "name": "Healing-mud (peloid) wellness guests and senior shoulder-season long stays",
+      "whyItFits": [
+        "The Nin lagoon next to Kraljičina plaža (1.46 km from the villa) is described as the largest healing-mud site in Croatia. Nin was listed as a climatic and thalassotherapy resort in 1960 and local use is much older (Novi list; Roman bath finds per nin.hr), and supervised therapy has run every summer since at least the 1980s (Novi list).",
+        "Two sources (a Novi list article and a campsite information sheet) say Zadar General Hospital (Opća bolnica Zadar) medical staff run a supervised peloid therapy season at Nin from early July to 31 August. Courses usually last 10–20 days per the campsite sheet, which matches a 2–3 week apartment stay.",
+        "Conditions for which the mud is traditionally used include rheumatic and musculoskeletal complaints, spinal problems and skin conditions. These are traditional and promotional claims; no controlled trial of Nin mud was found.",
+        "For seniors outside the mud season: flat walking and cycling (T&F Nin 1 has 32 m of climbing), quiet village, mild October (about 17 °C mean)."
+      ],
+      "listingNeeds": [
+        "Ground-floor or low-step apartment information, and a step-free route to the car",
+        "A 2–3 week rate aligned with a mud-therapy course",
+        "Practical info: how to reach the lagoon (1.5 km), what to bring, the outdoor shower to rinse off mud",
+        "Clear, cautious medical wording and a 'consult your doctor' notice"
+      ],
+      "seasonality": "Supervised mud therapy runs July–August (Novi list: early July to 31 August). The 2026 dates are unconfirmed. Senior long stays fit May–June and September–October.",
+      "messages": [
+        "Nin's lagoon mud, a 20-minute walk away: a local summer tradition for generations",
+        "Stay 2–3 weeks for a mud course; rinse off in our garden shower",
+        "Ask your doctor first: mud therapy is not recommended for people with heart conditions or high blood pressure"
+      ],
+      "channels": [
+        "Slovenian, Croatian and Central European senior audiences through the owner's own networks and language pages",
+        "Repeat-guest programme: the source describes long-running returning mud guests",
+        "Local cooperation: the Nin Tourist Board's Queen's Beach preservation project (NATURA 2000 education)"
+      ],
+      "risks": [
+        "Health claims are regulated. Never claim cure or treatment efficacy; use wording such as 'traditionally used' and 'consult a doctor'.",
+        "The 2026 therapy schedule, prices and referral rules at the Nin health centre are unverified.",
+        "The lagoon is a protected area; digging or taking mud may be restricted."
+      ],
+      "sources": [
+        "https://www.zaton.hr/en/blog/healing-mud-in-nin",
+        "https://partner.camping.info/docs/Campsite\\26524\\ljekovito-blato-en.pdf",
+        "https://www.novilist.hr/?p=1026645",
+        "https://www.tportal.hr/fun/clanak/blato-ljekovito-zabavno-i-seksi-20100720",
+        "https://karlobag.eu/dogadanja/projekt-ocuvanja-kraljicine-plaze-u-ninu-proslava-1100-obljetnice-hrvatskog-kral-2y42w/",
+        "https://hrcak.srce.hr/en/144791",
+        "https://climate-zone.com/climate/croatia/celsius/zadar-puntamika.htm"
+      ],
+      "confidence": "medium",
+      "notes": "The mud deposit and its traditional use are high confidence (Zaton blog, Croatian theses). The July–August supervised season is supported by two sources; the 2026 schedule is unverified. Medical efficacy is low confidence. The contraindication message (heart conditions, high blood pressure) comes from the Zaton blog, not a medical body; keep 'ask your doctor' wording."
+    },
+    {
+      "id": "birders-nature-photographers",
+      "name": "Birdwatchers and nature or landscape photographers",
+      "whyItFits": [
+        "Solana Nin salt pans are 3.31 km from the villa. Part of the saltworks is an ornithological reserve.",
+        "The official Solana Nin site records 158 species in the saltworks area (as of 2019), 41 of them endangered, and up to 220 species in the wider Nin area. Key species are black-winged stilt, little egret, Kentish plover (endangered in Croatia) and kingfisher. Birdingplaces.eu claims more than 280 species.",
+        "Birdingplaces.eu says the best viewpoint is an observation platform on the west side of the salt pans with small parking, with the best light in the late afternoon (backlit in the morning). Spring and autumn migration are the peak seasons, matching the villa's shoulder season.",
+        "For photographers: Pag's barren 'moonscape' is near, and a user-submitted photo-spot listing claims low light pollution on Pag for Milky Way shots (no official dark-sky status)."
+      ],
+      "listingNeeds": [
+        "A bird map: Solana Nin platform, lagoon, Sabunike shoreline; best times and light direction",
+        "Early-breakfast-friendly self-catering, flexible check-in, a scope and tripod-friendly car park",
+        "A seasonal sightings note (migration calendar) and links to the salt-works educational tour"
+      ],
+      "seasonality": "March–May and August–October for migration. Breeding season late spring.",
+      "messages": [
+        "158 species at the Nin salt pans, 3 km from your bed",
+        "Stilts and Kentish plovers by day, a quiet terrace by night: a spring birding base near Zadar"
+      ],
+      "channels": [
+        "birdingplaces.eu (Salin de Nin page). Camp Ljubac already advertises there with a 15% promo code (BIRDING15).",
+        "eBird (log a hotspot checklist and link the stay)",
+        "Croatian bird-conservation NGO community (e.g. Udruga BIOM). Verify partnership interest before naming them on the site."
+      ],
+      "risks": [
+        "Species counts differ by source (158, 220, 280+); quote the official 158 for the saltworks.",
+        "Reserve access rules: walking in the salt fields is allowed only with a guide.",
+        "Astro-photography claims are weak (no certification near Pag); keep them to a light mention."
+      ],
+      "sources": [
+        "https://www.solananin.hr/en/nature/wildlife/",
+        "https://birdingplaces.eu/birdingplaces/croatia/salin-de-nin",
+        "https://www.solananin.hr/en/tours/educational-salt-tour/",
+        "https://locationscout.net/croatia/6888-isle-of-pag-milky-way",
+        "https://hrcak.srce.hr/clanak/493223",
+        "https://www.openstreetmap.org/relation/9904654"
+      ],
+      "confidence": "high",
+      "notes": "The birding fit is strong and official. The astro component is low confidence. Fact-check 2026-10-16: the 158 / 41 / 220 figures and the BIRDING15 code were re-confirmed. The platform detail comes from birdingplaces.eu, not the official site."
+    },
+    {
+      "id": "dog-owners",
+      "name": "Dog owners (driving holidays)",
+      "whyItFits": [
+        "One pet-travel guide (bookiscout) says Privlaka has a designated dog-friendly section at Škrapavac beach, and that the far ends of Queen's Beach informally tolerate dogs outside peak hours. A directory listing mentions a 'Pseća plaža' (dog beach) near Privlaka; that page could not be fetched (HTTP 403).",
+        "OSM tags a designated dog beach near Povljana on the island of Pag (about 11.7 km straight-line, much longer by road via the Pag bridge), plus an unnamed dog_park area near Zaton, about 3 km south of the villa.",
+        "Dog owners mostly drive. Sabunike has flat walking lanes, and the shoulder season brings quieter beaches."
+      ],
+      "listingNeeds": [
+        "Clear pet policy: which apartments, fee, number and size of dogs, fenced or unfenced yard",
+        "A verified 'where can my dog swim' map with official rules and fines",
+        "Bowls, towels, dog-waste bags; nearest vet (to be researched)"
+      ],
+      "seasonality": "May–June and September–October, when beaches are less crowded and dog restrictions are less of an issue.",
+      "messages": [
+        "Bring the dog: verified dog-swim spots near Privlaka and on Pag, plus quiet lanes for morning walks"
+      ],
+      "channels": [
+        "Pet-travel guides and directories (bookiscout Zadar pet-friendly guide, beachatlas dog-friendly Privlaka)",
+        "German and Austrian dog-owner communities: driving distance makes these core markets"
+      ],
+      "risks": [
+        "No official municipal (Općina Privlaka or Grad Nin) dog-beach ordinance was found. All dog-beach claims are third-party.",
+        "A Slovenian news piece reports fines of about EUR 150 for dogs on a Croatian beach (town unnamed). Rules must be verified before publishing.",
+        "The villa's own pet policy is unknown."
+      ],
+      "sources": [
+        "https://bookiscout.com/en/guides/zadar-pet-friendly",
+        "https://beaches-searcher.com/en/beach/191603569/pseca-plaza-privlaka",
+        "https://www.beachatlas.com/de/hundefreundliche-straende-privlaka",
+        "https://www.openstreetmap.org/way/1559853964",
+        "https://www.openstreetmap.org/way/1209189288",
+        "https://n1info.si/magazin/potovanja/na-hrvaski-plazi-obiskovalcem-s-psi-grozi-150-evrov-kazni/",
+        "https://www.zaton.hr/en/blog/nature-and-beaches-in-zaton-and-vicinity",
+        "https://www.zaton.hr/en/blog/333/pool-and-beach-zaton-holiday-resort?desktop=1"
+      ],
+      "confidence": "low",
+      "notes": "The segment fit is plausible, but local dog-beach facts lack an official source. Keep it off the main page until the owner confirms the pet policy and the municipal rules."
+    },
+    {
+      "id": "naturists",
+      "name": "Naturists (FKK) wanting a family-friendly base near a naturist beach",
+      "whyItFits": [
+        "OSM maps two FKK beach sections in Sabunike, 0.83 km and 1.44 km from the villa in a straight line. The nearer one is about 1.1 km (17 minutes) on foot, and OSM tags it as gravel.",
+        "Sandee says the Sabunike FKK beach has been 'a favorite among naturists for decades', faces Pag and sits within a larger family beach area. Its surface description is inconsistent: the text says sandy, its tags say pebbles and rocky, and OSM says gravel.",
+        "Croatia has a long naturism tradition (Total Croatia News FKK guide). OTA filters do not surface 'walking distance to an FKK beach'."
+      ],
+      "listingNeeds": [
+        "A discreet, separate landing page with a map to the naturist section; signage is poor per Sandee",
+        "Privacy information: terrace or garden screening (no naturism on the property unless the owner chooses that)"
+      ],
+      "seasonality": "June–September.",
+      "messages": [
+        "Naturist beach about 1 km away on foot, with a family apartment to come back to"
+      ],
+      "channels": [
+        "National naturist federations and their travel listings (e.g. INF-FNI, DFK Germany, British Naturism). Verify listing options.",
+        "FKK beach directories (Sandee, beachatlas naturist pages)"
+      ],
+      "risks": [
+        "Brand conflict with family and school audiences. Keep it as a separate, opt-in page, not on the main family page.",
+        "The beach is not officially signed (per Sandee); the official status of the FKK section is unverified with the municipality."
+      ],
+      "sources": [
+        "https://www.openstreetmap.org/way/1209174534",
+        "https://www.openstreetmap.org/way/1209174533",
+        "https://sandee.com/croatia/zadar/privlaka/sabunike-fkk,-naturist-beach,-croatia",
+        "https://total-croatia-news.com/destinations/fkk-croatia-nudist/",
+        "https://www.beachatlas.com/fr/plages-naturistes-privlaka",
+        "https://routing.openstreetmap.de/"
+      ],
+      "confidence": "medium",
+      "notes": "The beach is mapped in OSM and in two directories. The owner must decide whether to target this audience at all. Fact-check 2026-10-16: the '10-minute walk' and 'sandy' claims were removed. The walk is about 17 minutes, and the surface is disputed (OSM: gravel)."
+    },
+    {
+      "id": "school-university-field-trips",
+      "name": "School, university and study-group field trips (biology, archaeology, geography)",
+      "whyItFits": [
+        "Solana Nin runs a 45-minute educational salt tour on weekdays (EN/HR). Groups over 15 pay EUR 5 per student and EUR 8 per adult. The Salt House museum has an interactive model of the nature reserve.",
+        "Nin heritage is within about 3 km: the 9th-century pre-Romanesque Church of the Holy Cross (called 'the smallest cathedral in the world'), Roman temple remains from the 1st century AD, and the Museum of Nin Antiquities (7 exhibition rooms, prehistory to the early Croatian state).",
+        "The lagoon is a NATURA 2000 habitat with peloid deposits, salt-pan ecology and 158 recorded bird species, giving one compact study area."
+      ],
+      "listingNeeds": [
+        "Whole-villa group rate with a supervisor-to-student bed plan",
+        "An invoice to an institution, with clear payment terms",
+        "A pre-built 3-day itinerary (salt works, museum, lagoon ecology walk, bike loop)"
+      ],
+      "seasonality": "April–June and September–October (term time, outside peak season).",
+      "messages": [
+        "A living classroom: salt pans, Roman Nin and a protected lagoon within 3 km",
+        "Field-trip package for 12–16: whole villa, group salt-works tour, ecology walk"
+      ],
+      "channels": [
+        "Direct email to university departments (biology, geography, archaeology) in Slovenia, Croatia, Austria and Germany",
+        "Teachers' and school-trip networks in the owner's home market (Slovenia)"
+      ],
+      "risks": [
+        "Villa capacity may be too small for a school class. Better suited to university seminars or small study groups.",
+        "Child-safeguarding, insurance and supervision liability for minors.",
+        "Museum opening hours and group booking rules are unverified."
+      ],
+      "sources": [
+        "https://www.solananin.hr/en/tours/educational-salt-tour/",
+        "https://www.solananin.hr/en/about-us/museum-and-house-of-salt/",
+        "https://en.wikipedia.org/wiki/Church_of_the_Holy_Cross,_Nin",
+        "https://www.viamichelin.pl/maps/tourist-attractions/poi/nin-23232-6696299f9deb",
+        "https://www.solananin.hr/en/nature/wildlife/"
+      ],
+      "confidence": "medium",
+      "notes": "Attractions are high confidence. Demand from this segment for a small villa is inferred."
+    },
+    {
+      "id": "small-company-retreats",
+      "name": "Small company and startup team retreats (6–16 people)",
+      "whyItFits": [
+        "Taking the whole villa gives a private, quiet venue: four apartments for sleeping, a grill area and outdoor kitchen for team dinners, and parking.",
+        "Zadar Airport is about 22 km in a straight line and about 25 km (35–40 minutes) by road, so a short transfer suits teams flying in during summer.",
+        "Team activities are within about 3.5 km: kite or windsurf taster lessons (Nin schools), the Solana Nin group tour, and flat bike loops from the door (Zadar Bike Magic)."
+      ],
+      "listingNeeds": [
+        "A meeting set-up: where 12 people can sit with a screen (terrace, shaded, Wi-Fi coverage outdoors)",
+        "A company invoice with the company's VAT ID (Croatian 'R1' invoice), quote-based pricing, and a deposit on invoice",
+        "Bundled extras: airport transfer, catering or grill chef, kite workshop, salt-works tour",
+        "Wi-Fi capacity for 10–15 simultaneous video calls"
+      ],
+      "seasonality": "May–June and September–October; summer flights help, but peak-season prices compete with family demand.",
+      "messages": [
+        "Your offsite, without the hotel: four apartments, one garden, one invoice",
+        "Strategy in the morning, kite lesson in the afternoon, team grill at sunset"
+      ],
+      "channels": [
+        "LinkedIn (owner's and Napros d.o.o. network; Slovenian and Austrian tech companies)",
+        "Direct outreach to companies in Ljubljana, Graz, Vienna and Munich (drive or direct flights)",
+        "Retreat-planning marketplaces exist, but they charge commission; verify the specific ones before use."
+      ],
+      "risks": [
+        "There is no dedicated indoor meeting room (unverified); bad weather plan needed.",
+        "B2B invoicing triggers fiscalisation and VAT questions depending on the owner's legal form."
+      ],
+      "sources": [
+        "https://www.kroati.de/kroatien-infos/surfcenter-surfmania-nin.html",
+        "https://www.solananin.hr/en/tours/educational-salt-tour/",
+        "https://www.zadar.hr/datastore/filestore/10/ZBM_2024_Zadar_Nin_Riviera_2024.pdf",
+        "https://teb.hr/novosti/2026/jesu-li-iznajmljivaci-obveznici-fiskalizacije/",
+        "https://en.wikipedia.org/wiki/Zadar_Airport"
+      ],
+      "confidence": "medium",
+      "notes": "The user named this segment explicitly. Fit facts are sourced; demand and pricing are not."
+    }
+  ],
+  "evaluatedAndDeprioritised": [
+    {
+      "id": "anglers",
+      "reason": "Licensing is clear but local angling-spot facts are thin. A recreational sea licence is required for shore or boat fishing; under-14s using a single handline are exempt. Licences are sold online via the Ministry of Agriculture (ribarstvo.mps.hr) and via HSŠRM for sport licences. Use as a sub-section of an 'activities' page rather than a dedicated audience.",
+      "sources": [
+        "https://www.gov.hr/en/marine-recreational-and-sport-fisheries/1542",
+        "https://www.hssrm.hr/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "wedding-guests",
+      "reason": "No evidence was found of a wedding-venue scene in Nin. The Church of the Holy Cross is a tiny 9th-century monument, and no source confirms that ceremonies are held there. Could serve guests of Zadar-region weddings, but there is no verifiable hook.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Church_of_the_Holy_Cross,_Nin"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "astro-photographers",
+      "reason": "No certified dark-sky place near Pag or Velebit. Croatia's first International Dark Sky Place is Petrova gora–Biljeg, far away. Academic work names Lika, Lastovo, Vis and Vrani Kamen as darkest. The Pag claim comes from one user-submitted photo-spot page. Folded into the photographers segment.",
+      "sources": [
+        "https://darksky.org/croatia-earns-first-international-dark-sky-place-at-petrova-gora-biljeg/",
+        "https://hrcak.srce.hr/clanak/493223",
+        "https://locationscout.net/croatia/6888-isle-of-pag-milky-way"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "triathletes",
+      "reason": "ZADARHALF (half-distance, swim off Zaton, bike leg through Nin) was last confirmed in 2021. No 2026 edition was found. Fold triathletes into the cycling and training-camp segment.",
+      "sources": [
+        "https://www.ahotu.com/evenement/zadarhalf-triathlon",
+        "https://www.tportal.hr/sport/clanak/na-sportski-spektakl-u-zadar-stize-350-sportasa-iz-20-zemalja-uz-nekoliko-velikih-zvijezda-ovo-je-novi-koncept-koji-ne-postoji-u-svijetu-triatlona-20211007"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "directBooking": [
+    {
+      "id": "ota-cost-math",
+      "topic": "Communicating savings vs OTA commission",
+      "practice": "State the saving concretely and honestly. Booking.com's commission averages around 15% (10–25% by market and property type); Croatian accounting guidance uses 15% as its worked example. Preferred Partner typically raises it to about 18%. Payments by Booking.com adds 1.1–3.1% by region (1.1–1.4% per a UK guide). Croatian hosts must also self-assess 25% Croatian VAT on the commission, even if they are not in the VAT system, after obtaining a VAT ID. A 15% commission therefore costs about 18.75% of the booking and an 18% one about 22.5% (derived). From 13 October 2026, Airbnb moved Croatian hosts to a host-only fee of 15.5%, also subject to VAT. Practical message: 'Book direct: same apartment, about 10–15% less than on booking platforms', passing on part of the margin.",
+      "sources": [
+        "https://www.guesty.com/blog/how-much-does-booking-com-charge-hosts/",
+        "https://www.holidayfox.com/en/partners/guides/cost-guides/booking-com-commission-breakdown-2026",
+        "https://articles.your.rentals/en/articles/booking.com-preferred-partner-program-terms-and-conditions",
+        "https://fiskalopedija.hr/baza-znanja/pausalni-obrt-izdavanje-racuna-i-kpr-booking",
+        "https://www.teb.hr/novosti/2025/jeste-li-platili-pdv-na-usluge-bookinga/",
+        "https://total-croatia-news.com/news/airbnb-croatian-hosts/"
+      ],
+      "confidence": "high",
+      "notes": "The owner's actual Booking.com commission rate is unknown; the derived VAT-inclusive figures assume a 15% or 18% base. Booking.com's partner contract may restrict advertising lower public prices; check the current terms before publishing a price comparison. Fact-check 2026-10-16: the unsourced 'Preferred Plus about 23%' figure was removed."
+    },
+    {
+      "id": "guest-appetite-for-direct",
+      "topic": "Guest willingness to book direct",
+      "practice": "A vendor survey of 1,204 short-term-rental guests found 95% were willing or open to booking direct for a 10–15% saving. Use a 'book direct and save' badge next to the price.",
+      "sources": [
+        "https://touchstay.com/blog/direct-bookings"
+      ],
+      "confidence": "medium",
+      "notes": "Vendor-run survey."
+    },
+    {
+      "id": "trust-signals",
+      "topic": "Trust signals",
+      "practice": "Show the real owner (names, photo, short bio, languages spoken) and a working phone, WhatsApp and e-mail. Display official status (category and stars from the categorisation decision, company details and OIB/VAT ID). Show genuine reviews with links to their source (Google, OTA profile) rather than copied text. Use real photos plus a floor plan or 3D model, and transparent all-in prices with tourist tax and cleaning stated. Clear house rules, check-in/out times and a cancellation policy reduce drop-off. A dedicated 'Why trust us' page can collect policies, safety and insurance.",
+      "sources": [
+        "https://craftedstays.co/blog/building-trust-on-your-direct-booking-site-8-key-strategies/",
+        "https://craftedstays.co/blog/three-pillars-of-direct-booking-success-with-heather-bayer/",
+        "https://hostaway.com/blog/maximizing-direct-bookings-for-your-short-term-rental"
+      ],
+      "confidence": "medium",
+      "notes": "Practitioner and vendor guidance. Local competitors (Haus Adria, Direct-Croatia listings) mostly lack categorisation, reviews and prices, so these signals are a differentiator."
+    },
+    {
+      "id": "payment-deposit",
+      "topic": "Payment and deposit norms in Croatia",
+      "practice": "Common Croatian practice is an advance payment (akontacija) by card or bank transfer to confirm the booking, with the balance paid on arrival, often in cash. Observed deposits: 15% (Makarska agency), 30% (villa agency), a flat EUR 100 with the balance on arrival (Apartments Šime, Sabunike, on Direct-Croatia), and 'pay in cash on arrival' (another Sabunike listing). Offer a SEPA bank transfer with a payment QR code and optionally a card link. Avoid Western Union-style requests, which look like scams. Recommendation: 30% deposit at booking, balance 14 days before arrival or on arrival.",
+      "sources": [
+        "https://www.beerent.com/site_media/media/uploads/posts/attachments/TERMS_AND_CONDITIONS_OF_CROATIA_TOURS_MAKARSKA.pdf",
+        "https://rentluxuryvillascroatia.com/nl/help-centar/can-i-pay-the-reservation-in-cash-in-which-currency-can-i-pay",
+        "https://www.direct-croatia.com/apartments/sabunike/apartments-sime/17704",
+        "https://direct-croatia.com/apartments/sabunike/apartment-donat/22690",
+        "https://direct-croatia.com/apartments/sabunike/apartments-casa-tea/17422",
+        "https://www.croatiatraveller.com/Money/CreditCards.htm"
+      ],
+      "confidence": "medium",
+      "notes": "There is no legal standard deposit; these are market observations. Fact-check 2026-10-16: the Istria agency source (20% within 24 h) now returns 404 and was removed. The Direct-Croatia QR-deposit promotion was not re-verified, so it was dropped."
+    },
+    {
+      "id": "fiscalisation",
+      "topic": "Invoicing and fiscalisation (Fiscalisation 2.0)",
+      "practice": "From 1 January 2026 (Fiscalisation Act NN 89/25), companies and flat-rate traders must fiscalise end-consumer invoices regardless of payment method, including bank transfer. Private citizen landlords taxed on property income are reportedly not on the end-consumer fiscalisation list, but sources conflict. Because the owner is a company (Napros d.o.o.), assume every guest invoice must be fiscalised and issued properly. Confirm with an accountant.",
+      "sources": [
+        "https://teb.hr/novosti/2026/jesu-li-iznajmljivaci-obveznici-fiskalizacije/",
+        "https://www.rrif.hr/obveza_fiskalizacije_racuna_u_krajnjoj_potrosnji_z-4194-misljenje/",
+        "https://fiskalopedija.hr/baza-znanja/fiskalizacija-20-pausalni-obrt",
+        "https://www.fiskai.hr/vodic/airbnb-najam/"
+      ],
+      "confidence": "medium",
+      "notes": "Depends on the owner's legal form and registration in Croatia (see openQuestions)."
+    },
+    {
+      "id": "tourist-tax",
+      "topic": "Tourist tax (turistička pristojba, formerly boravišna pristojba)",
+      "practice": "Under the Tourist Tax Act (Zakon o turističkoj pristojbi), tax is due per person per night. Children under 12 are exempt and ages 12–18 pay 50%. Persons with 70%+ disability and one companion are also exempt. Private household renters instead pay an annual flat amount per bed. The county assembly (Zadarska županija) sets the per-night and flat amounts for each municipality after consulting local tourist boards. Show prices 'tourist tax included', as local competitors do, or state the exact per-night amount for Privlaka. Guests and tax are recorded in eVisitor.",
+      "sources": [
+        "https://www.zakon.hr/z/2071/zakon-o-turisti%C4%8Dkoj-pristojbi",
+        "https://gov.hr/hr/turisticka-pristojba/1520",
+        "https://www.zakon.hr/cms.htm?id=39917",
+        "https://transition-pathways.europa.eu/system/files/2025-05/1.%20CNTB_eVisitor_2025.pdf"
+      ],
+      "confidence": "high",
+      "notes": "The 2026 amount for Općina Privlaka was not found. The owner must take it from TZ Privlaka or the county decision."
+    },
+    {
+      "id": "cancellation",
+      "topic": "Cancellation policy norms",
+      "practice": "Accommodation booked for specific dates is excluded from the EU 14-day right of withdrawal (Consumer Rights Directive 2011/83/EU, Art. 16(l)), so the published policy governs. Use a simple tiered policy: deposit refundable up to X days before arrival (e.g. 30–45 days in peak season), then forfeited. Allow free date changes in the off-season, and recommend travel insurance. Publish it next to the price and in the booking confirmation.",
+      "sources": [
+        "https://eur-lex.europa.eu/eli/dir/2011/83/oj",
+        "https://craftedstays.co/blog/building-trust-on-your-direct-booking-site-8-key-strategies/"
+      ],
+      "confidence": "medium",
+      "notes": "The tier values are a recommendation, not a sourced norm. No Croatian statutory cancellation norm for private accommodation was found."
+    },
+    {
+      "id": "legal-categorisation-advertising",
+      "topic": "Legal must-haves: categorisation, advertising, signage",
+      "practice": "Private-household accommodation requires a categorisation decision (rješenje) from the county state-administration office. Under the Hospitality Act as amended in NN 99/2018 (Art. 32), a landlord may advertise only the prescribed type designation, the category (stars) and any special-standard type stated in that decision. When advertising to EU taxpayers they must state their tax number (porezni broj; for Croatian residents this is the OIB) or VAT ID. A standard plate showing type and category must be displayed at the entrance. The site should therefore show, for each apartment, the type and category from the decision, plus the operator's tax number or VAT ID. Household (domaćinstvo) status is for natural-person owners (or their close family with written consent), so a company operator falls under different rules.",
+      "sources": [
+        "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_11_99_1917.html",
+        "https://www.zakon.hr/c/podzakonski-propis/15777/nn-09-16-od-27.01.2016.-pravilnik-o-razvrstavanju-i-kategorizaciji-objekata-u-kojima-se-pruzaju-ugostiteljske-usluge-u-domacinstvu",
+        "https://www.samobor.hr/storage/upload/doc_library/administracija_samobor_2026_95658.pdf"
+      ],
+      "confidence": "high",
+      "notes": "Which regime applies to Napros d.o.o. (company-run accommodation vs a household run by a natural-person owner) must be confirmed. The EEA/Swiss citizenship condition for household renters was not re-verified in the NN 99/2018 text."
+    },
+    {
+      "id": "registration-number",
+      "topic": "Short-term-rental registration number (upcoming)",
+      "practice": "EU Regulation 2024/1028 on short-term-rental data has applied since 20 May 2026. Platforms must share data with authorities and check registration numbers. Croatia Week reports that a mandatory registration number for units advertised on platforms will start in 2027, with the exact date set after the new Hospitality Activity Act is adopted. A separate Croatia Week piece (citing HRT) reports a rule requiring new landlords in multi-residential buildings to get consent from two-thirds of other residents; it names no law or effective date. Plan a placeholder on each apartment page for the registration number.",
+      "sources": [
+        "https://www.croatiaweek.com/croatia-short-term-rental-registration-numbers-2027/",
+        "https://www.croatiaweek.com/eu-new-short-term-rental-rules-airbnb-booking-croatia/",
+        "https://www.croatiaweek.com/croatia-new-rules-private-landlords-2026/",
+        "https://en.lider.media/2025/11/12/significant-changes-in-tourism-new-laws-stricter-oversight-and-digitalization/"
+      ],
+      "confidence": "medium",
+      "notes": "The 2027 date is the best-supported. The two-thirds consent rule has one secondary source with no legal citation, and is likely irrelevant for a detached villa. Re-check both before launch."
+    },
+    {
+      "id": "evisitor",
+      "topic": "Guest registration (eVisitor)",
+      "practice": "Every guest, not only the booker, must be registered in eVisitor within 24 hours of arrival and deregistered on departure. Collect guest names, ID numbers, dates of birth and nationality before arrival through a secure form and state why (a legal obligation). This also supports the GDPR legal basis.",
+      "sources": [
+        "https://gov.hr/en/tourist-registration-and-deregistration/1432",
+        "https://transition-pathways.europa.eu/system/files/2025-05/1.%20CNTB_eVisitor_2025.pdf",
+        "https://rentl.io/en/blog/industry-related/evisitor-croatia-vacation-rental-guest-registration-guide"
+      ],
+      "confidence": "high",
+      "notes": "A vendor blog cites fines of EUR 132–2,654; unverified against the legal text."
+    },
+    {
+      "id": "gdpr-imprint",
+      "topic": "GDPR, cookies and imprint",
+      "practice": "Publish a privacy policy (controller identity, purposes, legal bases such as legal obligation for eVisitor ID data and contract for booking, retention periods, processors such as e-mail or payment providers, and data-subject rights including the right to complain to AZOP, the Croatian DPA). Ask for cookie consent before non-essential cookies and embedded maps. The competitor's Google Map loads only after consent, which is a good practice to copy. Publish provider information under the E-Commerce Directive Art. 5: company name, address, e-mail, register number and VAT ID.",
+      "sources": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+        "https://eur-lex.europa.eu/eli/dir/2000/31/oj",
+        "https://urlaub-norddalmatien.com/"
+      ],
+      "confidence": "high",
+      "notes": "Self-host map tiles or the Leaflet/OSM map to reduce consent friction. OSM tile usage policy applies."
+    },
+    {
+      "id": "niche-content-seo",
+      "topic": "Niche content as the acquisition engine",
+      "practice": "Publish one landing page per segment (kite, cycling, birding, remote work, mud, whole villa) with verified local facts, maps and GPX. Local benchmarks show it works: Zaton Holiday Resort ranks with blog posts on Nin healing mud and cycling routes. Camp Ljubac buys a direct promo slot on birdingplaces.eu (code BIRDING15). Use segment promo codes to measure which channel converts.",
+      "sources": [
+        "https://www.zaton.hr/en/blog/healing-mud-in-nin",
+        "https://www.zaton.hr/en/blog/great-cycling-routes-in-zadar-region",
+        "https://birdingplaces.eu/birdingplaces/croatia/salin-de-nin"
+      ],
+      "confidence": "medium",
+      "notes": "That content ranks is inferred from search-result prominence, not measured."
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Haus Adria Sabunike (Kroll d.o.o.)",
+      "url": "https://urlaub-norddalmatien.com/",
+      "location": "Put Kandelica 82, 23233 Privlaka (Sabunike): the same street as Napros (no. 60)",
+      "offer": "3 units: Fischerhütte (2 bedrooms, 4+1), Leuchtturm (3 bedrooms, 6+1), Meeresbrise (studio, 2+1). About 200 m to the sea. AC, linen, towels, Wi-Fi, tourist tax and final cleaning included.",
+      "doesWell": [
+        "Named owners (Ute & Andreas Kroll) with a phone number, e-mail and WhatsApp",
+        "All-inclusive pricing message (tax, cleaning, linen)",
+        "Detailed travel section: direct flights from Germany to ZAD in under 2 hours, then about 40 minutes by car; 13–14 h by car from Germany; overnight train Munich–Rijeka",
+        "Activities and sights for Sabunike, Privlaka, Nin and Zadar; the map loads only after cookie consent"
+      ],
+      "doesPoorly": [
+        "German only, with no language switcher",
+        "No prices, availability calendar, inquiry form or online deposit; booking runs via WhatsApp, e-mail or phone, or the Traum-Ferienwohnungen portal (ID 530109)",
+        "No reviews, no categorisation (stars) and no OIB/VAT ID shown",
+        "The imprint has a copy-paste error that names an unrelated company ('Forstwirtschaftlichen Lohnunternehmens Martin Dreger'), which hurts trust",
+        "Single page with in-page anchors; no audience-specific content"
+      ],
+      "sources": [
+        "https://urlaub-norddalmatien.com/",
+        "https://urlaub-norddalmatien.com/impressum.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Owner listings on Direct-Croatia.com (Sabunike: Casa Tea, Donat, Šime, CasaBlanka, Kristi, Cypress Tree)",
+      "url": "https://www.direct-croatia.com/apartments/sabunike/apartments-casablanka/25209",
+      "location": "Sabunike / Privlaka",
+      "offer": "Owner-direct inquiry listings with a 'price from' figure: EUR 32–110 per night across the listings, e.g. Casa Tea EUR 90 (A2+1) and EUR 110 (A4+1), CasaBlanka EUR 65, Kristi EUR 90, Donat EUR 50.",
+      "doesWell": [
+        "Owner name, phone, WhatsApp and Viber visible; multilingual interface",
+        "Guest reviews on the listing (e.g. Casa Tea 5/5 from 1 review). Tourist-tax treatment varies: included at Casa Tea, excluded at Šime.",
+        "Simple terms: EUR 100 advance and balance on arrival (Šime); cash on arrival (Donat)"
+      ],
+      "doesPoorly": [
+        "No instant booking; the calendar is often empty; the exact price needs an inquiry",
+        "Template pages with no star category shown and no niche or local content",
+        "Owner-paid portal: still a middleman and a shared marketplace where guests compare neighbours side by side"
+      ],
+      "sources": [
+        "https://direct-croatia.com/apartments/sabunike/apartments-casa-tea/17422",
+        "https://direct-croatia.com/apartments/sabunike/apartment-donat/22690",
+        "https://www.direct-croatia.com/apartments/sabunike/apartments-sime/17704",
+        "https://www.direct-croatia.com/apartments/sabunike/apartments-kristi/17419"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Novasol / Clickstay agency listings (e.g. Sabunike CDI473, Villa Nina Zaton)",
+      "url": "https://www.novasol.co.uk/p/CDI473",
+      "location": "Sabunike, Zaton",
+      "offer": "Agency-managed holiday homes. Clickstay advertises 'No service fees' and a 'Lowest Price Pledge'.",
+      "doesWell": [
+        "Professional presentation, instant booking and payment, and brand trust",
+        "'No service fees' messaging: the price the guest sees is the price paid"
+      ],
+      "doesPoorly": [
+        "Agency commission is still embedded; no personal host story; generic content"
+      ],
+      "sources": [
+        "https://www.novasol.co.uk/p/CDI473",
+        "https://www.clickstay.com/p/427597"
+      ],
+      "confidence": "medium",
+      "notes": "Fact-check 2026-10-16: the earlier CDI736 URL returns 404 and was replaced by a live Sabunike listing (CDI473)."
+    },
+    {
+      "name": "Zaton Holiday Resort (content benchmark)",
+      "url": "https://www.zaton.hr/",
+      "location": "Zaton, about 4 km south of the villa",
+      "offer": "Large resort with its own booking. Not a like-for-like competitor, but it competes for Nin-area families and niche search queries.",
+      "doesWell": [
+        "Long-form blog posts on niche topics: Nin healing mud (with a contraindication note), Zadar-region cycling routes, nature and beaches. These capture search traffic for the exact niches Napros targets."
+      ],
+      "doesPoorly": [
+        "Resort scale; no small-group or whole-house privacy. Some posts are dated (the cycling post is from 2016)."
+      ],
+      "sources": [
+        "https://www.zaton.hr/en/blog/healing-mud-in-nin",
+        "https://www.zaton.hr/en/blog/great-cycling-routes-in-zadar-region",
+        "https://www.zaton.hr/en/blog/nature-and-beaches-in-zaton-and-vicinity"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Camp Ljubac (niche-channel benchmark)",
+      "url": "https://birdingplaces.eu/birdingplaces/croatia/salin-de-nin",
+      "location": "Ljubac (Ražanac), Northern Dalmatia",
+      "offer": "Advertises on the Salin de Nin birding page as being at 'the heart of Zadar's county birdwatching scene', with a 15% discount code BIRDING15.",
+      "doesWell": [
+        "Buys placement exactly where a niche audience plans its trip, with a trackable promo code"
+      ],
+      "doesPoorly": [
+        "Camp accommodation; does not serve guests wanting apartments"
+      ],
+      "sources": [
+        "https://birdingplaces.eu/birdingplaces/croatia/salin-de-nin"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Apartmani Privlaka & Sabunike (Facebook page)",
+      "url": "https://www.facebook.com/p/Apartmani-Privlaka-Sabunike-100028578049298/",
+      "location": "Privlaka / Sabunike",
+      "offer": "Social-media-only presence with phone and e-mail for inquiries.",
+      "doesWell": [
+        "Zero-cost direct inquiry channel"
+      ],
+      "doesPoorly": [
+        "No website, prices or availability; low discoverability outside Facebook"
+      ],
+      "sources": [
+        "https://www.facebook.com/p/Apartmani-Privlaka-Sabunike-100028578049298/"
+      ],
+      "confidence": "low",
+      "notes": "Seen only in search results; not fetched."
+    }
+  ],
+  "currentNaprosSite": {
+    "url": "http://napros.si/catalog/apartments/",
+    "observations": "WordPress product-catalogue page titled 'Apartments House Sabunike – Napros, d.o.o.' showing the address 'Sabunike, 23233 Privlaka, Put kandelica 60' and a photo gallery. It has no prices, calendar, apartment descriptions, contact form or categorisation info in the page text. The site serves HTTP with an incomplete TLS certificate chain, so HTTPS fetches fail certificate verification. That is a trust and SEO issue for the new site.",
+    "sources": [
+      "http://napros.si/catalog/apartments/"
+    ],
+    "confidence": "high"
+  },
+  "openQuestions": [
+    "Under which legal regime are the apartments rented: Napros d.o.o. as a company, or a natural-person owner under 'domaćinstvo'? This decides categorisation, VAT, fiscalisation and whether a Slovenian d.o.o. needs Croatian registration or a branch.",
+    "What is the categorisation decision for each apartment: type, stars, decision number, and the OIB/VAT ID to display?",
+    "What is the 2026 tourist tax per person per night (or flat rate per bed) for Općina Privlaka, and will prices include it?",
+    "What is the total sleeping capacity per apartment and for the whole villa (beds, sofa beds, cots)? Which apartments are on the ground floor or step-free?",
+    "Pet policy: are dogs allowed, in which apartments, at what fee? Is the yard fenced?",
+    "Measured internet speed (down/up/latency), and whether apartments have winter heating suitable for monthly October–May stays?",
+    "Is the owner willing to sign monthly lease contracts for digital-nomad address registration, and what is the tax treatment of such leases?",
+    "Is there lockable storage for bikes and kite gear, and an outdoor shower or rinse point?",
+    "Which OTAs are currently used, at what commission rate, and does any contract restrict advertising lower direct prices?",
+    "Preferred payment methods: SEPA transfer with QR, card link, or cash on arrival? Deposit percentage and cancellation tiers?",
+    "Are the Nin kite schools (Surfmania, Kiteboarding Croatia) operating in 2026, and are they open to a referral or discount partnership?",
+    "Does the 2026 Nin mud-therapy programme (Zadar General Hospital / Nin health centre) still run? Dates, booking route, referral needs?",
+    "What are the official dog-beach and FKK beach rules from Općina Privlaka / Grad Nin? And does the owner want to address naturists at all?",
+    "Is there a shaded outdoor area or indoor room where 10–15 people can meet (for retreats), and is Wi-Fi coverage good outdoors?",
+    "Which languages should the site cover (EN, DE, SL, HR at minimum)? The neighbour competitor is German-only.",
+    "Is the owner-supplied coordinate (44.25871, 15.15892) the exact house position? House number 60 is not mapped in OSM."
+  ],
+  "verification": {
+    "checkedAt": "2026-10-16",
+    "itemsChecked": 41,
+    "method": "All 9 keyDistancesFromVilla coordinates were re-derived from the OSM API (element geometry) and their haversine distances recomputed. All matched within 200 m, and none is in the sea or the wrong town. The villa coordinate is 40 m from the mapped Put Kandelica street. Walking, bike and car distances come from OSRM (routing.openstreetmap.de). All 103 cited URLs were checked with curl. The highest-risk claims were re-read at source: MUP permit, Airbnb fee, Surfmania and Kiteboarding Croatia, Solana Nin, birdingplaces, the competitor imprint, Granfondo, Booking commission, NN 99/2018, Croatia Week, Direct-Croatia, Sandee, bookiscout, the Zaton mud blog and the county bike PDF. Overpass and Nominatim were unavailable (timeout / HTTP 429), so the OSM API was used instead.",
+    "corrections": [
+      "Kite: Surfmania kites at Ždrijac (about 4.8 km on foot, 5 km by bike); only its windsurf station is on Kraljičina. The '20-minute walk to your kite spot' message was rewritten.",
+      "Kite: the 'best months for experienced kiters' wording was not in the source; it now reads 'best-wind months per the Surfmania page'.",
+      "Zadar Airport road distance: about 25 km / 35-40 min (OSRM), not about 30 km. Airport sources were added.",
+      "Zadar Granfondo: updated to the confirmed 2026 edition (18 Oct 2026, camp 16-18 Oct) instead of the 2025 dates.",
+      "Majstorska cesta: 1832 and 5.5% max gradient are re-sourced to Velebit Nature Park; epicroadrides gives neither.",
+      "Velebit landmine risk is now sourced (welovecycling 2020, MINE.info advice). The Ryanair seasonal-base claim is re-sourced to exyuaviation; the 403 secretflying source was removed.",
+      "Naturists: the '10-minute walk' became about 1 km / 17 min, and the 'sandy' claim was removed (OSM: gravel; Sandee is self-contradictory).",
+      "Mud therapy: season set to July-31 Aug (Novi list plus campsite sheet); contraindication wording attributed to the Zaton blog.",
+      "Booking.com: the unsourced 'Preferred Plus about 23%' was removed; the Croatian 15% is marked as a worked example, not a measured norm.",
+      "Legal: the NN 99/2018 wording is corrected to 'porezni broj (OIB for residents) or VAT ID'; the household-regime eligibility is softened.",
+      "Registration number: the 2027 start depends on adoption of the new Hospitality Activity Act; the two-thirds consent rule is flagged as single-source with no legal citation.",
+      "Competitors: the dead Novasol CDI736 URL was replaced with the live CDI473; Direct-Croatia tourist-tax inclusion varies by listing (Casa Tea included, Šime excluded).",
+      "Birding: the observation-platform detail is attributed to birdingplaces.eu, not the official Solana Nin site."
+    ],
+    "removed": [
+      "Payment norm '20% within 24 h (Istria agency)' and its source istriasun-web.neolab.hr (HTTP 404)",
+      "Direct-Croatia 'QR / mobile-banking deposit without card commission' claim (not re-verified)",
+      "Booking.com 'Preferred Plus about 23%' figure (no source)",
+      "secretflying.com source (HTTP 403, did not support the claim)"
+    ],
+    "remainingDoubts": [
+      "Sources returning HTTP 403 to automated fetches could not be re-read: beaches-searcher (Pseća plaža), partner.camping.info mud PDF, turistickeprice.hr, viamichelin, coworker.com, freakingnomads, ahotu, darksky.org, locationscout. Facts resting only on them stay at their stated confidence.",
+      "Villa house number 60 is not in OSM; the coordinate sits on Put Kandelica but the exact plot is unconfirmed.",
+      "2026 operation of Surfmania and Kiteboarding Croatia is unconfirmed (the kroati.de pages are undated).",
+      "2026 Nin mud-therapy schedule and the Privlaka 2026 tourist-tax amount are still unknown.",
+      "No official dog-beach or FKK ordinance from Općina Privlaka or Grad Nin was found; dog claims rest on one guide.",
+      "Household (domaćinstvo) citizenship and natural-person conditions were not verified in the consolidated Hospitality Act text.",
+      "The Mali Alan 1,044 m elevation and the gravel upper section rest on quaeldich.de only.",
+      "Zadar winter flight availability for 2026/27 was not checked against the current ZAD timetable."
+    ]
+  }
+}

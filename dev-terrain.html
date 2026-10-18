@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="adriatic">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terrain dev page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" />
+    <style>
+      body {
+        margin: 0;
+        padding: 16px;
+        background: var(--bg, #fbfaf7);
+        color: var(--ink, #0f1f2a);
+        font: 17px/1.6 'Inter', system-ui, sans-serif;
+      }
+      h1 {
+        font: 600 1.6rem/1.2 'Fraunces', Georgia, serif;
+        margin: 0 0 4px;
+      }
+      .stage {
+        height: min(70vh, 640px);
+        border-radius: 18px;
+        overflow: hidden;
+        margin: 12px 0 28px;
+        box-shadow: 0 6px 24px rgb(15 31 42 / 0.12);
+      }
+      .bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .bar button {
+        min-height: 44px;
+        padding: 0 14px;
+        border: 1px solid #b9b2a1;
+        border-radius: 999px;
+        background: #fff;
+        font: inherit;
+        cursor: pointer;
+      }
+      #log {
+        font-size: 15px;
+        color: #44535e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Dev-only harness for src/maps/terrain3d.js (not part of the build). -->
+    <h1>3D terrain · explore mode</h1>
+    <div class="bar">
+      <button data-focus="nin">Nin</button>
+      <button data-focus="zadar">Zadar</button>
+      <button data-focus="vir">Vir</button>
+      <button data-focus="paklenica">Paklenica</button>
+      <button data-focus="house">House</button>
+      <button data-select="nin">Select Nin</button>
+    </div>
+    <p id="log" aria-live="polite">Click a pin.</p>
+    <div class="stage" id="explore"></div>
+    <h1>3D terrain · flyover (hero)</h1>
+    <div class="stage" id="flyover"></div>
+    <script type="module">
+      import '/src/styles/themes.css';
+      import { createTerrain } from '/src/maps/terrain3d.js';
+
+      const pois = [
+        { id: 'nin', name: 'Nin', lat: 44.2417, lon: 15.1847, category: 'history', important: true },
+        { id: 'zadar', name: 'Zadar', lat: 44.1157, lon: 15.2246, category: 'town', important: true },
+        { id: 'vir', name: 'Vir', lat: 44.3, lon: 15.08, category: 'town' },
+        { id: 'paklenica', name: 'Paklenica National Park', lat: 44.36, lon: 15.47, category: 'nature' },
+      ];
+      const log = document.getElementById('log');
+      const params = new URLSearchParams(location.search);
+      const only = params.get('only');
+      const t0 = performance.now();
+      const explore = only !== 'flyover' ? await createTerrain(document.getElementById('explore'), { pois, onSelect: (id) => (log.textContent = `onSelect: ${id}`) }) : null;
+      console.log('[t3] explore ready in', Math.round(performance.now() - t0), 'ms');
+      if (only !== 'explore') await createTerrain(document.getElementById('flyover'), { flyover: true });
+      document.querySelector('.bar').addEventListener('click', (e) => {
+        const b = e.target.closest('button');
+        if (b?.dataset.focus) explore?.focus(b.dataset.focus);
+        if (b?.dataset.select) explore?.setSelected(b.dataset.select);
+      });
+      window.__terrain = explore;
+    </script>
+  </body>
+</html>

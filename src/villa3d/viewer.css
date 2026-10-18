@@ -1,0 +1,217 @@
+/* 3D viewer. Fills its container; the container decides the size. */
+.vv {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  /* Override --vv-sky (e.g. 'none') to let a hero background show through. */
+  background: var(--vv-sky, linear-gradient(180deg, var(--surface-3) 0%, color-mix(in srgb, var(--surface-3) 45%, var(--bg)) 58%, var(--bg) 100%));
+}
+.vv.is-ready {
+  opacity: 1;
+}
+.vv-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  outline-offset: -4px;
+}
+.vv-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.vv-labels > * {
+  pointer-events: none;
+}
+
+/* Apartment labels (CSS2D). White text sits on a darkened unit colour for contrast. */
+.vv-label {
+  --c-strong: color-mix(in srgb, var(--c) 72%, #000);
+  pointer-events: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 3px;
+  border: 2px solid var(--c);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.95);
+  color: #0f1f2a;
+  font: 700 0.875rem/1.1 var(--font-body);
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgb(15 31 42 / 0.18);
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+  position: relative;
+}
+/* Invisible larger hit area for touch (inset is measured from the padding box, so -9px gives 44px+). */
+.vv-label::before {
+  content: '';
+  position: absolute;
+  inset: -9px -7px;
+}
+.vv-label-num {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--c-strong);
+  color: #fff;
+  font-size: 0.75rem;
+}
+.vv-label.is-hover {
+  transform: scale(1.06);
+}
+.vv-label.is-selected {
+  background: var(--c-strong);
+  border-color: var(--c-strong);
+  color: #fff;
+  transform: scale(1.1);
+}
+.vv-label.is-selected .vv-label-num {
+  background: #fff;
+  color: var(--c-strong);
+}
+
+/* Chrome */
+.vv-ui {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+.vv-ui > * {
+  pointer-events: auto;
+}
+.vv-seg {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 1px 6px rgb(15 31 42 / 0.14);
+}
+.vv-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 6px 13px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink);
+  font: 600 0.875rem/1 var(--font-body);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.vv-btn:hover {
+  background: var(--surface-2);
+}
+.vv-btn[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--bg);
+}
+.vv-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.vv-roof,
+.vv-reset {
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 1px 6px rgb(15 31 42 / 0.14);
+}
+.vv-reset {
+  padding: 0;
+  margin-left: auto;
+}
+.vv-note {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  margin: 0;
+  max-width: calc(100% - 24px);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.85);
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+.vv-hint {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: rgb(15 31 42 / 0.82);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+.vv[data-lost]::after {
+  content: attr(data-lost);
+  position: absolute;
+  inset: auto 12px 48px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: #fff4cc;
+  color: #6b4e00;
+  font-size: 0.9rem;
+}
+
+/* WebGL fallback */
+.vv-failed {
+  background: var(--surface-2);
+}
+.vv-fallback {
+  margin: 0;
+  position: absolute;
+  inset: 0;
+}
+.vv-fallback img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vv-fallback figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / 0.94);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.vv-hero .vv-canvas {
+  pointer-events: none;
+}
+
+@media (max-width: 520px) {
+  .vv-btn {
+    padding-inline: 10px;
+    font-size: 0.8125rem;
+  }
+  .vv-label {
+    padding-right: 8px;
+  }
+  .vv-label-num {
+    width: 20px;
+    height: 20px;
+  }
+}

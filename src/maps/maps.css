@@ -1,0 +1,84 @@
+.vs-pin-wrap {
+  background: none;
+  border: 0;
+}
+.vs-pin {
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--pin);
+  color: #fff;
+  font: 700 12px/1 'Inter', system-ui, sans-serif;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.35);
+  transition: transform 0.15s;
+}
+.vs-pin svg {
+  width: 60%;
+  height: 60%;
+}
+.vs-pin.ring,
+.vs-pin-wrap.is-active .vs-pin {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 0.9), 0 0 0 7px var(--pin), 0 4px 12px rgb(0 0 0 / 0.35);
+}
+.vs-house {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #b5451f;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+.leaflet-container {
+  font: 15px/1.5 var(--font-body, 'Inter', system-ui, sans-serif);
+  background: var(--map-water, #a9d3e8);
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  color: #0f1f2a;
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.leaflet-popup-content h4 {
+  font-size: 1.02rem;
+  margin: 0 0 4px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+}
+/* 44 px zoom buttons on every map (Leaflet's touch default is 30 px) */
+.leaflet-container .leaflet-control-zoom a {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 22px;
+}
+/* Touch: shown until the first tap enables one-finger panning (see createMap) */
+.vs-map-hint {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  z-index: 800;
+  width: max-content;
+  max-width: calc(100% - 120px);
+  margin: 0;
+  padding: 6px 12px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-pill, 999px);
+  background: rgb(255 255 255 / 0.92);
+  color: var(--ink-2, #44535e);
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+  pointer-events: none;
+}

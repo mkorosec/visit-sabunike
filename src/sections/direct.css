@@ -1,0 +1,223 @@
+.direct-grid {
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  align-items: start;
+}
+@media (max-width: 960px) {
+  .direct-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.direct-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 22px 28px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+.direct-benefit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.direct-benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+.direct-benefit h3 {
+  font-size: 1.12rem;
+  margin: 2px 0 4px;
+}
+.direct-benefit p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 1rem;
+}
+
+/* Explainer / promise card */
+.direct-calc {
+  position: sticky;
+  top: 96px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: clamp(20px, 2.6vw, 30px);
+}
+.direct-calc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-bottom: 18px;
+}
+.direct-calc-head h3 {
+  margin: 0;
+}
+.direct-calc-form {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.dc-field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  align-items: center;
+}
+.dc-field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.dc-field output {
+  font: 700 1.05rem/1 var(--font-head);
+  font-variant-numeric: tabular-nums;
+}
+.dc-field input[type='range'] {
+  grid-column: 1 / -1;
+  padding: 0;
+  min-height: 32px;
+  border: 0;
+  background: none;
+  accent-color: var(--brand);
+}
+.dc-field input[type='range']:focus {
+  outline: none;
+}
+.dc-field input[type='range']:focus-visible {
+  outline: 3px solid var(--focus);
+}
+.dc-money {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 180px;
+}
+.dc-money span {
+  font-weight: 700;
+}
+.dc-bars {
+  display: grid;
+  gap: 18px;
+}
+.dc-bar-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.dc-bar-head b {
+  font: 700 1.15rem/1 var(--font-head);
+  font-variant-numeric: tabular-nums;
+}
+.dc-ask {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--brand-soft);
+  color: var(--ink);
+  font-weight: 600;
+}
+.dc-track {
+  display: flex;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--surface-2);
+}
+[data-theme='editorial'] .dc-track {
+  border-radius: 0;
+}
+.dc-seg {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+.dc-seg-host {
+  background: var(--brand);
+}
+.dc-seg-ota {
+  background: var(--accent);
+}
+.dc-seg-save {
+  background: repeating-linear-gradient(135deg, var(--ok) 0 5px, color-mix(in srgb, var(--ok) 35%, var(--surface)) 5px 10px);
+}
+.dc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 6px;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+.dc-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.dc-key b {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.dc-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+.dc-winwin {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 22px 0 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--brand-soft);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.dc-winwin .icon {
+  color: var(--ok);
+  margin-top: 3px;
+}
+.dc-fine {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+.direct-promise {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+.direct-promise-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.direct-promise p {
+  color: var(--ink-2);
+}
+@media (max-width: 960px) {
+  .direct-calc {
+    position: static;
+  }
+}
+.dc-winwin[hidden] {
+  display: none;
+}

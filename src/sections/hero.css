@@ -1,0 +1,546 @@
+.section-hero {
+  padding: 0;
+}
+.hero {
+  --hero-ink: #fff;
+  position: relative;
+}
+
+/* Overlay variants (photo, map) */
+.hero-overlay {
+  --focus: #ffd24a; /* the light-theme focus colour would vanish on the dark photo */
+  min-height: clamp(640px, calc(100svh - 64px), 920px);
+  display: flex;
+  color: var(--hero-ink);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--ink);
+}
+.hero-stage {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  transform-origin: 60% 40%;
+}
+.hero-slide.is-active {
+  opacity: 1;
+  animation: hero-kenburns 14s ease-out both;
+}
+.hero-slide:nth-child(2n) {
+  transform-origin: 30% 60%;
+}
+.is-paused .hero-slide {
+  animation-play-state: paused;
+}
+@keyframes hero-kenburns {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.is-active {
+    animation: none;
+  }
+}
+.hero-terrain {
+  position: absolute;
+  inset: 0;
+}
+.hero-terrain canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Strong enough on the left for small white text over bright façades (AA 4.5:1). */
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 74%, transparent) 0%, color-mix(in srgb, var(--ink) 52%, transparent) 38%, transparent 72%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, transparent 35%, rgb(0 0 0 / 0.45) 100%),
+    var(--hero-overlay);
+}
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: clamp(18px, 2.4vw, 28px);
+  padding-block: clamp(72px, 14vh, 180px) clamp(24px, 4vw, 44px);
+}
+.hero-copy {
+  max-width: 860px;
+}
+.hero--map .hero-copy {
+  max-width: 520px;
+}
+.hero-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hero-foot .hero-trust {
+  order: -1;
+}
+@media (min-width: 1100px) {
+  .hero-foot {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .hero-overlay .hero-foot .hero-trust {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 0 0 4px 22px;
+    border-top: 0;
+    border-left: 1px solid color-mix(in srgb, var(--hero-ink) 35%, transparent);
+    order: 0;
+    flex: none;
+  }
+}
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  font: 700 0.8125rem/1.3 var(--font-body);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.hero-kicker::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.8;
+}
+.hero h1 {
+  font-size: clamp(2.3rem, 1.3rem + 3.6vw, 4.6rem);
+  line-height: 1.04;
+  margin-bottom: 18px;
+}
+/* After .hero h1 on purpose: same specificity would otherwise lose. */
+.hero.hero--map h1 {
+  font-size: clamp(2.1rem, 1.3rem + 2.4vw, 3.4rem);
+}
+.hero-overlay h1,
+.hero-overlay .hero-sub {
+  text-shadow: 0 1px 24px rgb(0 0 0 / 0.28);
+}
+.hero-overlay .hero-kicker {
+  text-shadow: 0 1px 10px rgb(0 0 0 / 0.5);
+}
+.hero-sub {
+  font-size: clamp(1.08rem, 1rem + 0.45vw, 1.32rem);
+  line-height: 1.55;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+.hero-overlay .hero-sub {
+  color: color-mix(in srgb, var(--hero-ink) 92%, transparent);
+}
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Trust strip */
+.hero-trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.hero-trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-overlay .hero-trust {
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--hero-ink) 28%, transparent);
+  max-width: 980px;
+}
+.hero-split .hero-trust {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  color: var(--ink-2);
+  margin: 28px 0 24px;
+}
+.hero-split .hero-trust li {
+  align-items: flex-start;
+}
+.hero-split .hero-trust .icon {
+  flex: none;
+  margin-top: 2px;
+}
+.hero-split .hero-when {
+  width: 100%;
+}
+.hero-split .hero-trust .icon {
+  color: var(--brand);
+}
+
+/* Month picker */
+.hero-when {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 93%, transparent);
+  backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 14px 16px 12px;
+  max-width: 100%;
+  width: fit-content;
+}
+.hero-when-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-bottom: 10px;
+}
+.hero-when-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.hero-when-title .icon {
+  color: var(--brand);
+  align-self: center;
+}
+.hero-when-hint {
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+.hero-when-hint .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.hero-months {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  padding-bottom: 4px;
+  margin-inline: -4px;
+  padding-inline: 4px;
+}
+/* Fades at the right edge to show that the row scrolls (class set in hero.js). */
+.hero-months.is-scrollable {
+  mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+}
+.month-chip {
+  position: relative;
+  flex: none;
+  scroll-snap-align: start;
+  min-width: 50px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 0.9rem/1 var(--font-body);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.month-chip:hover {
+  border-color: var(--ink);
+}
+.month-chip.is-best::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.month-chip[aria-pressed='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.month-chip[aria-pressed='true']::after {
+  background: var(--bg);
+}
+
+/* Photo caption + pause */
+.hero-caption {
+  position: absolute;
+  z-index: 1; /* above .hero-inner, or the pause button cannot be clicked */
+  right: max(16px, calc((100% - 1200px) / 2));
+  top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--hero-ink);
+  text-shadow: 0 1px 8px rgb(0 0 0 / 0.5);
+}
+.hero-caption[hidden],
+.hero-caption [hidden] {
+  display: none;
+}
+.hero-caption [data-caption-text] {
+  background: rgb(0 0 0 / 0.55);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+.hero-pause {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--hero-ink) 55%, transparent);
+  background: rgb(0 0 0 / 0.22);
+  color: var(--hero-ink);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+.hero-pause .i-play,
+.hero-pause[aria-pressed='true'] .i-pause {
+  display: none;
+}
+.hero-pause[aria-pressed='true'] .i-play {
+  display: block;
+}
+/* Phones: the text spans the full width, so the scrim darkens top to bottom
+   instead of only on the left (AA contrast over bright façades). */
+@media (max-width: 760px) {
+  .hero-scrim {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--ink) 45%, transparent) 0%, color-mix(in srgb, var(--ink) 62%, transparent) 40%, color-mix(in srgb, var(--ink) 82%, transparent) 100%),
+      var(--hero-overlay);
+  }
+}
+@media (max-width: 640px) {
+  .hero-caption [data-caption-text] {
+    display: none;
+  }
+  .hero-trust {
+    font-size: 0.9rem;
+    gap: 8px 16px;
+  }
+  .hero-ctas .btn {
+    flex: 1 1 100%;
+  }
+  .hero-when {
+    width: 100%;
+  }
+}
+
+/* Split variant (live 3D house) */
+.hero-split {
+  background: linear-gradient(180deg, var(--surface-3) 0%, var(--bg) 100%);
+  padding-block: clamp(36px, 6vw, 80px) clamp(28px, 4vw, 48px);
+}
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+.hero-split .hero-kicker {
+  color: var(--accent);
+}
+.hero-split h1 {
+  font-size: clamp(2.2rem, 1.3rem + 3vw, 4rem);
+}
+.hero-split .hero-sub {
+  color: var(--ink-2);
+}
+.hero-3d {
+  position: relative;
+  margin: 0;
+}
+.hero-3d-pause {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.hero-3d-pause .hero-pause {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.hero-3d-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 20%, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+}
+.hero-3d-stage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-3d-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  color: var(--ink-2);
+}
+.hero-3d-loading .icon {
+  color: var(--brand);
+  animation: hero-spin 2.4s linear infinite;
+}
+@keyframes hero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero-3d-note {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  color: var(--ink);
+  font-size: 0.875rem;
+}
+.hero-3d figcaption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+.hero-3d figcaption .icon {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+@media (max-width: 900px) {
+  .hero-split-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* Phones: the live 3D house is the point of this hero, so it comes first. */
+@media (max-width: 760px) {
+  .hero-3d {
+    order: -1;
+  }
+  .hero-3d-stage {
+    aspect-ratio: auto;
+    height: 300px;
+    min-height: 0;
+  }
+}
+
+/* Phones: keep the month picker above the fold. */
+@media (max-width: 480px) {
+  .hero-inner {
+    padding-top: clamp(56px, 10vh, 96px);
+  }
+  .hero-trust li:nth-child(n + 3) {
+    display: none;
+  }
+  .hero-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hero-ctas .btn-lg {
+    min-width: 0;
+    padding-inline: 12px;
+    font-size: 0.95rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero-ctas .btn-lg .icon {
+    flex: none;
+  }
+  .hero-split .hero-trust {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Theme accents */
+[data-theme='editorial'] .hero h1 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+[data-theme='editorial'] .hero-kicker {
+  font: italic 500 1.05rem/1.3 var(--font-head);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+[data-theme='editorial'] .hero-when,
+[data-theme='editorial'] .month-chip {
+  border-radius: 2px;
+}
+[data-theme='postcard'] .hero-kicker {
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  transform: rotate(-2deg);
+  text-shadow: none;
+}
+[data-theme='postcard'] .hero-kicker::before {
+  display: none;
+}
+[data-theme='minimal'] .hero-overlay h1,
+[data-theme='minimal'] .hero-overlay .hero-sub {
+  text-shadow: none;
+}
+[data-theme='minimal'] .hero h1 {
+  letter-spacing: -0.04em;
+}
+@media (max-width: 400px) {
+  .hero-ctas .btn-primary .icon {
+    display: none;
+  }
+}
+@media (min-width: 901px) {
+  .hero-split .hero-months {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}

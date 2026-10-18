@@ -1,0 +1,43 @@
+/* Shared section patterns used by several section modules. */
+.split {
+  display: grid;
+  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+.map-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--map-water);
+  min-height: 420px;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.toolbar .spacer {
+  flex: 1;
+}
+.stat {
+  display: grid;
+  gap: 2px;
+}
+.stat b {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+.stat span {
+  color: var(--ink-2);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,32 @@
+{
+  "bbox": [
+    14.859695,
+    43.979969,
+    15.720062,
+    44.600246
+  ],
+  "width": 1253,
+  "height": 1262,
+  "encoding": "terrarium",
+  "projection": "webmercator",
+  "zoom": 11,
+  "pixelOrigin": [
+    283785,
+    189420
+  ],
+  "metersPerPixel": 54.7,
+  "minElev": -73,
+  "maxElev": 1734,
+  "generated": "2026-10-16",
+  "sources": [
+    "AWS Open Data \"Terrain Tiles\" (Mapzen / Tilezen Joerd), Terrarium encoding: https://registry.opendata.aws/terrain-tiles/",
+    "Underlying data: SRTM, GMTED2010, ETOPO1, EU-DEM (produced using Copernicus data and information funded by the European Union)"
+  ],
+  "attribution": "Elevation: Mapzen Terrain Tiles (AWS Open Data) · SRTM, ETOPO1, EU-DEM (Copernicus)",
+  "texture": {
+    "color": "color.webp",
+    "roughness": "rough.png",
+    "width": 2048,
+    "height": 2049
+  }
+}

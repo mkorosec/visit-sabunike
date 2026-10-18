@@ -1,0 +1,123 @@
+/* Themes. All are light and high-contrast (body text ≥ 7:1, muted text ≥ 4.5:1).
+   Every component reads these tokens only — never hard-coded colours. */
+
+:root,
+[data-theme='adriatic'] {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f3efe6; /* sand */
+  --surface-3: #e7f1f6; /* shallow water */
+  --ink: #0f1f2a;
+  --ink-2: #44535e;
+  --line: #d9d4c7;
+  --line-strong: #8a8474; /* field and chip borders: ≥ 3:1 on --surface */
+  --brand: #0b5d8c; /* Adriatic blue */
+  --brand-strong: #084a70;
+  --brand-ink: #ffffff;
+  --brand-soft: #e3eef5;
+  --accent: #b5451f; /* terracotta roof tiles */
+  --accent-ink: #ffffff;
+  --accent-soft: #f8e6dd;
+  --ok: #1d7a4a;
+  --warn: #8a5a00;
+  --focus: #9a4a00; /* ≥ 5:1 on every light surface; the dark hero overrides it */
+  --map-water: #a9d3e8;
+
+  --font-head: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --head-weight: 600;
+  --head-tracking: -0.015em;
+  --radius: 10px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --shadow: 0 1px 2px rgb(15 31 42 / 0.06), 0 6px 24px rgb(15 31 42 / 0.08);
+  --shadow-lg: 0 2px 6px rgb(15 31 42 / 0.08), 0 20px 50px rgb(15 31 42 / 0.14);
+  --hero-overlay: linear-gradient(180deg, rgb(8 25 38 / 0.05) 0%, rgb(8 25 38 / 0.35) 55%, rgb(8 25 38 / 0.72) 100%);
+}
+
+[data-theme='editorial'] {
+  --bg: #f7f3ea;
+  --surface: #fffdf8;
+  --surface-2: #efe8d8;
+  --surface-3: #e9eef0;
+  --ink: #171717;
+  --ink-2: #4b4740;
+  --line: #d8cfbd;
+  --line-strong: #8a8170;
+  --brand: #1f3a4d;
+  --brand-strong: #142837;
+  --brand-ink: #ffffff;
+  --brand-soft: #e4e8ea;
+  --accent: #8e1f1f;
+  --accent-ink: #ffffff;
+  --accent-soft: #f3e1dc;
+  --map-water: #b9d0da;
+
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --head-weight: 700;
+  --head-tracking: -0.01em;
+  --radius: 2px;
+  --radius-lg: 4px;
+  --shadow: none;
+  --shadow-lg: 0 10px 30px rgb(23 23 23 / 0.12);
+  --hero-overlay: linear-gradient(180deg, rgb(20 20 20 / 0) 30%, rgb(20 20 20 / 0.7) 100%);
+}
+
+[data-theme='postcard'] {
+  --bg: #fffaf2;
+  --surface: #ffffff;
+  --surface-2: #fdf0dc;
+  --surface-3: #ddf3f1;
+  --ink: #1d2433;
+  --ink-2: #4a5263;
+  --line: #f0dcc0;
+  --line-strong: #9a7a4e;
+  --brand: #0e6e6b; /* teal */
+  --brand-strong: #0a5552;
+  --brand-ink: #ffffff;
+  --brand-soft: #d8efed;
+  --accent: #b23c0b; /* sunset coral; ≥ 4.5:1 on --surface-3 */
+  --accent-ink: #ffffff;
+  --accent-soft: #ffe6d6;
+  --map-water: #9fdcd8;
+
+  --font-head: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --head-weight: 700;
+  --head-tracking: 0;
+  --radius: 16px;
+  --radius-lg: 28px;
+  --shadow: 0 2px 0 rgb(29 36 51 / 0.08), 0 10px 26px rgb(194 65 12 / 0.1);
+  --shadow-lg: 0 18px 48px rgb(14 110 107 / 0.18);
+  --hero-overlay: linear-gradient(180deg, rgb(14 40 52 / 0) 25%, rgb(14 40 52 / 0.68) 100%);
+}
+
+[data-theme='minimal'] {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --surface-3: #eef4fb;
+  --ink: #09090b;
+  --ink-2: #52525b;
+  --line: #e4e4e7;
+  --line-strong: #8a8a93;
+  --brand: #1d4ed8;
+  --brand-strong: #1e3a8a;
+  --brand-ink: #ffffff;
+  --brand-soft: #e8eefc;
+  --accent: #09090b;
+  --accent-ink: #ffffff;
+  --accent-soft: #f4f4f5;
+  --map-water: #c8dcf2;
+
+  --font-head: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --head-weight: 700;
+  --head-tracking: -0.03em;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 0 0 1px #e4e4e7;
+  --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.12);
+  --hero-overlay: linear-gradient(180deg, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.66) 100%);
+}

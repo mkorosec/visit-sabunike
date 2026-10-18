@@ -1,0 +1,910 @@
+{
+  "topic": "The villa's own public listings + local climate (Apartments Napros, Sabunike)",
+  "generatedAt": "2026-10-16",
+  "retrievalNotes": {
+    "dateRetrieved": "2026-10-16",
+    "booking.com": "Direct fetch of https://www.booking.com/hotel/hr/apartments-napros-sabunike.html was blocked (bot challenge page, no content). Booking.com facts below come from villas-garamm.com, which republishes the Booking.com listing (partner ref BG.195411, Booking hotel image id a=355109), and from Trip.com (third-party ratings).",
+    "travelocity": "Fetch returned HTTP 429; only search-snippet info is available (low confidence).",
+    "szallas.hu": "Fetch returned HTTP 403; search snippet only.",
+    "notFound": "No Airbnb, TripAdvisor, HolidayCheck or Google review page for 'Apartments Napros' Sabunike was found via web search. Interhome distributes the 4 units (seen on houfy.com and kroati.de); no interhome.com page was surfaced by search.",
+    "apartmentNumbering": "napros.si numbers Apt 1, 2, 4 (Apt 3 page returns 404). Interhome/houfy/kroati use 'Napros 1-4'; Trip.com uses A1-A4. Matching across platforms is inferred from size, floor, beds and outdoor space; see each item's 'crossPlatformMatch'."
+  },
+  "items": [
+    {
+      "id": "apt1",
+      "nameOwnerSite": "Appartment 1",
+      "namesUsed": {
+        "napros.si": "Appartment 1",
+        "booking.com (via villas-garamm)": "Two-Bedroom Apartment Standard",
+        "trip.com": "Economy Apartment A1",
+        "interhome (houfy.com)": "Apartment Napros 1 (houfy lodging 315848)",
+        "kroati.de": "Objekt-Nr. 41406"
+      },
+      "crossPlatformMatch": {
+        "confidence": "medium",
+        "basis": "Only 2-bedroom unit with a terrace (not balcony), ground floor, sofa bed and washing machine on every platform."
+      },
+      "floor": "ground floor (Interhome, kroati.de)",
+      "sizeM2": {
+        "ownerSite": 68,
+        "interhome": 62,
+        "kroati.de": 62,
+        "note": "Owner site says 68 m2, Interhome/kroati.de say 62 m2; may be with/without terrace."
+      },
+      "maxGuests": 6,
+      "maxGuestsNote": "Interhome: 6 ('ideal for 4-6 persons'); kroati.de: 4-6.",
+      "bedrooms": 2,
+      "beds": [
+        "Bedroom 1: double bed 180 cm",
+        "Bedroom 2: double bed 180 cm",
+        "Living room: double sofa bed for 2"
+      ],
+      "bathrooms": 1,
+      "bathroomDetails": "Shower, basin, WC, hair dryer; free toiletries (Booking).",
+      "kitchen": "Fully equipped kitchen with living/dining area: electric stove, oven, fridge-freezer, dishwasher, microwave, toaster, kettle, coffee machine; dining table for 6 (Interhome). napros.si describes 'separate kitchen'. Oven: listed by kroati.de (Backröhre) but Interhome raw data says OVEN:N; confirm.",
+      "outdoorSpace": "Furnished, roofed terrace 16 m2 opening from the living room (Interhome, kroati.de).",
+      "view": "Garden / courtyard view",
+      "airConditioning": "Yes (Interhome lists AC 'in part'; kroati.de: AC included in price)",
+      "heating": "Yes (kroati.de)",
+      "amenities": [
+        "Washing machine (for sole use)",
+        "Iron",
+        "Safe",
+        "Satellite TV",
+        "Wi-Fi",
+        "Private entrance",
+        "Barbecue/grill in courtyard (free)",
+        "Outdoor shower (kroati.de)",
+        "Towels and bed linen provided"
+      ],
+      "parking": "2 free private outdoor spaces on the property (Interhome)",
+      "thirdPartyPricesEUR": {
+        "source": "kroati.de object 41406, per night for 4-6 persons, incl. tourist tax, eco tax, registration fee, utilities and final cleaning; minimum stay 5 nights; dates read as 2027 season table",
+        "seasonA_0101-0406_and_1809-3112": 130.33,
+        "seasonB_0506-1806_and_0409-1709": 141.67,
+        "seasonC_1906-0207_and_2108-0309": 147.33,
+        "seasonD_0307-2008": 153
+      },
+      "photoUrls": [
+        "http://napros.si/wp-content/uploads/2021/10/App1_1.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_2.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_3.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_4.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_6.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_6-scaled.jpg",
+        "https://www.assets.houfy.com/assets/images/properties/315848/296c48e1ec380edc3a5e24c6cc43a91a.jpg?im_w=960"
+      ],
+      "description": "The largest unit: two double bedrooms plus a sofa bed for up to six, on the ground floor with its own 16 m2 roofed terrace onto the garden. Own washing machine, dishwasher and a dining table for six make it the natural pick for families or a small team.",
+      "sources": [
+        "http://napros.si/catalog/appartment-1/",
+        "https://www.houfy.com/lodging/315848",
+        "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41406.html",
+        "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+        "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros"
+      ],
+      "confidence": "high",
+      "notes": "Size conflict 68 vs 62 m2. The 'separate outdoor kitchen' from the brief is not mentioned on any public listing (napros.si only says 'separate kitchen'). Houfy contradicts itself on garden (private vs communal) and parking."
+    },
+    {
+      "id": "apt2",
+      "nameOwnerSite": "Appartment 2",
+      "namesUsed": {
+        "napros.si": "Appartment 2",
+        "booking.com (via villas-garamm)": "Two-Bedroom Apartment",
+        "trip.com": "Comfort Apartment A2",
+        "interhome (houfy.com)": "Apartment Napros 2 (houfy lodging 315843)",
+        "kroati.de": "Objekt-Nr. 41407"
+      },
+      "crossPlatformMatch": {
+        "confidence": "medium",
+        "basis": "Only 2-bedroom unit with a balcony, upper floor, no sofa bed, kitchenette, on every platform."
+      },
+      "floor": "1st floor",
+      "sizeM2": {
+        "ownerSite": 57,
+        "interhome": 47,
+        "kroati.de": 47,
+        "note": "Owner site 57 m2 vs 47 m2 on Interhome/kroati.de."
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": [
+        "Bedroom 1: double bed 180 cm",
+        "Bedroom 2: double bed 180 cm"
+      ],
+      "bathrooms": 1,
+      "bathroomDetails": "Shower, basin, WC, hair dryer.",
+      "kitchen": "Kitchenette: electric stove, fridge-freezer, dishwasher, microwave, toaster, kettle, coffee machine; dining table for 4. No oven listed.",
+      "outdoorSpace": "Furnished, roofed balcony 16 m2 opening from the living room.",
+      "view": "Partial sea view (Interhome/houfy); courtyard view (kroati.de); garden view (Booking).",
+      "airConditioning": "Yes (Interhome 'in part')",
+      "heating": "Yes (kroati.de)",
+      "amenities": [
+        "Satellite TV",
+        "Wi-Fi",
+        "Safe",
+        "Private entrance",
+        "Barbecue/grill in courtyard",
+        "Outdoor shower (kroati.de)",
+        "Towels and bed linen provided"
+      ],
+      "parking": "1 free private outdoor space on the property (Interhome)",
+      "thirdPartyPricesEUR": {
+        "source": "kroati.de object 41407, per night for 4 persons, incl. taxes, utilities and final cleaning; min stay 5 nights. Mapping of price to date range inferred from an ambiguous table.",
+        "seasonA_0101-0406_and_1809-3112": 119,
+        "seasonB_0506-1806_and_0409-1709": 130.33,
+        "seasonC_1906-0207_and_2108-0309": 136,
+        "seasonD_0307-2008": 141.67
+      },
+      "photoUrls": [
+        "http://napros.si/wp-content/uploads/2021/10/App2_1.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App2_2.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App2_3.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App1_5.jpg",
+        "https://www.assets.houfy.com/assets/images/properties/315843/847ff3324ca157d37859026f1009a7a7.jpg?im_w=960"
+      ],
+      "description": "Two double bedrooms on the first floor for up to four guests, with the villa's big 16 m2 roofed balcony and a partial sea view. Good for two couples or a family of four who want their evenings outside.",
+      "sources": [
+        "http://napros.si/catalog/appartment-2/",
+        "https://www.houfy.com/lodging/315843",
+        "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41407.html",
+        "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+        "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros"
+      ],
+      "confidence": "high",
+      "notes": "Size conflict 57 vs 47 m2. View conflict (partial sea vs courtyard). The napros.si Apt 2 gallery includes a file named App1_5.jpg (captioned App2_4)."
+    },
+    {
+      "id": "apt3",
+      "nameOwnerSite": null,
+      "namesUsed": {
+        "napros.si": "no page (http://napros.si/catalog/appartment-3/ returns 404 'Strani ni mogoče najti')",
+        "booking.com (via villas-garamm)": "One-Bedroom Apartment Standard",
+        "trip.com": "Classic Apartment A3",
+        "interhome (houfy.com)": "Apartment Napros 3 (houfy lodging 315789)",
+        "kroati.de": "Objekt-Nr. 41408"
+      },
+      "crossPlatformMatch": {
+        "confidence": "medium",
+        "basis": "The 1-bedroom unit with oven but no dishwasher and only 1 bed, on both Booking text and Interhome."
+      },
+      "floor": "1st floor",
+      "sizeM2": {
+        "ownerSite": null,
+        "ownerBrief": 46,
+        "interhome": 22,
+        "kroati.de": 22,
+        "note": "Owner brief says 1 bedroom + balcony 46 m2 (like Apt 4); every public listing says 22 m2 for 2 persons. Major conflict."
+      },
+      "maxGuests": 2,
+      "bedrooms": 1,
+      "beds": [
+        "Bedroom: double bed 180 cm"
+      ],
+      "bathrooms": 1,
+      "bathroomDetails": "Shower, basin, WC, hair dryer.",
+      "kitchen": "Kitchen: electric stove, oven, fridge-freezer, microwave, toaster, kettle, coffee machine; dining table for 2. No dishwasher listed.",
+      "outdoorSpace": "Furnished, roofed balcony 5 m2.",
+      "view": "Courtyard view (kroati.de); garden view (Booking).",
+      "airConditioning": "Yes",
+      "heating": "Yes (kroati.de)",
+      "amenities": [
+        "Satellite TV",
+        "Wi-Fi",
+        "Safe",
+        "Private entrance",
+        "Barbecue/grill in courtyard",
+        "Outdoor shower (kroati.de)",
+        "Towels and bed linen provided"
+      ],
+      "parking": "1 free private outdoor space on the property (Interhome)",
+      "thirdPartyPricesEUR": {
+        "source": "kroati.de object 41408, per night for 2 persons, incl. taxes, utilities and final cleaning; min stay 5 nights. Mapping of price to date range inferred.",
+        "seasonA_0101-0406_and_1809-3112": 73.67,
+        "seasonB_0506-1806_and_0409-1709": 90.67,
+        "seasonC_1906-0207_and_2108-0309": 96.33,
+        "seasonD_0307-2008": 102
+      },
+      "photoUrls": [
+        "https://www.assets.houfy.com/assets/images/properties/315789/279ebc0bb3b5ffc874f76e4fa8c91297.jpg?im_w=960"
+      ],
+      "description": "A compact one-bedroom for two on the first floor, with a small roofed balcony and a full kitchen with oven. Suits a couple or a solo cyclist who wants a base rather than a big flat.",
+      "sources": [
+        "https://www.houfy.com/lodging/315789",
+        "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41408.html",
+        "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+        "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros"
+      ],
+      "confidence": "medium",
+      "notes": "Not on the owner's own site. Size must be confirmed by the owner (22 vs 46 m2) before any marketing use."
+    },
+    {
+      "id": "apt4",
+      "nameOwnerSite": "Appartment 4",
+      "namesUsed": {
+        "napros.si": "Appartment 4",
+        "booking.com (via villas-garamm)": "One-Bedroom Apartment",
+        "trip.com": "Standard Apartment A4",
+        "interhome (houfy.com)": "Apartment Napros 4 (houfy lodging 315840)",
+        "kroati.de": "Objekt-Nr. 41405"
+      },
+      "crossPlatformMatch": {
+        "confidence": "medium",
+        "basis": "1-bedroom unit with living room, sofa bed and dishwasher; 44-46 m2 on all sources."
+      },
+      "floor": "1st floor",
+      "sizeM2": {
+        "ownerSite": 46,
+        "interhome": 44,
+        "kroati.de": 44
+      },
+      "maxGuests": 4,
+      "maxGuestsNote": "Interhome/kroati.de: 2-4 persons.",
+      "bedrooms": 1,
+      "beds": [
+        "Bedroom: double bed 180 cm",
+        "Living room: double sofa bed for 2"
+      ],
+      "bathrooms": 1,
+      "bathroomDetails": "Shower, basin, WC, hair dryer.",
+      "kitchen": "Kitchen: electric stove, oven, fridge-freezer, dishwasher, microwave, toaster, kettle, coffee machine; dining table for 4.",
+      "outdoorSpace": "Furnished balcony with awning, 5 m2 (houfy) or 3 m2 (kroati.de).",
+      "view": "Courtyard view (kroati.de); garden view (Booking).",
+      "airConditioning": "Yes",
+      "heating": "Yes (kroati.de)",
+      "amenities": [
+        "Satellite TV",
+        "Wi-Fi",
+        "Safe",
+        "Private entrance",
+        "Barbecue/grill in courtyard",
+        "Outdoor shower (kroati.de)",
+        "Towels and bed linen provided"
+      ],
+      "parking": "1 free private outdoor space on the property (Interhome)",
+      "thirdPartyPricesEUR": {
+        "source": "kroati.de object 41405, per night for 2-4 persons, incl. tourist tax, eco tax, registration fee, utilities and final cleaning; min stay 5 nights.",
+        "seasonA_0101-0406_and_1809-3112": 96.33,
+        "seasonB_0506-1806_and_0409-1709": 102,
+        "seasonC_1906-0207_and_2108-0309": 107.67,
+        "seasonD_0307-2008": 113.33
+      },
+      "photoUrls": [
+        "http://napros.si/wp-content/uploads/2021/10/App4_1.jpg",
+        "http://napros.si/wp-content/uploads/2021/10/App4_2.jpg",
+        "https://www.assets.houfy.com/assets/images/properties/315840/b8c8dbc6456658e53e365e49885c55c2.jpg?im_w=960"
+      ],
+      "description": "One double bedroom plus a sofa bed in a separate living room, for two to four guests, on the first floor with a small shaded balcony. Has a dishwasher and oven, so it works for a couple with one or two kids.",
+      "sources": [
+        "http://napros.si/catalog/appartment-4/",
+        "https://www.houfy.com/lodging/315840",
+        "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41405.html",
+        "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+        "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros"
+      ],
+      "confidence": "high",
+      "notes": "Balcony size conflict 5 vs 3 m2."
+    }
+  ],
+  "property": {
+    "name": "Apartments Napros (napros.si: 'Apartments House Sabunike')",
+    "operator": "Napros d.o.o. (Slovenian company whose napros.si site is mainly about renting business premises; the villa is a catalog section on it)",
+    "address": "Put kandelica 60, Sabunike, 23233 Privlaka, Zadar County, Croatia (villas-garamm/Booking list the locality as 'Batalaži')",
+    "coordinates": {
+      "lat": 44.25876,
+      "lon": 15.15892,
+      "basis": "Booking.com-derived map pin on villas-garamm (44.258776, 15.158924) matches the owner's Google Maps link (44.25871, 15.15892). OSM Nominatim resolves only the street 'Put Kandelica' (44.25834, 15.15845), ~50 m away; house number 60 is not in OSM. Interhome pins (44.26000, 15.16053) are ~200 m NE and look approximate.",
+      "confidence": "high",
+      "verification": "Re-checked 2026-10-16: Trip.com and villas-garamm both embed 44.258776, 15.158924. OSM (Overpass): nearest coastline 474 m ENE, so the pin is on land, inside Sabunike (hamlet node 44.25783, 15.16058, ~150 m away)."
+    },
+    "units": 4,
+    "category": "2 stars (villas-garamm/Booking, Trip.com, kroati.de). A Travelocity search snippet said 3-star (unverified).",
+    "plotSizeM2": 500,
+    "plotSizeSource": "Interhome/houfy 'Size of property: 500m2' (medium confidence; may mean plot)",
+    "sharedAmenities": [
+      "Free Wi-Fi in all areas",
+      "Free private on-site parking (Interhome: 2 spaces for Napros 1, 1 each for the other units)",
+      "Barbecue/grill in the courtyard, free",
+      "Garden (houfy says both 'private garden' and 'communal use')",
+      "Outdoor shower (kroati.de)",
+      "Air conditioning in every unit (Booking/Trip.com/kroati.de); Interhome says 'in part', so not necessarily every room",
+      "Private entrance for every unit",
+      "First-aid kit",
+      "Non-smoking throughout",
+      "Linens/towels washed per local authority guidelines; units disinfected between stays (Booking COVID-era text)"
+    ],
+    "houseRules": {
+      "checkIn": "from 14:00 (Trip.com: 14:00-22:00; Interhome: 'flexible')",
+      "checkOut": "by 10:00",
+      "pets": "Not allowed (Trip.com, Interhome, kroati.de)",
+      "smoking": "Not allowed",
+      "partiesEvents": "Not allowed; no hen/stag or similar parties (Booking)",
+      "minimumAgeMainGuest": 18,
+      "children": "Children of all ages welcome; cots and extra beds cannot be added (Trip.com)",
+      "minimumStay": "5 nights on kroati.de/Interhome channel; Booking minimum unknown",
+      "checkInNote": "kroati.de: check-in from 14:00, check-out by 10:00; Trip.com: 14:00-22:00 / by 10:00. Houfy raw data also contains 16:00/11:00 template values next to 'Flexible'; treat those as unreliable."
+    },
+    "languagesSpoken": [
+      "Croatian",
+      "Czech",
+      "English",
+      "French",
+      "German",
+      "Hungarian",
+      "Slovak"
+    ],
+    "languagesNote": "From the Trip.com facility list (fetched 2026-10-16), not from villas-garamm, which shows no language list. Probably imported from the Booking.com listing. Interhome host languages (EN, FR, DE, ES) belong to Interhome. Slovenian not listed: confirm with owner.",
+    "distancesClaimed": [
+      {
+        "to": "Beach Sabunike",
+        "value": "5-minute walk",
+        "source": "Booking (via villas-garamm)",
+        "verification": "OSM: nearest mapped beach 470 m, coastline 474 m: consistent"
+      },
+      {
+        "to": "Nearest sandy beach / sea",
+        "value": "400 m",
+        "source": "Interhome, kroati.de",
+        "verification": "OSM: nearest beach node 470 m, coastline 474 m (straight line): consistent"
+      },
+      {
+        "to": "Kraljičina (Queen's) beach",
+        "value": "600 m",
+        "source": "Interhome",
+        "verification": "OSM: nearest point of 'Queen's Beach' way 523 m, 'Kraljičina plaža' way 900 m: consistent"
+      },
+      {
+        "to": "Sabunike Mol",
+        "value": "530 m",
+        "source": "Trip.com",
+        "verification": "OSM: pier (way 442901834) at 480 m straight line: consistent"
+      },
+      {
+        "to": "Sabunike vidikovac (viewpoint)",
+        "value": "490 m",
+        "source": "Trip.com"
+      },
+      {
+        "to": "Playground Sabunike",
+        "value": "400 m",
+        "source": "Trip.com",
+        "verification": "OSM: playground at 373 m: consistent"
+      },
+      {
+        "to": "Church of St Catherine",
+        "value": "780 m",
+        "source": "Trip.com",
+        "verification": "NOT found in OSM within 1.5 km; unverified, do not use without owner check"
+      },
+      {
+        "to": "Ninske Vodice beach",
+        "value": "1.5 km",
+        "source": "Trip.com",
+        "verification": "Not found by name in OSM; unverified"
+      },
+      {
+        "to": "Plaža Škrapavac",
+        "value": "2.3 km",
+        "source": "Trip.com",
+        "verification": "OSM beach node 44.24041, 15.14561 = 2.3 km: consistent"
+      },
+      {
+        "to": "Grocery store",
+        "value": "200 m (Interhome) / 300 m (kroati.de)",
+        "source": "Interhome, kroati.de",
+        "verification": "OSM: Lito market (supermarket) at 170 m: consistent"
+      },
+      {
+        "to": "Restaurant",
+        "value": "250 m",
+        "source": "Interhome, kroati.de",
+        "verification": "OSM: Plava Laguna Bistro at 289 m: consistent"
+      },
+      {
+        "to": "Village centre",
+        "value": "300 m",
+        "source": "Interhome, kroati.de"
+      },
+      {
+        "to": "Busy road",
+        "value": "200 m",
+        "source": "kroati.de"
+      },
+      {
+        "to": "Dive centre",
+        "value": "5 km",
+        "source": "kroati.de"
+      },
+      {
+        "to": "Nin",
+        "value": "3.4 km",
+        "source": "Booking (via villas-garamm)"
+      },
+      {
+        "to": "Grobni Humak",
+        "value": "3.4 km",
+        "source": "Booking (via villas-garamm)",
+        "verification": "Not found in OSM; unverified Booking label"
+      },
+      {
+        "to": "Materiza",
+        "value": "3.9 km",
+        "source": "Booking (via villas-garamm)"
+      },
+      {
+        "to": "Stone Bridge",
+        "value": "5 km",
+        "source": "Trip.com"
+      },
+      {
+        "to": "Island of Vir",
+        "value": "8 km",
+        "source": "Interhome",
+        "verification": "OSM: Vir bridge (Virski most) is 3.5 km straight line; 8 km is plausible only as road distance onto the island"
+      },
+      {
+        "to": "Zadar Airport",
+        "value": "23 km (Booking); 23.8 km straight line / 28.9 km (Trip.com); 35 km (Interhome)",
+        "source": "multiple",
+        "verification": "OSM: ZAD aerodrome 23.0 km straight line, so Booking/Trip.com figures are consistent; Interhome 35 km is road distance"
+      },
+      {
+        "to": "Zadar railway station",
+        "value": "19.75 km",
+        "source": "Trip.com"
+      },
+      {
+        "to": "Port",
+        "value": "30 km",
+        "source": "Interhome"
+      },
+      {
+        "to": "Motorway",
+        "value": "43 km",
+        "source": "Interhome"
+      }
+    ],
+    "distributionChannels": [
+      {
+        "channel": "Booking.com",
+        "url": "https://www.booking.com/hotel/hr/apartments-napros-sabunike.html",
+        "notes": "Could not be fetched directly; partner ref BG.195411"
+      },
+      {
+        "channel": "Interhome (seen via houfy.com)",
+        "url": "https://www.houfy.com/lodging/315848",
+        "notes": "Units Napros 1-4: houfy 315848, 315843, 315789, 315840"
+      },
+      {
+        "channel": "kroati.de",
+        "url": "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41405.html",
+        "notes": "Objects 41405-41408, with public per-night prices"
+      },
+      {
+        "channel": "Trip.com",
+        "url": "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros",
+        "notes": "hotel id 102583604"
+      },
+      {
+        "channel": "Travelocity/Expedia",
+        "url": "https://www.travelocity.com/es/Privlaka-Hoteles-Apartments-Napros.h89269745.Informacion-Hotel",
+        "notes": "Expedia id h89269745; fetch blocked (429)"
+      },
+      {
+        "channel": "villas-garamm.com (Booking.com affiliate mirror)",
+        "url": "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+        "notes": "Republishes the Booking text and photos"
+      }
+    ],
+    "thirdPartyPhotoUrls": [
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970667.jpg?k=89d2a7ba76aa4032386a2c1cada4296b2e8791e60e708bdd11f454adfc15283a&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970668.jpg?k=7bef1faf18512e2bc6849b7e60cf835217f72e5b2b456c6808be07ba3e5c586d&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970670.jpg?k=94ac60c1ebe7b0fe5407c4905d77df470a15deeeba840767358af9bbe9f41614&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970673.jpg?k=1a767f6c698159e8806e5d8cf50c0e5fd0034dffb1dbbb6163132490cff12eb6&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970675.jpg?k=4c55cb49661a9bbf917b2737dbb77e6d11e85f184a772d0cc92e9beb264db2f2&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970680.jpg?k=4d6416f933b62dc9857fa714934854e1abba3f5d13d5c4a8a774a16f6619b3dc&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970684.jpg?k=bd521d8ec0da228862cf12532211d319d9f0f930264986a73e5ff57513e8eb0c&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970686.jpg?k=b67bbcd8625ecca2b71a6e91825ea18c794f6b258a5c3530f033c9fb5a6e9e6c&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970691.jpg?k=252e41112d7162e74a88bb877804e8f62ed06691da4859ea346a5fb7ee605194&o=&a=355109",
+      "https://q-xx.bstatic.com/xdata/images/hotel/max1400/414970693.jpg?k=4b9cacf9c376bdeb458520641abf5b0144e0a9311f0752caf2c40e1602a9167e&o=&a=355109"
+    ],
+    "thirdPartyPhotoNote": "Booking.com (bstatic) images: copyright may sit with the owner who uploaded them; kroati.de hosts 13-19 photos per unit at cdn.kroati.de/thumbs.php?src=/images/objekte/414/<id>[_n].jpg. Use the owner's originals on napros.si for the new site.",
+    "description": "Four air-conditioned apartments in one house on a residential street in Sabunike, about 500 m from the shallow sandy beaches between Nin and Privlaka. Every unit has its own entrance and parking, and guests share a courtyard with a barbecue and an outdoor shower.",
+    "sources": [
+      "http://napros.si/catalog/apartments/",
+      "http://napros.si/catalog/",
+      "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+      "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros",
+      "https://www.houfy.com/lodging/315848",
+      "https://www.kroati.de/ferienwohnung-privlaka-dalmatien-kroatien_41406.html",
+      "https://nominatim.openstreetmap.org/search?format=jsonv2&q=Put+kandelica+60,+Sabunike,+Croatia"
+    ],
+    "confidence": "high"
+  },
+  "reviews": [
+    {
+      "platform": "Booking.com (score as republished by villas-garamm.com)",
+      "score": 8.3,
+      "scale": 10,
+      "count": null,
+      "dateRetrieved": "2026-10-16",
+      "source": "https://villas-garamm.com/accommodation/batalazi/apartments-napros/195411",
+      "confidence": "medium",
+      "notes": "Review count not shown; booking.com itself could not be fetched."
+    },
+    {
+      "platform": "Trip.com (third-party reviews, likely Booking-sourced)",
+      "score": 8.3,
+      "scale": 10,
+      "count": 11,
+      "subscores": {
+        "cleanliness": 8.3,
+        "amenities": 8.3,
+        "location": 8.3,
+        "service": 8.3
+      },
+      "dateRetrieved": "2026-10-16",
+      "source": "https://uk.trip.com/hotels/privlaka-hotel-detail-102583604/apartments-napros",
+      "confidence": "medium",
+      "notes": "Identical subscores suggest a single imported aggregate. A ph.trip.com search snippet showed 6.7/10 and 3.3/5 (not verified, possibly a stale or different aggregate). A 2026-10-16 web-search snippet also showed 7.9/10 from 20 reviews on a Trip.com page; Trip.com aggregates differ by locale and time, so quote 8.3 (11 reviews) only with the retrieval date."
+    },
+    {
+      "platform": "Travelocity / Expedia",
+      "score": 9,
+      "scale": 10,
+      "count": 2,
+      "dateRetrieved": "2026-10-16",
+      "source": "https://www.travelocity.com/es/Privlaka-Hoteles-Apartments-Napros.h89269745.Informacion-Hotel",
+      "confidence": "low",
+      "notes": "Search snippets only (page fetch HTTP 429): Travelocity/Expedia show 9.0/10 'Wonderful'; the Expedia snippet says it is based on 2 reviews and calls the property 3-star. Too few reviews to use in marketing."
+    },
+    {
+      "platform": "Interhome (houfy.com), kroati.de",
+      "score": null,
+      "scale": null,
+      "count": 0,
+      "dateRetrieved": "2026-10-16",
+      "source": "https://www.houfy.com/lodging/315848",
+      "confidence": "medium",
+      "notes": "No review score shown on any of the 4 houfy pages or the kroati.de pages."
+    }
+  ],
+  "photoUrls": {
+    "note": "All photo URLs found on napros.si villa pages (all return HTTP 200 as of 2026-10-16). '-scaled' files are WordPress-resized versions of the same originals. The site sidebar 'Slike' gallery (2017/03/*_600X400.jpg, FasadaZahod.jpg) shows the company's business park, not the villa, and is listed separately.",
+    "houseExteriorAndGarden_catalogApartments": [
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171634.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171634-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171634-2.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171634-2-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171714.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171714-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171929.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210720_171929-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210810_184724.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210810_184724-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_110141.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_110141-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_152134.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_152134-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_155421.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_155421-scaled.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_155653.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/20210918_155653-scaled.jpg"
+    ],
+    "apartment1": [
+      "http://napros.si/wp-content/uploads/2021/10/App1_1.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_2.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_3.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_4.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_6.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_6-scaled.jpg"
+    ],
+    "apartment2": [
+      "http://napros.si/wp-content/uploads/2021/10/App2_1.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App2_2.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App2_3.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App1_5.jpg"
+    ],
+    "apartment4": [
+      "http://napros.si/wp-content/uploads/2021/10/App4_1.jpg",
+      "http://napros.si/wp-content/uploads/2021/10/App4_2.jpg"
+    ],
+    "notVilla_sidebarBusinessPark": [
+      "http://napros.si/wp-content/uploads/2017/03/1_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/2_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/3_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/4_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/5_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/6_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/7_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/8_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/9_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/A_600X400.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/FasadaZahod.jpg",
+      "http://napros.si/wp-content/uploads/2017/03/Reklama_728X90.jpg"
+    ]
+  },
+  "climate": [
+    {
+      "month": 1,
+      "airMaxC": 10.2,
+      "airMinC": 3.3,
+      "seaC": 13.5,
+      "rainDays": 11.8,
+      "sunHoursPerDay": 3.7,
+      "precipMm": 119,
+      "windNote": "Bura (NE) is the dominant wind on ~45% of days: cold, dry, gusty; jugo (SE) on ~21% brings rain. ~3 days/month with max wind >= 40 km/h.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 10.8,
+        "dhmzZadarMinC": 4.3,
+        "seaC_seatemperatureInfoNin": 13.2,
+        "sunHoursPerDay_openMeteoModel": 6.4,
+        "dhmzZadarPrecipMm": 72.6,
+        "dhmzZadarPrecipDays_ge0_1mm": 10
+      }
+    },
+    {
+      "month": 2,
+      "airMaxC": 11.9,
+      "airMinC": 4.7,
+      "seaC": 13.1,
+      "rainDays": 10.3,
+      "sunHoursPerDay": 5.2,
+      "precipMm": 118,
+      "windNote": "Windiest month: bura ~39% and jugo ~34% of days; ~3.6 days with max wind >= 40 km/h.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 11.3,
+        "dhmzZadarMinC": 4.3,
+        "seaC_seatemperatureInfoNin": 12.1,
+        "sunHoursPerDay_openMeteoModel": 7.4,
+        "dhmzZadarPrecipMm": 62.5,
+        "dhmzZadarPrecipDays_ge0_1mm": 8.5
+      }
+    },
+    {
+      "month": 3,
+      "airMaxC": 14.2,
+      "airMinC": 6.2,
+      "seaC": 13.7,
+      "rainDays": 10.7,
+      "sunHoursPerDay": 6,
+      "precipMm": 118,
+      "windNote": "Changeable: jugo ~36%, bura ~31%, first maestral (NW) days ~22%. Sea still cold (coldest in February).",
+      "crossCheck": {
+        "dhmzZadarMaxC": 13.6,
+        "dhmzZadarMinC": 6.3,
+        "seaC_seatemperatureInfoNin": 12.3,
+        "sunHoursPerDay_openMeteoModel": 9.3,
+        "dhmzZadarPrecipMm": 63.5,
+        "dhmzZadarPrecipDays_ge0_1mm": 8.9
+      }
+    },
+    {
+      "month": 4,
+      "airMaxC": 17.7,
+      "airMinC": 9.2,
+      "seaC": 15.1,
+      "rainDays": 8.9,
+      "sunHoursPerDay": 6.9,
+      "precipMm": 78,
+      "windNote": "Calmer: jugo ~34%, bura ~25%, maestral ~22%; ~1.4 days with max wind >= 40 km/h. Mild cycling weather.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 16.6,
+        "dhmzZadarMinC": 9.3,
+        "seaC_seatemperatureInfoNin": 14.2,
+        "sunHoursPerDay_openMeteoModel": 10.8,
+        "dhmzZadarPrecipMm": 70,
+        "dhmzZadarPrecipDays_ge0_1mm": 10.4
+      }
+    },
+    {
+      "month": 5,
+      "airMaxC": 21.7,
+      "airMinC": 13.8,
+      "seaC": 18.5,
+      "rainDays": 10.8,
+      "sunHoursPerDay": 8.9,
+      "precipMm": 120,
+      "windNote": "Maestral (NW afternoon sea breeze) grows to ~30% of days; jugo ~28%. Showers still common.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 21.3,
+        "dhmzZadarMinC": 13.5,
+        "seaC_seatemperatureInfoNin": 17.7,
+        "sunHoursPerDay_openMeteoModel": 11.9,
+        "dhmzZadarPrecipMm": 64.7,
+        "dhmzZadarPrecipDays_ge0_1mm": 9.5
+      }
+    },
+    {
+      "month": 6,
+      "airMaxC": 27.3,
+      "airMinC": 18.7,
+      "seaC": 22.4,
+      "rainDays": 5.7,
+      "sunHoursPerDay": 10.1,
+      "precipMm": 50,
+      "windNote": "Maestral dominant (~47% of days): steady NW breeze in the afternoon, calm mornings. Strong wind rare (~0.4 days).",
+      "crossCheck": {
+        "dhmzZadarMaxC": 25.2,
+        "dhmzZadarMinC": 17,
+        "seaC_seatemperatureInfoNin": 22.1,
+        "sunHoursPerDay_openMeteoModel": 13.2,
+        "dhmzZadarPrecipMm": 54.4,
+        "dhmzZadarPrecipDays_ge0_1mm": 8.2
+      }
+    },
+    {
+      "month": 7,
+      "airMaxC": 30.2,
+      "airMinC": 20.8,
+      "seaC": 25.4,
+      "rainDays": 4.1,
+      "sunHoursPerDay": 11.3,
+      "precipMm": 32,
+      "windNote": "Peak maestral (~57% of days) cools hot afternoons; driest, sunniest month.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 28.2,
+        "dhmzZadarMinC": 19.3,
+        "seaC_seatemperatureInfoNin": 24.7,
+        "sunHoursPerDay_openMeteoModel": 13.5,
+        "dhmzZadarPrecipMm": 30.4,
+        "dhmzZadarPrecipDays_ge0_1mm": 5.3
+      }
+    },
+    {
+      "month": 8,
+      "airMaxC": 30.6,
+      "airMinC": 20.8,
+      "seaC": 25.1,
+      "rainDays": 4.2,
+      "sunHoursPerDay": 10.4,
+      "precipMm": 56,
+      "windNote": "Maestral ~47% of days; short bura spells (~26%) after thunderstorms, especially late August.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 28.2,
+        "dhmzZadarMinC": 19.3,
+        "seaC_seatemperatureInfoNin": 24.8,
+        "sunHoursPerDay_openMeteoModel": 12.8,
+        "dhmzZadarPrecipMm": 49.6,
+        "dhmzZadarPrecipDays_ge0_1mm": 5.9
+      }
+    },
+    {
+      "month": 9,
+      "airMaxC": 25.1,
+      "airMinC": 16.7,
+      "seaC": 23.3,
+      "rainDays": 9.3,
+      "sunHoursPerDay": 8.2,
+      "precipMm": 139,
+      "windNote": "Mixed: bura ~33%, maestral ~28%, jugo ~24%. Sea still warmer than in June; heavy but short storms.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 24.3,
+        "dhmzZadarMinC": 16,
+        "seaC_seatemperatureInfoNin": 22.4,
+        "sunHoursPerDay_openMeteoModel": 10.5,
+        "dhmzZadarPrecipMm": 104,
+        "dhmzZadarPrecipDays_ge0_1mm": 8.7
+      }
+    },
+    {
+      "month": 10,
+      "airMaxC": 20.3,
+      "airMinC": 12.7,
+      "seaC": 21,
+      "rainDays": 9.4,
+      "sunHoursPerDay": 5.9,
+      "precipMm": 132,
+      "windNote": "Bura ~39%, jugo ~32%; maestral fades. ~1.6 days with max wind >= 40 km/h. Sea warmer than the air at night.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 20,
+        "dhmzZadarMinC": 12.5,
+        "seaC_seatemperatureInfoNin": 19.7,
+        "sunHoursPerDay_openMeteoModel": 8.8,
+        "dhmzZadarPrecipMm": 106.7,
+        "dhmzZadarPrecipDays_ge0_1mm": 9.8
+      }
+    },
+    {
+      "month": 11,
+      "airMaxC": 15.2,
+      "airMinC": 8.9,
+      "seaC": 18.1,
+      "rainDays": 14.1,
+      "sunHoursPerDay": 4.1,
+      "precipMm": 205,
+      "windNote": "Wettest month: jugo (~29%) brings rain, bura (~50%) clears it; ~2.8 strong-wind days.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 15.1,
+        "dhmzZadarMinC": 8.3,
+        "seaC_seatemperatureInfoNin": 17.4,
+        "sunHoursPerDay_openMeteoModel": 6.3,
+        "dhmzZadarPrecipMm": 105.6,
+        "dhmzZadarPrecipDays_ge0_1mm": 11.2
+      }
+    },
+    {
+      "month": 12,
+      "airMaxC": 11.8,
+      "airMinC": 5.4,
+      "seaC": 15.1,
+      "rainDays": 12.9,
+      "sunHoursPerDay": 3.5,
+      "precipMm": 155,
+      "windNote": "Bura dominant (~49% of days): cold, clear, gusty; jugo ~22%.",
+      "crossCheck": {
+        "dhmzZadarMaxC": 11.9,
+        "dhmzZadarMinC": 5.5,
+        "seaC_seatemperatureInfoNin": 15.1,
+        "sunHoursPerDay_openMeteoModel": 5.7,
+        "dhmzZadarPrecipMm": 95.2,
+        "dhmzZadarPrecipDays_ge0_1mm": 10.4
+      }
+    }
+  ],
+  "climateMethod": {
+    "airMaxC_airMinC_rainDays_precipMm_wind": "Open-Meteo historical archive (ERA5-based reanalysis), daily 2016-01-01..2025-12-31, request point 44.2587,15.1589; API snapped to grid cell 44.2531,15.2519 (~7 km east, inland, elevation 15 m), which likely makes summer highs ~1-2 °C warmer than at the beach. Mean of daily max/min per month; rainDays = mean count of days with precipitation >= 1 mm; precipMm = mean monthly total. Aggregated with jq.",
+    "wind": "Share of days by daily dominant 10 m wind direction: bura = NE sector 10-90°, jugo = SE 100-170°, maestral = NW 270-340°. 'Strong-wind days' = daily max 10 m wind >= 40 km/h (sustained, not gusts). Modelled data, not a station record.",
+    "seaC": "Open-Meteo marine API hourly sea_surface_temperature, grid cell 44.2917,15.1250 (sea between Nin and Vir), monthly mean over 2023-01..2025-12 (data available only from 2022-11-23). Only 3 years: medium confidence. seatemperature.info (Nin, 10-year averages) agrees within ~1 °C, Open-Meteo slightly warmer in spring/autumn.",
+    "sunHoursPerDay": "DHMZ station normals for Zadar 1971-2000 (monthly sunshine hours / days in month), via Wikipedia 'Zadar' climate table. Open-Meteo's modelled sunshine_duration is also given in crossCheck but runs ~40-70% higher than station data (annual ~3,800 h vs DHMZ 2,567 h), so it is not used as the main figure.",
+    "precipitationWarning": "Open-Meteo (ERA5 grid) precipitation runs ~1.5-2x the DHMZ Zadar station normals Oct-May (e.g. May 120 vs 65 mm, Nov 205 vs 106 mm), and its rainDays (>=1 mm) exceed the DHMZ precipitation days even though DHMZ counts days >=0.1 mm. For guest-facing pages prefer the DHMZ values in crossCheck (1971-2000 normals)."
+  },
+  "climateSources": [
+    "https://archive-api.open-meteo.com/v1/archive?latitude=44.2587&longitude=15.1589&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,sunshine_duration,wind_speed_10m_max,wind_direction_10m_dominant&timezone=Europe/Zagreb",
+    "https://marine-api.open-meteo.com/v1/marine?latitude=44.26&longitude=15.15&hourly=sea_surface_temperature&start_date=2021-01-01&end_date=2025-12-31&timezone=Europe/Zagreb",
+    "https://seatemperature.info/nin-water-temperature.html",
+    "https://en.wikipedia.org/wiki/Zadar#Climate",
+    "https://en.wikipedia.org/w/index.php?title=Zadar&action=raw"
+  ],
+  "openQuestions": [
+    "Apartment sizes: napros.si says Apt1 68 m2, Apt2 57 m2, Apt4 46 m2, but Interhome/kroati.de say 62, 47, 44 m2. Which is correct (with/without terrace)?",
+    "Apartment 3: the owner brief says 1 bedroom + balcony, 46 m2, but every public listing (Interhome Napros 3, kroati.de 41408) says 22 m2 for 2 guests with a 5 m2 balcony. Confirm size, beds and max guests. napros.si has no Apt 3 page (404).",
+    "Confirm that the cross-platform unit mapping is right (napros.si Apt1-4 = Interhome Napros 1-4 = Trip.com A1-A4 = kroati.de 41406/41407/41408/41405).",
+    "Apt1 'separate outdoor kitchen': no public listing mentions it (napros.si only says 'separate kitchen'). Is it outdoors, covered, shared or private to Apt1? What equipment?",
+    "Apt2 view: partial sea view (houfy) or courtyard view (kroati.de)?",
+    "Apt4 balcony: 5 m2 (houfy) or 3 m2 (kroati.de)?",
+    "Max guests per unit: Apt1 6 with sofa bed, Apt2 4, Apt3 2, Apt4 4 with sofa bed. Total villa capacity = 16? Can cots or extra beds be provided for direct bookings? Trip.com says no.",
+    "Air conditioning: Interhome says 'in part'. Is every bedroom and living room air-conditioned?",
+    "Number of parking spaces in total (Interhome implies 5: 2 for Apt1 + 1 each). Room for a van or bike trailer?",
+    "Pets: all listings say not allowed. Keep that for direct bookings or open to dog owners (a niche audience)?",
+    "Minimum stay (5 nights on Interhome/kroati.de) and check-in/out for direct bookings; is flexible check-in possible?",
+    "Direct-booking prices: kroati.de lists public per-night prices incl. taxes and cleaning (e.g. Apt1 EUR 130-153, Apt3 EUR 74-102). What direct rates and discounts should the new site show?",
+    "Booking.com review score and count: only 8.3/10 seen via a mirror; Trip.com shows 8.3 from 11 reviews. Owner should export the current Booking.com score, count and permitted guest quotes.",
+    "Languages actually spoken by the hosts: Booking lists CS, FR, HR, HU, SK. Are Slovenian, English, German available?",
+    "Booking.com lists the locality as 'Batalaži'. Should the new site use Sabunike, Privlaka or Nin as the main place name?",
+    "Is there a garden that is private to one unit, or one shared garden (houfy is contradictory)?",
+    "Wi-Fi speed (for remote-work and company retreat audiences) and whether there is a workspace or a covered area big enough for group meetings.",
+    "Secure storage for bicycles, and a bike wash or tools (for the cyclist audience)?",
+    "Washing machine: only Apt1 per listings. Is it available to other guests?",
+    "Photo rights: Booking/kroati.de photos may be the owner's uploads. Can they, and the napros.si originals, be reused, and are newer photos available (current ones date from 2021)?",
+    "Category is 2 stars on most listings (one Travelocity snippet said 3). Confirm the official categorisation.",
+    "Church of St Catherine (Trip.com, 780 m), Ninske Vodice beach and 'Grobni Humak' (Booking) are not found in OSM. Which local landmarks should the site name?"
+  ],
+  "verification": {
+    "checkedAt": "2026-10-16",
+    "itemsChecked": 4,
+    "corrections": [
+      "Languages: source is Trip.com (not villas-garamm); its list also has English and German, now added",
+      "Property description: 'quiet street' replaced with 'residential street' (kroati.de lists a busy road 200 m away); beach distance now 'about 500 m' per OSM",
+      "Shared amenities: 'AC in every unit' qualified with Interhome's 'in part'",
+      "Apt1 kitchen: oven flagged as conflicting (kroati.de yes, Interhome raw data no)",
+      "Travelocity/Expedia review: count set to 2 per Expedia search snippet; flagged as too small to market",
+      "Trip.com review: noted that other Trip.com pages show 7.9/20 and 6.7; quote only with date",
+      "Climate: added DHMZ precipitation mm/days to every month's crossCheck, plus a warning that modelled rain is ~1.5-2x station normals Oct-May",
+      "Photos: added the missing napros.si original 20210720_171634-2.jpg and the sidebar ad banner Reklama_728X90.jpg (not the villa)",
+      "Distances: added OSM verification notes to 13 claimed distances; Vir 8 km is a road distance (bridge is 3.5 km straight line)",
+      "House rules: noted conflicting houfy template check-in/out values"
+    ],
+    "removed": [],
+    "remainingDoubts": [
+      "Verified OK: every URL returns HTTP 200 except booking.com (202 bot challenge), travelocity (429) and the nominatim source URL (403 without a User-Agent)",
+      "Verified OK: kroati.de prices (2027 season table), sizes, floors, balcony sizes, 5-night minimum, check-in 14:00/out 10:00, no pets; houfy 1.80 m beds, Apt2 partial sea view, parking spaces, 500 m2 plot; Trip.com 8.3/11, coordinates, distances, cots/extra beds not possible",
+      "Verified OK: air temps, rain days, wind shares and sea temps reproduce exactly from Open-Meteo; sunshine matches the DHMZ normals via Wikipedia",
+      "Owner-site sizes (68/57/46 m2) vs Interhome (62/47/44) and Apt3 22 m2 vs the brief's 46 m2 remain unresolved",
+      "Cross-platform unit mapping is still an inference",
+      "Church of St Catherine, Ninske Vodice and Grobni Humak are not in OSM",
+      "The Open-Meteo land grid cell is ~7.5 km inland (44.2531, 15.2519); summer highs are likely 1-2 C too high",
+      "Booking.com score and count not seen first-hand (bot challenge)"
+    ]
+  }
+}

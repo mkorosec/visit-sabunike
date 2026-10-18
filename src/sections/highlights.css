@@ -1,0 +1,115 @@
+.section-highlights {
+  padding-block: clamp(48px, 6vw, 88px);
+}
+.hl-layout {
+  display: grid;
+  gap: clamp(20px, 3vw, 36px);
+}
+.hl-head {
+  margin-bottom: 0;
+}
+.hl-head h2 {
+  margin-bottom: 0;
+}
+.hl-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+.hl-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 22px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+a.hl-tile:hover {
+  color: var(--ink);
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-lg);
+}
+.hl-num {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font: 600 0.8125rem/1 var(--font-head);
+  color: var(--ink-2);
+  letter-spacing: 0.06em;
+}
+.hl-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  margin-bottom: 12px;
+}
+.hl-tile h3 {
+  font-size: 1.22rem;
+  margin-bottom: 4px;
+}
+.hl-tile p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.hl-more {
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--brand);
+  transition: transform 0.2s ease;
+}
+a.hl-tile:hover .hl-more {
+  transform: translateX(4px);
+}
+@media (min-width: 1100px) {
+  .hl-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 3fr);
+    align-items: start;
+  }
+  .hl-grid {
+    grid-template-columns: repeat(var(--hl-count, 4), minmax(0, 1fr));
+  }
+  .hl-head h2 {
+    font-size: clamp(1.7rem, 1.2rem + 1vw, 2.3rem);
+  }
+}
+
+[data-theme='editorial'] .hl-tile {
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--ink);
+  border-radius: 0;
+  padding-inline: 0;
+}
+[data-theme='editorial'] .hl-num {
+  right: 0;
+}
+[data-theme='editorial'] .hl-icon {
+  background: none;
+  width: auto;
+  height: auto;
+  justify-content: start;
+  color: var(--accent);
+}
+[data-theme='postcard'] .hl-tile:nth-child(odd) .hl-icon {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+[data-theme='minimal'] .hl-icon {
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--ink);
+}

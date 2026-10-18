@@ -1,0 +1,940 @@
+{
+  "topic": "Beaches near Apartments Napros, Sabunike (Privlaka), Zadar County",
+  "generatedAt": "2026-10-16",
+  "villa": {
+    "name": "Apartments Napros",
+    "address": "Put kandelica 60, 23233 Sabunike (Privlaka), Croatia",
+    "lat": 44.25871,
+    "lon": 15.15892,
+    "sources": [
+      "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=44.2587142&lon=15.1589155&zoom=17"
+    ],
+    "notes": "Nominatim reverse-geocode of the Google Maps pin returns 'Put Kandelica, Sabunike, Privlaka', so the pin matches the address."
+  },
+  "methodNotes": [
+    "Coordinates come from OpenStreetMap (Overpass natural=beach and related features, retrieved 2026-10-16) unless noted. Rounded to 5 decimals.",
+    "distanceKmStraight is the straight-line (haversine) distance from the villa, not road distance. Vir and Vrsi beaches are much further by road than the straight line suggests (via Privlaka bridge or via Nin).",
+    "kidFriendly, snorkeling and crowdLevel are editorial 1-5 estimates based on the cited descriptions (shallow entry, facilities, popularity). They are not measured values.",
+    "sunsetView is inferred from coastline orientation (sea horizon to the west/south-west). The Sabunike/Nin coast faces north-east towards Velebit: you get evening light on the mountains, not a sunset over the sea.",
+    "Blue Flag status could not be checked against the official Blue Flag list (site unreachable, web search budget used up). Only the Zaton resort's own claim is recorded.",
+    "Overpass and Nominatim started returning errors / HTTP 429 part-way through, so several beaches without OSM pins are listed under unmappedCandidates instead of items.",
+    "roadKm is the road distance in km from the house for walking, cycling and driving, from the OSRM foot, bike and car profiles at routing.openstreetmap.de (retrieved 2026-10-16). Queen's Beach (kraljicina-plaza) is routed to the north-west end of the OSM polygon (way/231022098, 44.25567,15.16936), the end nearest the house. For vir-lanterna the bike router snapped to a far-off track, so the walking distance is used for bike."
+  ],
+  "items": [
+    {
+      "id": "sabunike-mol",
+      "name": "Sabunike Mol (pier beach)",
+      "localName": "Plaža Sabunike – mol",
+      "lat": 44.26135,
+      "lon": 15.16358,
+      "municipality": "Privlaka",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "umbrellas",
+      "facilities": [
+        "bar",
+        "toilets",
+        "rentals"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "swimming"
+      ],
+      "sunsetView": false,
+      "description": "The closest beach to the villa: a sandy shore next to the small Sabunike pier, about 500 m (a 6-minute walk) from the apartments. The seabed slopes very gently into clear water, so small children can paddle a long way out. Beach Bar Palma is right at the pier.",
+      "tips": "Walk, don't drive. Rent an umbrella or bring your own, because there is very little natural shade. There can be a strip of small stones before the sand, so water shoes help toddlers. Windsurfers use the open water further out on windy afternoons.",
+      "sources": [
+        "https://www.openstreetmap.org/node/5759639286",
+        "https://www.openstreetmap.org/way/442901834",
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/",
+        "https://www.zadar.hr/en/experience/beaches"
+      ],
+      "confidence": "high",
+      "notes": "'Sabunike Mol' is the owner's name. OSM has an unnamed beach (node/5759639286) beside a pier (way/442901834, 44.26214,15.16342), with Beach Bar Palma at 44.26139,15.16289 and Plava Laguna hotel/bistro at 44.25898,15.16243. kroati.de shows a jetty ('Steg') at Sabunike beach. The sand/family/facility facts are for Sabunike beach in general. The Sabunike shore runs on without a break into Queen's Beach to the south-east. [Verified 2026-10-16] OSM API confirms 'Beach bar Palma' (node/9949073705, 44.26139,15.16289), the pier (way/442901834, centroid 44.26219,15.1635) and the beach node. kroati.de confirms fine golden sand with a few small stones, a very flat seabed, toilets, umbrellas and loungers.",
+      "distanceKmStraight": 0.47,
+      "roadKm": {
+        "walk": 0.54,
+        "bike": 0.55,
+        "car": 0.55
+      }
+    },
+    {
+      "id": "kraljicina-plaza",
+      "name": "Queen's Beach",
+      "localName": "Kraljičina plaža",
+      "lat": 44.25143,
+      "lon": 15.17422,
+      "municipality": "Nin",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": true,
+      "dogsAllowed": null,
+      "shade": "umbrellas",
+      "facilities": [
+        "bar",
+        "toilets",
+        "showers",
+        "parking",
+        "rentals"
+      ],
+      "crowdLevel": 4,
+      "bestFor": [
+        "family",
+        "swimming",
+        "kite"
+      ],
+      "sunsetView": false,
+      "description": "One of Croatia's best-known sandy beaches: a long strip of sand and warm, shallow water running from Sabunike south-east towards Nin, with Velebit mountain behind it. Local legend ties the name to a Croatian queen. The healing mud of the Nin lagoon is right behind it.",
+      "tips": "The northern (Sabunike) end is about 1.4 km from the villa on foot and quieter than the Nin end. The afternoon maestral brings windsurfers, and the Surfmania windsurf centre is on this beach, so keep small swimmers close to shore on windy days.",
+      "sources": [
+        "https://www.openstreetmap.org/way/231022098",
+        "https://www.openstreetmap.org/way/1209180103",
+        "https://www.zaton.hr/en/blog/nature-and-beaches-in-zaton-and-vicinity",
+        "https://total-croatia-news.com/lifestyle/skin-care-croatian-beach/",
+        "https://secretcroatia.blog/2009/09/05/sand-beaches-in-croatia-kraljicina-queens-beach-in-nin/",
+        "https://www.kroati.de/kroatien-infos/surfcenter-surfmania-nin.html",
+        "https://www.beachatlas.com/hr/sabunike",
+        "https://www.zadar.hr/en/experience/beaches"
+      ],
+      "confidence": "high",
+      "notes": "The pin is the OSM 'Kraljičina plaža' polygon (wikidata Q12754203). A second OSM feature, 'Queen's Beach' (way/1209180103, 44.2573,15.1676), marks the northern part of the strip near Sabunike. Beach Atlas pins its 'Sabunike' entry at the same spot (44.25768,15.16718) and lists toilets, umbrella and lounger rental, restaurants, a playground and parking. kiteSpot: per zaton.hr the whole Nin lagoon is popular with wind- and kitesurfers, but Surfmania runs windsurf here and kitesurf at Ždrijac. [Verified 2026-10-16] Name legend: sources disagree. zaton.hr says the wife of King Tomislav; total-croatia-news says Queen Jelena (Helen). The old text stated the Tomislav version as fact, so it was changed to 'legend ties the name to a Croatian queen'. The '3 km' length was removed because no source states it.",
+      "distanceKmStraight": 1.46,
+      "roadKm": {
+        "walk": 1.38,
+        "bike": 1.41,
+        "car": 1.41
+      }
+    },
+    {
+      "id": "zdrijac",
+      "name": "Ždrijac Beach",
+      "localName": "Plaža Ždrijac",
+      "lat": 44.24757,
+      "lon": 15.18535,
+      "municipality": "Nin",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": true,
+      "dogsAllowed": null,
+      "shade": "umbrellas",
+      "facilities": [
+        "bar",
+        "toilets",
+        "showers",
+        "parking",
+        "rentals"
+      ],
+      "crowdLevel": 5,
+      "bestFor": [
+        "kite",
+        "family",
+        "swimming"
+      ],
+      "sunsetView": false,
+      "description": "Long sandy beach on the Ždrijac spit just outside Nin's old town, counted among Croatia's top kitesurfing spots. A kite and windsurf school works from the beach, and the shallow sandy bottom suits learners and families alike.",
+      "tips": "The car park (about 200 spaces) fills by late morning in August, so cycle from the villa if you can. Kiters and swimmers share the shore, so stay inside the marked zones. Spring and autumn bring stronger wind for experienced riders; summer maestral (about 8-12 kn) suits beginners.",
+      "sources": [
+        "https://www.openstreetmap.org/way/229300369",
+        "https://www.beachatlas.com/hr/zdrijac",
+        "https://www.kroati.de/kroatien-infos/surfcenter-surfmania-nin.html",
+        "https://turistickeprice.hr/en/friends-of-the-wind%2C-nin-is-an-ideal-place-for-kitesurfing/"
+      ],
+      "confidence": "high",
+      "notes": "OSM survey date 2024-08-03, fee=no. Kite school: Surfmania kitesurf centre (kroati.de, undated page; it gives course prices, which are deliberately not reproduced here). The turistickeprice.hr article (seen only as a search snippet; direct fetch got HTTP 403) names Ždrijac one of three top kite locations in Croatia.",
+      "distanceKmStraight": 2.44,
+      "roadKm": {
+        "walk": 4.78,
+        "bike": 5.01,
+        "car": 5.6
+      }
+    },
+    {
+      "id": "nin-lagoon-healing-mud",
+      "name": "Nin Lagoon healing-mud beach",
+      "localName": "Ninska laguna – ljekovito blato",
+      "lat": 44.249,
+      "lon": 15.176,
+      "municipality": "Nin",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 4,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "quiet"
+      ],
+      "sunsetView": false,
+      "description": "The shallow Nin lagoon next to Queen's Beach is the largest healing-mud (peloid) site in Croatia. Visitors cover themselves in the black mud, let it dry in the sun, then rinse it off in the warm shallows. In summer, open-air mud therapy combined with sea-water therapy is offered by the beach.",
+      "tips": "Skip it if you have a heart condition or high blood pressure, and ask a doctor if unsure. Wear old swimwear because the mud stains. Pair it with a swim at Queen's Beach, 10-15 minutes' walk from the villa.",
+      "sources": [
+        "https://partner.camping.info/docs/Campsite%5C26524%5Cljekovito-blato-en.pdf",
+        "https://total-croatia-news.com/lifestyle/skin-care-croatian-beach/",
+        "https://www.solananin.hr/en/about-us/nin/",
+        "https://www.zaton.hr/en/blog/healing-mud-in-nin"
+      ],
+      "confidence": "low",
+      "notes": "The mud facts are well sourced, but the PIN IS APPROXIMATE. OSM does not map the mud field. Sources place it 'in the centre of Nin's Lagoon close to Queen's Beach' and 'on the western side of Nin', so the pin sits between Kraljičina plaža and Camping Ninska Laguna (44.24698,15.17437). The owner should drop the exact pin. [Verified 2026-10-16] Removed the claim 'supervised mud therapy runs through the Nin health centre in July and August': no source names the operator or the months (zaton.hr says only 'during the summer months ... therapy out in the open'). Health benefits must not be promised on the website. The caution for heart conditions and high blood pressure comes from zaton.hr. The camping.info PDF returns HTTP 403 to scripts. Pin still approximate (OSM API: no mapped mud feature).",
+      "distanceKmStraight": 1.74,
+      "roadKm": {
+        "walk": 2.34,
+        "bike": 2.34,
+        "car": 2.32
+      }
+    },
+    {
+      "id": "sabunike-fkk",
+      "name": "Sabunike Naturist Beach",
+      "localName": "Plaža Sabunike FKK",
+      "lat": 44.26616,
+      "lon": 15.15879,
+      "municipality": "Privlaka",
+      "surface": "fine-pebble",
+      "shallowEntry": true,
+      "kidFriendly": 2,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [],
+      "crowdLevel": 2,
+      "bestFor": [
+        "quiet",
+        "swimming"
+      ],
+      "sunsetView": false,
+      "description": "A designated naturist (textile-free) beach on the gravelly shore just north of Sabunike, about 850 m from the villa. It is undeveloped and quiet even in high season.",
+      "tips": "No bar or seating on the beach, so bring water and shade. A dog-friendly stretch is reported right next to it (see unmappedCandidates).",
+      "sources": [
+        "https://www.openstreetmap.org/way/1209174534",
+        "https://www.openstreetmap.org/way/1209174533",
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html"
+      ],
+      "confidence": "high",
+      "notes": "OSM has two segments: way/1209174534 (nudism=designated, check_date 2024-08-25, outdoor_seating=no) and way/1209174533 further north-west (44.27057,15.15175). shallowEntry is inferred from the rest of the Sabunike shore and is not confirmed for this stretch.",
+      "distanceKmStraight": 0.83,
+      "roadKm": {
+        "walk": 1.09,
+        "bike": 1.94,
+        "car": 2.17
+      }
+    },
+    {
+      "id": "skrapavac",
+      "name": "Škrapavac Beach",
+      "localName": "Plaža Škrapavac",
+      "lat": 44.24041,
+      "lon": 15.14561,
+      "municipality": "Privlaka",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [
+        "bar",
+        "showers",
+        "rentals"
+      ],
+      "crowdLevel": 4,
+      "bestFor": [
+        "family",
+        "swimming",
+        "sunset"
+      ],
+      "sunsetView": true,
+      "description": "A sandy bay at Privlaka's southern end, sheltered from the bura wind. It has a small inflatable water park, a children's playground, a beach bar and clear, shallow water. The Zadar tourist board calls it 'perfect for kids and non-swimmers'.",
+      "tips": "Pedal boats and jet skis are for rent, and a mini-market right behind the beach covers picnic supplies. Walk about 1 km south-east along the shore to Bilotinjak for wilder sand.",
+      "sources": [
+        "https://www.openstreetmap.org/node/11649314830",
+        "https://www.zadar.hr/en/experience/beaches",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/",
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html"
+      ],
+      "confidence": "high",
+      "notes": "zadar.hr lists the beach as 'Škrapavac – Bilotinjak', but the facilities belong to Škrapavac, not Bilotinjak. Changing rooms are also reported. No source mentions shade. OSM bars nearby: Beach bar and pizza 'Batela' (44.23925,15.14764) and Beach Bar Barufa at Autocamp Punta. The sunset view is inferred from the south-west-facing shore.",
+      "distanceKmStraight": 2.29,
+      "roadKm": {
+        "walk": 3.07,
+        "bike": 3.12,
+        "car": 2.63
+      }
+    },
+    {
+      "id": "bilotinjak",
+      "name": "Bilotinjak Beach",
+      "localName": "Plaža Bilotinjak",
+      "lat": 44.23465,
+      "lon": 15.15349,
+      "municipality": "Privlaka",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 4,
+      "snorkeling": 2,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [],
+      "crowdLevel": 3,
+      "bestFor": [
+        "quiet",
+        "family",
+        "sunset"
+      ],
+      "sunsetView": true,
+      "description": "A wild natural bay of fine golden sand between reddish rock and a sandy dune, between Privlaka and Zaton. There is no bar, no toilets and no showers, which is why it still feels secluded in summer.",
+      "tips": "Bring water, food and an umbrella: there is no shade and no infrastructure. The access road is narrow and rough and the small parking area fills early, so arrive before 10:00 or cycle (about 3 km from the villa as the crow flies). Travel guides mention dogs swimming here, but no official dog rule was found.",
+      "sources": [
+        "https://www.openstreetmap.org/node/9941930381",
+        "https://www.beachatlas.com/sv/bilotinjak",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/",
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html",
+        "https://www.zadar.hr/en/experience/beaches"
+      ],
+      "confidence": "high",
+      "notes": "The sources disagree on the municipality. Nominatim reverse-geocodes the beach node to Zaton (Grad Nin), but the hamlet 'Bilotinjak' is in Općina Privlaka and zadar.hr lists the beach under Privlaka. OSM surface tag: fine_gravel;sand;gravel. The sunset view is inferred from the south-west-facing shore.",
+      "distanceKmStraight": 2.71,
+      "roadKm": {
+        "walk": 3.46,
+        "bike": 3.54,
+        "car": 3.39
+      }
+    },
+    {
+      "id": "zaton-holiday-resort-beach",
+      "name": "Zaton Holiday Resort Beach",
+      "localName": "Plaža Zaton",
+      "lat": 44.23078,
+      "lon": 15.16382,
+      "municipality": "Nin (Zaton)",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": true,
+      "shade": "trees",
+      "facilities": [
+        "bar",
+        "rentals"
+      ],
+      "crowdLevel": 5,
+      "bestFor": [
+        "family",
+        "dogs",
+        "swimming",
+        "sunset"
+      ],
+      "sunsetView": true,
+      "description": "The mostly sandy, partly pebbly 1.2 km beach of the large Zaton Holiday Resort, with a shallow entry, water slides, an inflatable water park, beach volleyball and pine shade. The resort describes it as pet-friendly and advertises a Blue Flag.",
+      "tips": "OSM tags the resort beach as access=customers, so check whether day visitors are let in (or charged) before driving over. It is a good fallback for families when the wind is up at Sabunike.",
+      "sources": [
+        "https://www.openstreetmap.org/way/972611475",
+        "https://www.zaton.hr/en/blog/nature-and-beaches-in-zaton-and-vicinity",
+        "https://www.zaton.hr/en/blog/333/pool-and-beach-zaton-holiday-resort?desktop=1",
+        "https://www.zaton.hr/en/blog/why-is-zaton-s-beach-the-best-in-dalmatia"
+      ],
+      "confidence": "medium",
+      "notes": "The Blue Flag (reported 'since 2003') and the pet area are the resort's own claims and were not checked against the Blue Flag register. Lifeguard, toilet and shower details for day visitors were not confirmed. The sunset view is inferred from the west-facing shore. [Verified 2026-10-16] Length set to 1.2 km as stated by zaton.hr (the '1.5 km' had no source). 'blue-flag' was removed from facilities: zaton.hr claims it, but the claim could not be checked against the official Blue Flag list, and the award is renewed every year. The 'since 2003' date is not on the cited pages and was dropped. dogsAllowed=true is based on zaton.hr calling it a 'pet friendly beach'. Day-visitor access is still unconfirmed (OSM access=customers).",
+      "distanceKmStraight": 3.13,
+      "roadKm": {
+        "walk": 3.71,
+        "bike": 5.37,
+        "car": 4.01
+      }
+    },
+    {
+      "id": "plisa",
+      "name": "Pliša Beach",
+      "localName": "Plaža Pliša",
+      "lat": 44.21674,
+      "lon": 15.16613,
+      "municipality": "Nin (Zaton)",
+      "surface": "sand",
+      "shallowEntry": false,
+      "kidFriendly": 3,
+      "snorkeling": 3,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [
+        "bar",
+        "parking"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "snorkel",
+        "quiet",
+        "sunset"
+      ],
+      "sunsetView": true,
+      "description": "A small sandy beach south of Zaton with a seaside promenade, backed by golden sand cliffs and reeds. The water is notably clear and good for a casual snorkel. The Demos Pliša beach bar and a small marina are right next to it.",
+      "tips": "Combine it with a walk or ride along the Zaton promenade. It works well as an evening swim and sunset stop.",
+      "sources": [
+        "https://www.openstreetmap.org/way/598588203",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/",
+        "https://www.zaton.hr/en/blog/nature-and-beaches-in-zaton-and-vicinity"
+      ],
+      "confidence": "medium",
+      "notes": "OSM: surface=sand, fee=no, with 'Beach bar Demos Pliša' (44.21652,15.16579) and 'Pliša' marina next to it. The large car park comes from a search snippet about 'Pliša - Ploče'. shallowEntry is unknown, set false to be safe. The sunset view is inferred.",
+      "distanceKmStraight": 4.7,
+      "roadKm": {
+        "walk": 6.05,
+        "bike": 6,
+        "car": 6.49
+      }
+    },
+    {
+      "id": "ricina-vrsi",
+      "name": "Ričina Beach",
+      "localName": "Plaža Ričina",
+      "lat": 44.28059,
+      "lon": 15.20741,
+      "municipality": "Vrsi",
+      "surface": "mixed",
+      "shallowEntry": true,
+      "kidFriendly": 4,
+      "snorkeling": 2,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "umbrellas",
+      "facilities": [
+        "bar",
+        "rentals"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "swimming",
+        "quiet"
+      ],
+      "sunsetView": true,
+      "description": "A sheltered cove of fine sand and gravel with low grass on the Vrsi side of the Nin bay, looking out to Velebit and Pag. In season it has a beach bar, an inflatable water park, scooter rental and palm-leaf parasols. The sandy, shallow bottom suits families.",
+      "tips": "Reached by a gravel road that ordinary cars can manage; parking is tight in peak season and some visitors come by boat. Walk north along the shore to get away from the crowd in front of the bar. Drive via Nin: it is only 4.5 km from the villa as the crow flies, but much further by road.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1110577863",
+        "https://www.beachatlas.com/hr/ricina",
+        "https://zadar.nivas.hr/en/destinations/nin-riviera/vrsi",
+        "https://www.beachatlas.com/hr/privlaka"
+      ],
+      "confidence": "high",
+      "notes": "The location is backed by Beach Atlas (44.28054,15.20738), an unnamed OSM beach polygon at the same spot (way/1110577863), the OSM bay 'Uvala Ričina' (44.28035,15.21051) and 'Capitano Beach Bar' (44.28178,15.20558). NAME CLASH: OSM also has a sandy beach called 'Ričina' at 44.32906,15.13226 (way/230293651), which reverse-geocodes to Stara Povljana on Pag island (far by road). The brief said 'Ričina (Privlaka)', but no beach of that name was found in Privlaka. The sunset view is inferred from the west-facing cove. [Verified 2026-10-16] Beach Atlas confirms Ričina is in Vrsi (44.28054,15.20738), with a bar, an inflatable water park, scooter rental and palm-leaf parasols. The Beach Atlas Privlaka page lists it only as a nearby beach (7.3 km from Privlaka). No Ričina in Privlaka itself was found.",
+      "distanceKmStraight": 4.56,
+      "roadKm": {
+        "walk": 10.18,
+        "bike": 10.83,
+        "car": 13.15
+      }
+    },
+    {
+      "id": "duboka-draga-vrsi",
+      "name": "Duboka Draga",
+      "localName": "Duboka draga",
+      "lat": 44.26883,
+      "lon": 15.24614,
+      "municipality": "Vrsi",
+      "surface": "pebble",
+      "shallowEntry": false,
+      "kidFriendly": 2,
+      "snorkeling": 5,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [
+        "bar",
+        "toilets",
+        "parking"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "snorkel",
+        "swimming",
+        "quiet"
+      ],
+      "sunsetView": false,
+      "description": "A pebble-and-rock cove on the Vrsi coast with very clear water, which visitors rate as the area's best snorkeling spot. It has a seasonal beach bar and a public toilet but is otherwise natural, with views of Velebit.",
+      "tips": "Bring your own mask, snorkel and water shoes, because the rocks are sharp and there is no rental. The last stretch is a gravel road of about 1 km; parking is at the end of the asphalt, 10-15 minutes' walk from the cove. There is no shade, so arrive early and bring your own.",
+      "sources": [
+        "https://www.openstreetmap.org/way/827364306",
+        "https://www.beachatlas.com/pt/duboka-draga-2",
+        "https://beachsearcher.com/pl/beach/191201380/duboka-draga",
+        "https://sandee.com/croatia/zadar/pag/dumboka-draga-beach"
+      ],
+      "confidence": "high",
+      "notes": "OSM beach polygon, bay node at 44.26948,15.24759 and a parking node at 44.26864,15.24586. Beach Atlas coordinates (44.26889,15.24609) match. AMBIGUITY: there is also a 'Duboka Draga' on Vir near Lozice (kroati.de) and an OSM bay of that name at 44.29517,15.17558. The owner should confirm the Vrsi one is the snorkeling spot they mean. [Verified 2026-10-16] Removed 'quick drop-off' and 'water gets deep quickly': no source mentions depth. shallowEntry=false is unverified. Beach Atlas names the seasonal bar 'Punat'; this was not checked elsewhere, so it is kept out of the description. beachsearcher.com returns HTTP 403 to scripts.",
+      "distanceKmStraight": 7.04,
+      "roadKm": {
+        "walk": 10.15,
+        "bike": 10.3,
+        "car": 11.36
+      }
+    },
+    {
+      "id": "ljubac",
+      "name": "Ljubač Bay Beach",
+      "localName": "Plaža Ljubač",
+      "lat": 44.25487,
+      "lon": 15.30002,
+      "municipality": "Ražanac (Ljubač)",
+      "surface": "sand",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": true,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [
+        "parking"
+      ],
+      "crowdLevel": 2,
+      "bestFor": [
+        "kite",
+        "family",
+        "quiet"
+      ],
+      "sunsetView": true,
+      "description": "A long, gently sloping sandy bay at Ljubač, opening to the north-west, with a big standing area in shallow water and few boats. The afternoon thermal wind regularly reaches about 15 knots, which draws windsurfers, foilers and kiters looking for a break from crowded Nin.",
+      "tips": "You can park right at the beach at the south-western end of the bay. Bora days are gusty with a rough cross-sea here. Look for the ruins of the medieval Ljubač fortress (Stari grad Ljubač) on the headland.",
+      "sources": [
+        "https://www.openstreetmap.org/way/297604102",
+        "https://www.surf-magazin.de/en/spots-and-areas/international/croatia/mini-spot-guide-up-and-coming-tip-ljubac-in-croatia/",
+        "https://direct-croatia.com/apartments/ljubac/apartments-barbara/18973"
+      ],
+      "confidence": "medium",
+      "notes": "OSM: unnamed sandy beach polygon, fee=no, supervised=no. Another sandy polygon is at 44.26156,15.29332 near the village, and Beach Bar Beskafondo is at 44.24623,15.29364 (about 1 km south). One hotel review calls parts of the shore rocky. kiteSpot is based on surf-magazin saying kiters come from Nin. No school was confirmed. The sunset view is inferred from the north-west-facing bay.",
+      "distanceKmStraight": 11.25,
+      "roadKm": {
+        "walk": 16.64,
+        "bike": 18.91,
+        "car": 20.89
+      }
+    },
+    {
+      "id": "vir-jadro",
+      "name": "Jadro Beach, Vir",
+      "localName": "Plaža Jadro",
+      "lat": 44.2973,
+      "lon": 15.08687,
+      "municipality": "Vir",
+      "surface": "fine-pebble",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 2,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "umbrellas",
+      "facilities": [
+        "bar",
+        "toilets",
+        "rentals"
+      ],
+      "crowdLevel": 5,
+      "bestFor": [
+        "family",
+        "swimming",
+        "party"
+      ],
+      "sunsetView": false,
+      "description": "Vir's main town beach along the promenade: fine pebbles over a sandy seabed with a flat, family-friendly entry. Water sports, rentals, cafés and shops are right behind it.",
+      "tips": "The bridge from Privlaka to Vir backs up on summer weekends, so go early or cycle across. Changing cabins are on site.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1418021178",
+        "https://www.openstreetmap.org/way/436605123",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html",
+        "https://blog.medgulets.com/croatia/zadar/vir"
+      ],
+      "confidence": "high",
+      "notes": "OSM splits the beach into 'Plaža jadro istok' (fine_gravel, way/1418021178, used as the pin) and 'Plaža Jadro Zapad' (pebblestone, 44.29708,15.08243). dogsAllowed=false reflects kroati.de listing it as not a dog beach, not a posted ban. The bridge traffic tip is general knowledge and not sourced. 'party' tag: town-centre bars, not a club beach. [Verified 2026-10-16] dogsAllowed changed from false to null. kroati.de only leaves Jadro off its dog-beach list; it does not say dogs are banned.",
+      "distanceKmStraight": 7.16,
+      "roadKm": {
+        "walk": 8.68,
+        "bike": 8.27,
+        "car": 10.02
+      }
+    },
+    {
+      "id": "vir-radovanjica",
+      "name": "Radovanjica Beach, Vir",
+      "localName": "Plaža Radovanjica",
+      "lat": 44.29779,
+      "lon": 15.09357,
+      "municipality": "Vir",
+      "surface": "mixed",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 1,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "some",
+      "facilities": [
+        "bar",
+        "toilets",
+        "rentals"
+      ],
+      "crowdLevel": 4,
+      "bestFor": [
+        "family",
+        "swimming"
+      ],
+      "sunsetView": false,
+      "description": "A south-coast beach near Vir town that mixes concrete sunbathing areas and gravel with a very flat sandy sea entry. Toilets, food, sunbed rental and pedal boats are on hand.",
+      "tips": "The concrete platforms make it easy for grandparents and buggies; the sandy shallows keep toddlers happy.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1548812725",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html"
+      ],
+      "confidence": "medium",
+      "notes": "OSM surface=pebblestone. kroati.de describes concrete, gravel and 'very flat sand'. dogsAllowed: not a dog beach per kroati.de. [Verified 2026-10-16] dogsAllowed changed from false to null (no source states a ban). shade changed to 'some': kroati.de says palms and small trees give partial shade along the promenade.",
+      "distanceKmStraight": 6.78,
+      "roadKm": {
+        "walk": 8.14,
+        "bike": 7.73,
+        "car": 10.55
+      }
+    },
+    {
+      "id": "vir-sapavac",
+      "name": "Sapavac Beach, Vir",
+      "localName": "Plaža Sapavac",
+      "lat": 44.29355,
+      "lon": 15.07595,
+      "municipality": "Vir",
+      "surface": "mixed",
+      "shallowEntry": true,
+      "kidFriendly": 5,
+      "snorkeling": 2,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "trees",
+      "facilities": [
+        "toilets"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "quiet",
+        "sunset"
+      ],
+      "sunsetView": true,
+      "description": "A sheltered bay on Vir's south-west shore with mostly sand, some gravel and rock, pine shade and warm, shallow water that is especially good for families with small children.",
+      "tips": "There is only a mobile toilet on the beach, with cafés a few minutes' walk away. The deep sand is not suitable for wheelchairs.",
+      "sources": [
+        "https://www.openstreetmap.org/way/501675460",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html"
+      ],
+      "confidence": "medium",
+      "notes": "The surface tags conflict: OSM says pebblestone, kroati.de says 'mostly sand, gravel, rock'. The sunset view is inferred from the south-west orientation. [Verified 2026-10-16] shade changed from 'none' to 'trees', and the 'Bring shade' tip was removed: kroati.de says pines give pleasant shade around the beach. kroati.de also says the beach is known for healing mud and that its deep sand is unsuitable for wheelchairs. dogsAllowed changed from false to null (no source states a ban).",
+      "distanceKmStraight": 7.66,
+      "roadKm": {
+        "walk": 10.2,
+        "bike": 10.13,
+        "car": 10.1
+      }
+    },
+    {
+      "id": "vir-pedinka",
+      "name": "Pedinka Beach, Vir",
+      "localName": "Plaža Pedinka",
+      "lat": 44.28534,
+      "lon": 15.05845,
+      "municipality": "Vir",
+      "surface": "mixed",
+      "shallowEntry": true,
+      "kidFriendly": 4,
+      "snorkeling": 3,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [
+        "bar",
+        "parking"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "sunset",
+        "swimming"
+      ],
+      "sunsetView": true,
+      "description": "A south-Vir beach of rock, gravel and concrete with flat shallows that one guide calls ideal for toddlers and non-swimmers. It has a beach bar and its own car park.",
+      "tips": "The rocky edges are worth a look with a mask; use the flat middle section for small children.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1429462115",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html"
+      ],
+      "confidence": "medium",
+      "notes": "OSM surface=pebblestone. The snorkeling score of 3 is inferred from the rocky shore and not stated by a source. The sunset view is inferred. [Verified 2026-10-16] dogsAllowed changed from false to null (no source states a ban).",
+      "distanceKmStraight": 8.53,
+      "roadKm": {
+        "walk": 11.88,
+        "bike": 12.06,
+        "car": 12.21
+      }
+    },
+    {
+      "id": "vir-biskupljaca-lozice",
+      "name": "Biskupljača & Lozice Beach, Vir",
+      "localName": "Plaža Biskupljača",
+      "lat": 44.31711,
+      "lon": 15.05588,
+      "municipality": "Vir",
+      "surface": "mixed",
+      "shallowEntry": true,
+      "kidFriendly": 4,
+      "snorkeling": 2,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "some",
+      "facilities": [
+        "bar",
+        "toilets",
+        "rentals"
+      ],
+      "crowdLevel": 3,
+      "bestFor": [
+        "family",
+        "swimming"
+      ],
+      "sunsetView": false,
+      "description": "A north-west Vir beach at Lozice with gravel, small stones and patches of sand. It has a café, a restaurant, toilets, sunbed rental and water sports, and is suitable for children.",
+      "tips": "It is quieter than Jadro. Vir's other 'Duboka Draga' cove is nearby along the north-west coast.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1418360966",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html"
+      ],
+      "confidence": "medium",
+      "notes": "dogsAllowed: not a dog beach per kroati.de. [Verified 2026-10-16] dogsAllowed changed from false to null (no source states a ban). shade changed to 'some': kroati.de says a few trees along the promenade give natural shade.",
+      "distanceKmStraight": 10.46,
+      "roadKm": {
+        "walk": 11.88,
+        "bike": 11.62,
+        "car": 11.57
+      }
+    },
+    {
+      "id": "vir-lanterna",
+      "name": "Lanterna (Vir lighthouse point)",
+      "localName": "Lanterna",
+      "lat": 44.30312,
+      "lon": 15.02607,
+      "municipality": "Vir",
+      "surface": "rock",
+      "shallowEntry": false,
+      "kidFriendly": 2,
+      "snorkeling": 3,
+      "kiteSpot": false,
+      "dogsAllowed": null,
+      "shade": "none",
+      "facilities": [],
+      "crowdLevel": 1,
+      "bestFor": [
+        "sunset",
+        "quiet"
+      ],
+      "sunsetView": true,
+      "description": "The western tip of Vir, at a lighthouse built in 1881, largely destroyed in WWII and rebuilt in 1950. It is remote and open to the west, which makes it one of the island's best places to watch the sun go down.",
+      "tips": "Go for the sunset rather than a beach day. There are no facilities, and the lighthouse building is now a private holiday villa, so stay on the public shore.",
+      "sources": [
+        "https://www.openstreetmap.org/node/12104110384",
+        "https://blog.medgulets.com/croatia/zadar/vir"
+      ],
+      "confidence": "low",
+      "notes": "OSM has only a 'Lanterna beach' node (node/12104110384, confirmed via the OSM API) with no surface tag; the surface and snorkeling values are guesses. The lighthouse history (1881, largely destroyed in WWII, rebuilt 1950) and its conversion into a private holiday villa are confirmed on blog.medgulets.com. The sunset claim is inferred from the west-facing tip and is not in any source. [Verified 2026-10-16] Removed the unsourced villa name, 'sleeps 8' and 'own private beach' details from these notes. Public access to the shore right by the villa is unconfirmed.",
+      "distanceKmStraight": 11.67,
+      "roadKm": {
+        "walk": 14.38,
+        "bike": 14.38,
+        "car": 13
+      }
+    }
+  ],
+  "unmappedCandidates": [
+    {
+      "id": "sabunike-dog-section",
+      "name": "Sabunike dog-friendly stretch (next to the FKK beach)",
+      "anchorLat": 44.26616,
+      "anchorLon": 15.15879,
+      "why": "kroati.de: 'Gleich nebenan gibt es des Weiteren auch schöne Abschnitte für Hundehalter' (right next to the naturist beach north of Sabunike). If confirmed, this would be the closest dog beach to the villa, under 1 km away.",
+      "sources": [
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html"
+      ],
+      "confidence": "low",
+      "distanceKmStraight": 0.83
+    },
+    {
+      "id": "privlaka-dog-beach-vir-bridge",
+      "name": "Privlaka / Vir dog beach by the Vir bridge (Kažin / Vrilo)",
+      "anchorLat": 44.27958,
+      "anchorLon": 15.12655,
+      "why": "Several sources report a dog beach near the Vir bridge: BringFido (search snippet) says a fenced dog beach over 100 m long at 'Kažin' near the Vir bridge with parking; kroati.de (Vir page) mentions a dog section near Vrilo (Privlaka) and a dog beach near the bridge on Vir's eastern edge. Beaches-Searcher lists a 'Pseća plaža' at Zarići. The anchor is the Virski most bridge (Nominatim), not the beach.",
+      "sources": [
+        "https://www.bringfido.ca/attraction/18792",
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html",
+        "https://beaches-searcher.com/en/beach/191603569/pseca-plaza-privlaka",
+        "https://sandee.com/croatia/zadar/privlaka/hundestrand"
+      ],
+      "confidence": "low",
+      "distanceKmStraight": 3.47,
+      "notes": "Verified 2026-10-16: kroati.de (Vir page) confirms a popular dog section by Vrilo beach in Privlaka (coarse gravel, small sandy patches, a gently sloping seabed, no infrastructure), plus a dog-friendly stretch near the bridge on Vir's eastern edge and at Srpljica beach. BringFido and beaches-searcher return HTTP 403 to scripts, so the 'fenced, over 100 m' detail is unconfirmed."
+    },
+    {
+      "id": "privlaka-mostina",
+      "name": "Mostina Beach, Privlaka",
+      "why": "Official zadar.hr: sandy, for families with small children; showers, changing booths, eco toilet, and separate barrier-free sea access for disabled guests. placesofjuma says it is in front of Dalmacija camp near the village centre. A strong candidate for accessibility and grandparent audiences, but there is no OSM pin.",
+      "sources": [
+        "https://www.zadar.hr/en/experience/beaches",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/",
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "privlaka-vrilo",
+      "name": "Vrilo Beach, Privlaka",
+      "why": "About 330 m long and mostly sand, with some pebbly corners and concrete sunbathing areas. It has a few straw parasols, a small seasonal beach bar, parking, changing rooms and a toilet (kroati.de), and a popular dog section. kroati.de places it on Privlaka's east coast, placesofjuma on the north coast; the location is unconfirmed.",
+      "sources": [
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html",
+        "https://www.placesofjuma.com/de/privlaka-kroatien/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "privlaka-selo",
+      "name": "Selo Beach, Privlaka",
+      "why": "Golden sand with a flat entry next to Privlaka's small fishing harbour, popular with families. Loungers, umbrellas and a restaurant terrace; no parking at the beach.",
+      "sources": [
+        "https://www.kroati.de/kroatien-dalmatien/privlaka.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "privlaka-partenza",
+      "name": "Partenza Beach, Privlaka",
+      "why": "A sandy beach next to the Vir bridge on Privlaka's north-west side, with a gentle shelf suiting small children and non-swimmers, and the Partenza beach bar.",
+      "sources": [
+        "https://www.placesofjuma.com/de/privlaka-kroatien/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "vir-kozjak",
+      "name": "Kozjak Beach, Vir",
+      "why": "Concrete, stones and sandy patches by the small settlement and cape of Kozjak, a few steps from the ruins of the Kaštelina fortress on Vir. Entry is gentle and suits children; there is no infrastructure. No OSM pin.",
+      "sources": [
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html",
+        "https://blog.medgulets.com/croatia/zadar/vir"
+      ],
+      "confidence": "medium",
+      "notes": "Verified 2026-10-16: the earlier text said 'south-west', which kroati.de does not state, while medgulets places Kozjak Bay on the south-eastern shore. The side of the island is unconfirmed."
+    },
+    {
+      "id": "vir-duboka-draga",
+      "name": "Duboka Draga, Vir (Lozice)",
+      "why": "A second 'Duboka Draga': a quiet cove of gravel, sand and red rocks on Vir's north-west coast near Lozice, with only a beach bar. It might be the owner's intended snorkeling spot.",
+      "sources": [
+        "https://www.kroati.de/kroatien-infos/straende-insel-vir.html",
+        "https://www.beachatlas.com/hr/privlaka"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "nin-prodorica",
+      "name": "Prodorica Beach, Nin",
+      "anchorLat": 44.24761,
+      "anchorLon": 15.20041,
+      "why": "A named OSM beach east of Nin old town (no tags beyond the name). No descriptive source was found.",
+      "sources": [
+        "https://www.openstreetmap.org/way/229299015"
+      ],
+      "confidence": "low",
+      "distanceKmStraight": 3.53
+    },
+    {
+      "id": "petrcane-public-beach",
+      "name": "Petrčane public beach",
+      "anchorLat": 44.18119,
+      "anchorLon": 15.16087,
+      "why": "A pebble beach in OSM about 8.6 km straight-line south of the villa, but roughly 25 km by road. No descriptive source was found.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1314939109"
+      ],
+      "confidence": "low",
+      "distanceKmStraight": 8.62
+    },
+    {
+      "id": "pag-povljana-ricina",
+      "name": "Ričina / Dubrovnik / Perilo beaches, Povljana (Pag)",
+      "anchorLat": 44.32906,
+      "anchorLon": 15.13226,
+      "why": "Sandy beaches on Pag's southern shore, about 8-12 km straight-line across the water but a long drive by road via the Pag bridge. They include an OSM dog-designated beach (way/1559853964) and the OSM 'Ričina' beach. They are excluded from items because they are not practical half-day trips from the villa.",
+      "sources": [
+        "https://www.openstreetmap.org/way/230293651",
+        "https://www.openstreetmap.org/way/1559853964",
+        "https://www.beachatlas.com/hr/povljana"
+      ],
+      "confidence": "medium",
+      "distanceKmStraight": 8.11
+    }
+  ],
+  "openQuestions": [
+    "Is 'Sabunike Mol' the small pier by Beach Bar Palma (OSM 44.26214,15.16342, about 500 m straight-line from the villa)? Confirm the walking route and time.",
+    "Which Ričina did you mean? We used the sandy cove in Vrsi (Capitano Beach Bar, inflatable water park). OSM also has a 'Ričina' beach on Pag (Stara Povljana). We found no Ričina in Privlaka.",
+    "Which Duboka Draga is your snorkeling tip: Vrsi (used here, about 7 km straight-line) or the cove of the same name on Vir near Lozice?",
+    "Where exactly is the dog-friendly stretch next to Sabunike FKK beach, and is it still in use? This could be a strong selling point for dog owners.",
+    "Location and rules of the Privlaka dog beach near the Vir bridge (Kažin / Vrilo / Zarići). Is it fenced, and does it have shade or a water tap?",
+    "Exact spot where guests can scoop the healing mud in the Nin lagoon. Please drop a pin.",
+    "Can non-resort guests use Zaton Holiday Resort beach, and is there a fee? Is its Blue Flag current for 2026?",
+    "Which beaches near Nin/Privlaka currently hold a Blue Flag? This could not be checked against the official register.",
+    "Are dogs allowed (leashed or off-season) on Sabunike, Queen's Beach and Ždrijac? No municipal rule was found.",
+    "Pins for Mostina, Vrilo, Selo and Partenza (Privlaka) and Kozjak (Vir), so they can be added to the map.",
+    "Which kite/windsurf school(s) operate at Ždrijac and Sabunike in 2026, and do they offer kids' or group (retreat) sessions?",
+    "Owner's own walking and cycling times from the villa to Sabunike Mol, Queen's Beach, Ždrijac and Bilotinjak, to replace straight-line distances.",
+    "Does Zaton Holiday Resort beach hold a Blue Flag for 2026? It is removed from facilities until this is confirmed.",
+    "Who runs the Nin lagoon open-air mud therapy (health centre or private), and in which months? Do not publish dates or health claims until confirmed."
+  ],
+  "verification": {
+    "checkedAt": "2026-10-16",
+    "itemsChecked": 18,
+    "corrections": [
+      "All 18 pins re-checked against their cited OSM features via the OSM API 0.6 (Overpass was unreachable and Nominatim returned 429). All are within 200 m of the feature centroid; none moved.",
+      "Business names re-checked in OSM: Beach bar Palma, Plava Laguna, Capitano Beach Bar, Beach bar Demos Pliša, Beach Bar Beskafondo and Batela all exist. Barufa/Autocamp Punta was not checked.",
+      "Queen's Beach: the name legend was stated as fact (Tomislav's wife), but sources disagree (TCN says Queen Jelena), so it is now worded as a legend. The unsourced '3 km' and 'Croatia's best-known' were softened.",
+      "Healing mud: removed the unsourced 'supervised therapy via Nin health centre in July and August' claim; the wording is now 'open-air therapy in summer' (zaton.hr).",
+      "Zaton resort: 'blue-flag' removed from facilities (resort's own claim, not checked against the yearly list). Length changed from 1.2-1.5 km to 1.2 km per zaton.hr; 'since 2003' dropped.",
+      "Duboka Draga (Vrsi): removed the unsourced 'quick drop-off / deep quickly' claims. Parking and gravel-road details aligned with Beach Atlas.",
+      "Vir Jadro, Radovanjica, Sapavac, Pedinka, Biskupljača: dogsAllowed changed from false to null. kroati.de never states a ban.",
+      "Sapavac: shade changed from none to trees (kroati.de mentions pines) and the 'bring shade' tip removed. Radovanjica and Biskupljača: shade changed to 'some'.",
+      "Lanterna: removed the unsourced villa name, 'sleeps 8' and 'private beach' details; lighthouse history confirmed on medgulets.",
+      "Candidates: Kozjak 'south-west' claim removed (medgulets says south-east). The Vrilo description was enriched from kroati.de, including its dog section."
+    ],
+    "removed": [
+      "Claim: mud therapy run by the Nin health centre in July and August",
+      "Facility tag 'blue-flag' on zaton-holiday-resort-beach",
+      "Notes detail: 'Villa Lanterna, sleeps 8, own private beach'"
+    ],
+    "remainingDoubts": [
+      "Sources that return HTTP 403 to scripts (likely bot-blocking), so their content was not re-read: bringfido.ca, beachsearcher.com, beaches-searcher.com, turistickeprice.hr, partner.camping.info PDF.",
+      "No Blue Flag status for any beach near Nin, Privlaka or Vir is confirmed for 2026.",
+      "Healing-mud pin is still approximate; OSM maps no mud feature.",
+      "Kite school at Ždrijac and windsurf centre at Queen's Beach (Surfmania) are confirmed only by kroati.de and Beach Atlas, not by the operator's own site.",
+      "Scores (kidFriendly, snorkeling, crowdLevel) and sunsetView remain editorial or inferred.",
+      "Ričina and Duboka Draga: the Vrsi locations are confirmed by Beach Atlas and OSM, but which ones the owner means is still open (namesakes exist on Pag and Vir)."
+    ]
+  }
+}

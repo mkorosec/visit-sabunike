@@ -1,0 +1,372 @@
+/* "For you": niche spotlight and the "Who stays with us" grid. */
+
+.nc-lowconf {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 760px;
+  margin: -12px 0 24px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--warn) 10%, var(--surface));
+  color: var(--ink);
+  border: 1px solid var(--warn);
+}
+.nc-lowconf .icon {
+  margin-top: 2px;
+}
+.nc-lowconf[hidden] {
+  display: none;
+}
+
+.nc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: start;
+}
+.nc-grid h3,
+.nc-lower h3,
+.nc-others h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
+  margin-bottom: 14px;
+}
+.nc-grid h3 .icon,
+.nc-lower h3 .icon {
+  color: var(--accent);
+}
+
+/* Why it fits */
+.nc-facts {
+  list-style: none;
+  counter-reset: fact;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.nc-facts li {
+  counter-increment: fact;
+  position: relative;
+  padding-left: 46px;
+  line-height: 1.55;
+}
+.nc-facts li::before {
+  content: counter(fact);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  font-family: var(--font-head);
+  font-weight: 700;
+}
+/* Numbered source links: a 44 × 44 px target around a small visual chip
+   (::before); negative block margins keep the line height unchanged. */
+.nc-src {
+  display: inline-flex;
+  margin-left: -4px;
+  vertical-align: middle;
+}
+.nc-src a {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin-block: -11px;
+  color: var(--ink-2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nc-src a::before {
+  content: '';
+  position: absolute;
+  inset: 11px;
+  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+}
+.nc-src a:hover {
+  color: var(--brand);
+}
+.nc-src a:hover::before {
+  border-color: var(--brand);
+}
+
+/* What we offer */
+.nc-offer {
+  padding: clamp(18px, 2.5vw, 28px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.nc-offers {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+}
+.nc-o {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.5;
+}
+.nc-o:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.nc-o b {
+  font-size: 1.02rem;
+}
+.nc-o > span:last-child {
+  color: var(--ink-2);
+}
+.nc-o .badge.todo {
+  margin-left: 6px;
+}
+.nc-o-st {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  margin-bottom: 4px;
+  border-radius: var(--radius-pill);
+  font: 700 0.75rem/1.4 var(--font-body);
+  letter-spacing: 0.02em;
+}
+.nc-o-yes .nc-o-st {
+  background: color-mix(in srgb, var(--ok) 12%, var(--surface));
+  color: var(--ok);
+}
+.nc-o-partial .nc-o-st,
+.nc-o-info .nc-o-st {
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+}
+.nc-o-ask .nc-o-st {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.nc-o-no .nc-o-st {
+  background: var(--surface-2);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.nc-ask {
+  width: 100%;
+  white-space: normal;
+}
+
+/* Season + caveats */
+.nc-lower {
+  margin-top: clamp(32px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: start;
+}
+.nc-season,
+.nc-caveats {
+  padding: clamp(18px, 2.5vw, 28px);
+  border-radius: var(--radius-lg);
+}
+.nc-season {
+  background: var(--surface-2);
+}
+.nc-months {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 4px;
+}
+.nc-m {
+  display: grid;
+  place-items: end center;
+  height: 64px;
+  padding-bottom: 6px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  position: relative;
+  background: var(--surface);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+}
+.nc-m-best {
+  background: var(--brand);
+  color: var(--brand-ink);
+  border-color: var(--brand);
+}
+/* A 2px brand border keeps "good" months distinct from off months in every
+   theme (brand-soft alone is ~1.1:1 on the editorial cream). */
+.nc-m-good {
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  border: 2px solid var(--brand);
+}
+.nc-m.is-sel {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  z-index: 1;
+}
+.nc-m.is-sel::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.nc-legend {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+.nc-legend li {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.nc-key {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  transform: translateY(2px);
+}
+.nc-key.nc-m-good {
+  border: 2px solid var(--brand);
+}
+.nc-season-note {
+  margin: 0;
+  color: var(--ink-2);
+}
+.nc-season-note.has-month {
+  color: var(--ink);
+  font-weight: 600;
+}
+.nc-caveats {
+  background: var(--surface);
+  border: 1.5px dashed var(--line-strong);
+}
+.nc-caveats > p {
+  margin-top: -6px;
+}
+.nc-caveats ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  line-height: 1.55;
+}
+
+/* Other versions */
+.nc-others {
+  margin-top: clamp(32px, 4vw, 56px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.nc-others .chip {
+  min-height: 44px;
+  text-decoration: none;
+  padding-inline: 14px;
+}
+
+/* Who stays with us */
+.nc-who {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+  gap: 12px;
+}
+.nc-who-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  min-height: 84px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.nc-who-card:hover {
+  color: var(--ink);
+  border-color: var(--brand);
+  transform: translateY(-1px);
+}
+.nc-who-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+.nc-who-text {
+  display: grid;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.35;
+}
+.nc-who-text span {
+  color: var(--ink-2);
+  font-size: 0.92rem;
+}
+.nc-who-go {
+  color: var(--brand);
+  flex: none;
+}
+.section-niche .error-box {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .nc-grid,
+  .nc-lower {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .nc-months {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .nc-m {
+    height: 48px;
+  }
+  .nc-facts li {
+    padding-left: 42px;
+  }
+}

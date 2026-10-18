@@ -1,0 +1,684 @@
+/* Things to do: picks, filters, cards and the day planner. */
+
+/* ---------- skeleton */
+.act-skeleton {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+.act-sk {
+  grid-column: span 2;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+.act-sk-lg {
+  grid-column: span 3;
+  height: 320px;
+}
+.act-skeleton p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .act-sk,
+  .act-sk-lg {
+    grid-column: 1 / -1;
+    height: 180px;
+  }
+}
+
+/* ---------- picks */
+.act-picks-h {
+  margin-bottom: 14px;
+}
+.act-picks {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.act-pick {
+  position: relative; /* contains .visually-hidden text inside the phone scroller */
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.act-pick-lg {
+  grid-column: span 3;
+}
+.act-pick-media {
+  position: relative;
+  aspect-ratio: 2 / 1;
+  background: color-mix(in srgb, var(--c) 10%, var(--surface));
+  overflow: hidden;
+}
+.act-pick-lg .act-pick-media {
+  aspect-ratio: 16 / 7;
+}
+.act-pick-media > img,
+.act-pick-media > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.act-pick-cat {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--c);
+  color: var(--brand-ink);
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+.act-pick-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  padding: 18px 20px 20px;
+}
+.act-pick-body > * {
+  margin: 0;
+}
+.act-pick-body h3 {
+  margin: 0;
+}
+.act-pick-body > p:not(.meta) {
+  color: var(--ink);
+}
+.act-pick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto !important;
+  padding-top: 4px;
+}
+@media (max-width: 980px) {
+  .act-pick,
+  .act-pick-lg {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 680px) {
+  /* Swipeable row of picks on phones, so the list below stays within reach. */
+  .act-picks {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    margin-inline: -16px;
+    padding: 2px 16px 10px;
+    scroll-padding-inline: 16px;
+  }
+  .act-pick,
+  .act-pick-lg {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+  .act-pick-media,
+  .act-pick-lg .act-pick-media {
+    aspect-ratio: 5 / 2;
+  }
+  .act-pick-body {
+    padding: 16px;
+  }
+}
+
+/* ---------- buttons shared by cards and picks */
+.act-add {
+  min-height: 44px;
+}
+.act-add[aria-pressed='true'] {
+  --_bg: var(--ok);
+  --_fg: var(--brand-ink);
+  --_bd: var(--ok);
+}
+.act-add[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.act-pick-actions .btn-ghost,
+.act-actions .btn-ghost {
+  min-height: 44px;
+  color: var(--brand);
+}
+
+/* ---------- filters */
+.act-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1100px) {
+  .act-main {
+    grid-template-columns: 1fr;
+  }
+}
+.act-filters {
+  display: grid;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  margin-bottom: 14px;
+}
+.act-frow {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: start;
+}
+.act-flabel {
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding-top: 9px;
+  color: var(--ink-2);
+}
+.act-filters .chip {
+  min-height: 44px;
+}
+.act-n {
+  font-weight: 500;
+  opacity: 0.7;
+}
+.act-chipdot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 0 2px var(--surface);
+}
+.act-frow-month {
+  grid-template-columns: 84px auto minmax(0, 1fr);
+  align-items: center;
+}
+.act-frow-month .act-flabel {
+  padding-top: 0;
+}
+.act-frow-month select {
+  width: auto;
+  min-width: 150px;
+}
+.act-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.act-switch input {
+  width: 22px;
+  height: 22px;
+  min-height: 0;
+  margin: 0;
+  accent-color: var(--brand);
+  flex: none;
+}
+.act-switch.is-disabled {
+  color: var(--ink-2);
+  font-weight: 500;
+  cursor: default;
+}
+@media (max-width: 560px) {
+  .act-filters {
+    padding: 14px;
+  }
+  .act-frow,
+  .act-frow-month {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .act-flabel {
+    padding-top: 0;
+  }
+  .act-frow-month select {
+    width: 100%;
+  }
+}
+.act-list [hidden] {
+  display: none !important;
+}
+.act-count-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  margin-bottom: 8px;
+}
+.act-count {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---------- cards */
+.act-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+  gap: 16px;
+}
+.act-none {
+  grid-column: 1 / -1;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+  margin: 0;
+}
+.act-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  scroll-margin-top: 100px;
+}
+.act-card.is-off {
+  background: var(--surface-2);
+}
+.act-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 14px;
+  background: var(--c);
+  color: var(--brand-ink);
+}
+.act-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+}
+.act-flags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+.act-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.act-flag-warn {
+  background: color-mix(in srgb, var(--warn) 14%, var(--surface));
+  color: var(--warn);
+}
+.act-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px 6px;
+  flex: 1;
+}
+.act-body > * {
+  margin: 0;
+}
+.act-name {
+  font-size: 1.15rem;
+  margin: 0;
+}
+.act-meta {
+  font-size: 0.875rem;
+}
+.act-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+/* 44 px hit area; the negative margin keeps the 24 px footprint in the line. */
+.act-src {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin: -10px;
+  color: var(--ink-2);
+}
+.act-months {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+.act-dots {
+  display: inline-grid;
+  grid-template-columns: repeat(12, 9px);
+  gap: 3px;
+}
+.act-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid color-mix(in srgb, var(--c) 45%, var(--surface));
+}
+.act-dots i.on {
+  background: var(--c);
+  border-color: var(--c);
+}
+.act-dots i.sel {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--ink);
+}
+.act-months.is-unknown .act-dots i {
+  border-style: dashed;
+}
+.act-season {
+  font-weight: 600;
+}
+.act-off {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--warn);
+}
+.act-desc {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.act-desc p {
+  margin: 0;
+}
+.act-desc.is-open {
+  display: block;
+}
+.act-more {
+  align-self: flex-start;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font: 600 0.875rem/1.2 var(--font-body);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.act-ops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.9rem;
+}
+.act-ops a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  font-weight: 600;
+}
+/* Booking info and sources: part of the card body; on phones only after "Read more". */
+.act-extra {
+  display: contents;
+}
+@media (max-width: 760px) {
+  .act-card:not(.is-open) .act-extra {
+    display: none;
+  }
+}
+.act-details {
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.act-details summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+}
+.act-details summary::-webkit-details-marker {
+  display: none;
+}
+/* Chevron: points right when closed, down when open. */
+.act-details summary::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin: 0 3px 0 1px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+.act-details[open] > summary::before {
+  transform: rotate(45deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .act-details summary::before {
+    transition: none;
+  }
+}
+.act-caution {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 8px 10px;
+  border-left: 3px solid var(--warn);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: color-mix(in srgb, var(--warn) 9%, var(--surface));
+  color: var(--ink);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+.act-caution .icon {
+  flex: none;
+  margin-top: 2px;
+  color: var(--warn);
+}
+.act-details p {
+  margin: 0 0 8px;
+}
+.act-sources summary {
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+}
+.act-sources ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  font-size: 0.8125rem;
+}
+.act-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 16px 16px;
+}
+.act-more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.act-method {
+  margin: 18px 0 0;
+}
+
+/* ---------- day planner */
+.act-plan {
+  position: sticky;
+  top: calc(var(--header-h, 72px) + 12px);
+  padding: 18px 20px;
+  display: grid;
+  gap: 12px;
+  border-top: 4px solid var(--accent);
+}
+.act-plan > * {
+  margin: 0;
+}
+.act-plan-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.act-plan-head h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.act-plan-empty {
+  color: var(--ink-2);
+}
+.act-start {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.act-start select {
+  width: auto;
+}
+.act-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.act-stop {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 8px 0;
+  position: relative;
+}
+.act-stop time {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+}
+.act-stop > span,
+.act-stop > div {
+  border-left: 3px solid var(--c, var(--line-strong));
+  padding-left: 10px;
+}
+.act-home > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  border-left-color: var(--line-strong);
+}
+.act-stop p {
+  margin: 0;
+}
+.act-stop-name {
+  font-weight: 700;
+  line-height: 1.35;
+}
+.act-stop-tools {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.act-stop-tools .btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 6px 10px;
+}
+.act-leg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 62px;
+  padding: 2px 0 2px 10px;
+  border-left: 3px dotted var(--line-strong);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+.act-plan-sum {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.act-plan-sum div {
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+.act-plan-sum dt {
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+.act-plan-sum dd {
+  margin: 0;
+  font-weight: 700;
+}
+.act-warn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: var(--warn);
+}
+.act-warn li {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+.act-warn .icon {
+  margin-top: 2px;
+}
+.act-plan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  .act-plan {
+    position: static;
+    order: -1;
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 420px) {
+  .act-plan {
+    padding: 16px 14px;
+  }
+  .act-plan-actions .btn-primary {
+    width: 100%;
+    white-space: normal;
+  }
+}

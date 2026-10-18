@@ -1,0 +1,509 @@
+/* 3D terrain map. Pin and house colours are data colours (like the Leaflet pins);
+   everything else reads theme tokens, with fallbacks for the dev page. */
+
+.t3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  overflow: hidden;
+  /* clip, unlike hidden, cannot be scrolled by focusing a child near the edge */
+  overflow: clip;
+  isolation: isolate;
+  /* Pale sky; the scene fog fades into the same horizon colour (#e9eff1). */
+  background: linear-gradient(180deg, #cfe0ea 0%, #e2ebef 38%, #e9eff1 60%, #e9eff1 100%);
+  color: var(--ink, #0f1f2a);
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  border-radius: inherit;
+}
+/* Focus rings are two-tone (dark + amber) so they read on white chips, sand and sea alike. */
+.t3:focus-visible {
+  outline: none;
+}
+.t3:focus-visible::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  border: 3px solid var(--ink, #0f1f2a);
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 3px var(--focus, #e0a400);
+  pointer-events: none;
+}
+.t3-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  cursor: grab;
+}
+.t3-canvas:active {
+  cursor: grabbing;
+}
+.t3.is-flyover .t3-canvas {
+  cursor: default;
+}
+/* CSS2DRenderer writes inline overflow: hidden (scrollable by focus) and a
+   z-index per label up to the marker count. The layer's own z-index keeps all of
+   them below the card and tools; the !important rules below win over the inline values. */
+.t3-labels {
+  position: absolute !important;
+  inset: 0;
+  z-index: 1;
+  overflow: clip !important;
+  pointer-events: none;
+}
+
+/* Loading and failure states */
+.t3-loading,
+.t3-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--ink-2, #44535e);
+}
+.t3-loading span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid rgb(11 93 140 / 0.2);
+  border-top-color: var(--brand, #0b5d8c);
+  animation: t3-spin 0.9s linear infinite;
+}
+.t3-fallback {
+  background: var(--surface-2, #f3efe6);
+  z-index: 5;
+}
+.t3-fallback strong {
+  color: var(--ink, #0f1f2a);
+  font-size: 17px;
+}
+@keyframes t3-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Place names: quiet cartographic labels with a white halo */
+.t3-place {
+  font: 600 13px/1 var(--font-body, 'Inter', system-ui, sans-serif);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1f3a4d;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 6px rgb(255 255 255 / 0.9);
+  white-space: nowrap;
+  transition: opacity 0.25s, visibility 0.25s;
+}
+.t3-place.is-range {
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.32em;
+  color: #4b4a3f;
+  font-size: 14px;
+}
+.t3.is-far .t3-place:not(.is-range) {
+  font-size: 12px;
+}
+
+/* POI pins: dot on a short stem, label on hover / focus / selection */
+.t3-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: flex-end;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.2s, visibility 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.t3-pin-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--pin);
+  border: 2.5px solid #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+  transition: transform 0.15s;
+}
+.t3-pin-stem {
+  width: 2px;
+  height: 14px;
+  background: linear-gradient(var(--pin), rgb(255 255 255 / 0.4));
+}
+.t3-pin-label,
+.t3-house-label {
+  margin-bottom: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fff;
+  color: #0f1f2a;
+  font: 600 14px/1.3 var(--font-body, 'Inter', system-ui, sans-serif);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgb(15 31 42 / 0.12), 0 4px 12px rgb(15 31 42 / 0.14);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s, transform 0.15s;
+  pointer-events: none;
+}
+.t3-pin:hover,
+.t3-pin:focus-visible,
+.t3-pin.is-selected,
+.t3-pin.is-flash,
+.t3-house {
+  z-index: 100000 !important;
+}
+.t3-pin:hover .t3-pin-label,
+.t3-pin:focus-visible .t3-pin-label,
+.t3-pin.is-selected .t3-pin-label,
+.t3-pin.is-flash .t3-pin-label,
+.t3-pin.is-important:not(.is-near-house) .t3-pin-label {
+  opacity: 1;
+  transform: none;
+}
+.t3-pin:hover .t3-pin-dot,
+.t3-pin:focus-visible .t3-pin-dot,
+.t3-pin.is-selected .t3-pin-dot {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 0.9), 0 0 0 5px var(--pin), 0 2px 8px rgb(0 0 0 / 0.35);
+}
+.t3-pin:focus-visible {
+  outline: none;
+}
+.t3-pin:focus-visible .t3-pin-label {
+  outline: 3px solid var(--ink, #0f1f2a);
+  box-shadow: 0 0 0 6px var(--focus, #e0a400);
+}
+.t3-pin.is-left .t3-pin-label {
+  align-self: flex-start;
+}
+.t3-pin.is-right .t3-pin-label {
+  align-self: flex-end;
+}
+/* Near the top edge the label goes below the dot instead of off the map. */
+.t3-pin.is-flipped .t3-pin-label {
+  position: absolute;
+  top: 100%;
+  margin: 6px 0 0;
+}
+
+/* The house: always labelled, terracotta, gentle pulse */
+.t3-house {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.2s;
+}
+.t3-house-label {
+  opacity: 1;
+  transform: none;
+  background: #b5451f;
+  color: #fff;
+}
+.t3-house-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: #b5451f;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
+}
+.t3-house-stem {
+  width: 3px;
+  height: 18px;
+  background: linear-gradient(#b5451f, rgb(181 69 31 / 0.15));
+}
+.t3-house-pulse {
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: rgb(181 69 31 / 0.55);
+  animation: t3-pulse 2.4s ease-out infinite;
+}
+.t3-house:focus-visible {
+  outline: none;
+}
+.t3-house.is-selected .t3-house-icon {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #b5451f, 0 3px 10px rgb(0 0 0 / 0.35);
+}
+.t3-house:focus-visible .t3-house-icon {
+  outline: 3px solid var(--ink, #0f1f2a);
+  box-shadow: 0 0 0 6px var(--focus, #e0a400), 0 3px 10px rgb(0 0 0 / 0.35);
+}
+/* Portrait hero: the hero text covers most of the frame, so the marker would
+   always sit behind a line of it. The terrain alone is the backdrop there. */
+.t3.is-flyover.is-portrait .t3-house {
+  display: none;
+}
+.t3.is-flyover .t3-house,
+.t3.is-flyover .t3-pin {
+  pointer-events: none;
+}
+@keyframes t3-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+/* Hidden behind a ridge, or a place name that would be clipped (computed per frame).
+   visibility (not only opacity) so hidden pins cannot take keyboard focus. The
+   focused or selected pin stays visible. */
+.t3 .is-occluded:not(:focus):not(.is-selected),
+.t3 .is-out:not(:focus),
+.t3 .t3-place.is-clipped {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.t3 .t3-house.is-occluded {
+  opacity: 0.35;
+}
+
+/* Tool buttons */
+.t3-tools {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  display: grid;
+  gap: 6px;
+}
+.t3-tools button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line, #d9d4c7);
+  border-radius: var(--radius, 10px);
+  background: var(--surface, #fff);
+  color: var(--ink, #0f1f2a);
+  box-shadow: var(--shadow, 0 2px 8px rgb(15 31 42 / 0.12));
+  cursor: pointer;
+}
+.t3-tools button:hover {
+  background: var(--brand-soft, #e3eef5);
+  color: var(--brand-strong, #084a70);
+}
+.t3-tools button:focus-visible,
+.t3-card-close:focus-visible,
+.t3-done:focus-visible {
+  outline: 3px solid var(--ink, #0f1f2a);
+  outline-offset: 0;
+  box-shadow: 0 0 0 6px var(--focus, #e0a400);
+}
+.t3-tools button[data-t3='left'] {
+  margin-top: 6px;
+}
+.t3-tools button[data-t3='north'] {
+  margin-top: 6px;
+}
+
+.t3-hint {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  z-index: 4;
+  /* max-content: with left: 50% the shrink-to-fit width would stop at half the map */
+  width: max-content;
+  max-width: calc(100% - 96px);
+  margin: 0;
+  padding: 6px 12px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-pill, 999px);
+  background: rgb(255 255 255 / 0.92);
+  color: var(--ink-2, #44535e);
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.t3-hint.is-quiet {
+  opacity: 0;
+}
+.t3-hint.is-loud {
+  opacity: 1;
+  background: rgb(15 31 42 / 0.85);
+  color: #fff;
+}
+.t3.is-touch-active .t3-hint {
+  opacity: 0;
+}
+
+/* Touch: shown while the map owns one-finger gestures */
+.t3-done {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  z-index: 5;
+  min-width: 96px;
+  min-height: 44px;
+  padding: 0 20px;
+  transform: translateX(-50%);
+  border: 0;
+  border-radius: var(--radius-pill, 999px);
+  background: var(--ink, #0f1f2a);
+  color: #fff;
+  font: 600 16px/1 var(--font-body, 'Inter', system-ui, sans-serif);
+  box-shadow: var(--shadow, 0 2px 8px rgb(15 31 42 / 0.2));
+  cursor: pointer;
+}
+.t3-done[hidden] {
+  display: none;
+}
+
+.t3-attr {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  z-index: 4;
+  max-width: calc(100% - 16px);
+  margin: 0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgb(255 255 255 / 0.75);
+  color: #44535e;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Selection card */
+.t3-card {
+  position: absolute;
+  left: 12px;
+  bottom: 28px;
+  z-index: 4;
+  width: min(360px, calc(100% - 80px));
+  padding: 14px 52px 14px 16px;
+  border-radius: var(--radius-lg, 14px);
+  background: var(--surface, #fff);
+  color: var(--ink, #0f1f2a);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgb(15 31 42 / 0.18));
+  animation: t3-in 0.18s ease-out;
+}
+.t3-card h4 {
+  margin: 6px 0 2px;
+  font-family: var(--font-head, Georgia, serif);
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+.t3-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-2, #44535e);
+}
+.t3-chip {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--pin);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.t3-card-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--ink-2, #44535e);
+  cursor: pointer;
+}
+.t3-card-close:hover {
+  background: var(--surface-2, #f3efe6);
+}
+@keyframes t3-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* Phones: the tools become one row at the bottom right (a column would cover
+   half the map height), the card sits above them, the attribution may wrap. */
+@media (max-width: 520px) {
+  .t3-tools {
+    top: auto;
+    right: 8px;
+    bottom: 44px;
+    grid-auto-flow: column;
+    gap: 4px;
+  }
+  .t3-tools button[data-t3='left'],
+  .t3-tools button[data-t3='north'] {
+    margin: 0 0 0 4px;
+  }
+  .t3-card {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    bottom: 100px;
+  }
+  .t3-hint {
+    max-width: calc(100% - 24px);
+  }
+  .t3-attr {
+    left: 8px;
+    white-space: normal;
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t3-house-pulse {
+    animation: none;
+    opacity: 0;
+  }
+  .t3-loading span {
+    animation-duration: 3s;
+  }
+  .t3-card {
+    animation: none;
+  }
+}
+.t3-pin.is-selected:not(.is-flipped) .t3-pin-label,
+.t3-pin:hover:not(.is-flipped) .t3-pin-label,
+.t3-pin:focus-visible:not(.is-flipped) .t3-pin-label {
+  margin-bottom: 8px;
+}
