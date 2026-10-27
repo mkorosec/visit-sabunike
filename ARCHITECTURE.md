@@ -64,3 +64,10 @@ export default {
 - Light, high-contrast themes only (`adriatic`, `editorial`, `postcard`, `minimal`). Body text is 17px with line-height 1.6.
 - Mobile first: works at 360px width with no horizontal scroll and tap targets of at least 44px.
 - Respect `prefers-reduced-motion`: no auto-rotation or fly-throughs when it is set.
+
+## Building model
+
+`twin.html` is the standalone drawing-led explorer. Its model and calibration data
+live in `src/twin/model.js` and `model-data.js`, shared with the embedded and hero
+viewers in `src/villa3d/viewer.js`. See `src/twin/README.md` for provenance,
+asset handling, validation and known drawing conflicts.

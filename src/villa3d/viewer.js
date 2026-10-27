@@ -1,5 +1,4 @@
-// Embeddable 3D view of the house, built from the photo-based model in
-// model.js / build.js. Two modes:
+// Embeddable 3D view sharing the drawing-led Sol high model with twin.html. Two modes:
 //   'embed' – orbit, hover + click to pick an apartment, floor isolation, roof toggle.
 //   'hero'  – no chrome, no picking, slow pendulum orbit (static with reduced motion).
 // Frames are rendered on demand only (the hero orbit runs only while on screen).
@@ -13,8 +12,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
-import * as M from './model.js';
-import { createMaterials, buildBuilding, buildZoneObjects } from './build.js';
+import { buildBuilding } from '../twin/model.js';
+import { floors, point, PLINTH, LEVEL, WALL_HEIGHT } from '../twin/model-data.js';
 import { APARTMENTS } from '../content/site.js';
 import { esc, photo, prefersReducedMotion, tr } from '../lib/util.js';
 import { getState } from '../state.js';
@@ -24,7 +23,7 @@ const DEG = Math.PI / 180;
 const MAX_PIXEL_RATIO = 1.5;
 const FOV = 36;
 const MAX_POLAR = 84 * DEG; // stay above the lawn
-const PARAMS = M.DEFAULT_PARAMS;
+const MODEL_DEPTH = 14.84;
 const FALLBACK_PHOTO = '20210810_184724.jpg';
 const HERO_SWING_MS = 46000; // one full pendulum swing of the hero camera, then it rests
 const PARK_MS = 30000;
@@ -65,7 +64,7 @@ const STRINGS = {
   upper: { en: 'Upper', de: 'OG', sl: 'Nadstropje', hr: 'Kat', it: 'Primo' },
   roof: { en: 'Roof', de: 'Dach', sl: 'Streha', hr: 'Krov', it: 'Tetto' },
   reset: { en: 'Reset view', de: 'Ansicht zurücksetzen', sl: 'Ponastavi pogled', hr: 'Vrati početni prikaz', it: 'Ripristina la vista' },
-  note: { en: 'Simplified 3D model, based on photos', de: 'Vereinfachtes 3D-Modell nach Fotos', sl: 'Poenostavljen 3D-model, narejen po fotografijah', hr: 'Pojednostavljeni 3D model izrađen prema fotografijama', it: 'Modello 3D semplificato, ricostruito dalle foto' },
+  note: { en: 'Plan-based 3D model; heights and roof estimated', de: '3D-Modell nach Grundrissen; Höhen und Dach geschätzt', sl: '3D-model po načrtih; višine in streha so ocenjene', hr: '3D model prema nacrtima; visine i krov su procijenjeni', it: 'Modello 3D dalle planimetrie; altezze e tetto stimati' },
   roleDescription: { en: '3D model', de: '3D-Modell', sl: '3D-model', hr: '3D model', it: 'modello 3D' },
   zoomHint: { en: 'Hold Ctrl and scroll to zoom', de: 'Zum Zoomen Strg gedrückt halten und scrollen', sl: 'Za povečavo držite Ctrl in se pomikajte s kolescem', hr: 'Za zumiranje držite Ctrl i pomičite kotačić', it: 'Per lo zoom tenete premuto Ctrl e scorrete' },
   scene: {
@@ -164,18 +163,23 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(FOV, 1, 0.1, 400);
-  const materials = createMaterials();
   addLights(scene);
   const ground = makeGround();
   scene.add(ground);
 
-  const { groups, meshes } = buildBuilding(PARAMS, materials);
-  for (const g of Object.values(groups)) scene.add(g);
+  const model = buildBuilding();
+  // The embedded cameras face +Z; the drawings use -Z as the front.
+  model.root.rotation.y = Math.PI;
+  model.root.position.x = 12.71;
+  scene.add(model.root);
+  const groups = { ground: model.floorGroups[0], upper: model.floorGroups[1], roof: model.roof };
+  const meshes = [];
+  model.root.traverse((object) => { if (object.isMesh) meshes.push(object); });
 
   const zoneMats = new Map();
   const zoneGroups = { ground: new THREE.Group(), upper: new THREE.Group() };
   const outlines = new Map(); // unit id -> { group, mat }
-  const { zones, objects } = buildZoneObjects(PARAMS, (unit, kind) => zoneMaterialsFor(zoneMats, unit, kind));
+  const objects = buildApartmentZones(zoneMats);
   const aptObjects = objects.filter((o) => APT.has(o.unit.id));
   for (const o of objects) {
     o.mesh.visible = !hero && APT.has(o.unit.id);
@@ -205,10 +209,10 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
     root.append(labelRenderer.domElement);
     for (const [id, apt] of APT) {
       const label = makeLabel(apt, S, () => pickUnit(id));
-      // Anchor on the unit's terrace/balcony: it is on the visible side and is what guests recognise.
+      // Anchor within the calibrated apartment footprint.
       const own = aptObjects.filter((o) => o.unit.id === id);
       const main = own.find((o) => o.zone.kind === 'outdoor') || own[0];
-      const [cx, cz] = M.polygonCentroid(main.zone.poly);
+      const [cx, cz] = main.zone.center;
       label.position.set(cx, main.zone.level + Math.min(1.3, main.zone.height * 0.6), cz);
       label.userData.floor = main.zone.floor;
       scene.add(label);
@@ -284,7 +288,7 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
 
   /* ---------- camera ---------- */
   const home = () => {
-    const D = PARAMS.depth;
+    const D = MODEL_DEPTH;
     const target = new THREE.Vector3(5.6, hero ? 3.4 : 2.9, -D / 2 + 1.2);
     const span = (camera.aspect < 1 ? 19 : 25) + (hero ? 4 : 0);
     const dist = Math.max(hero ? 32 : 26, fitDistance(span, hero ? 16 : 14));
@@ -344,7 +348,7 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
     if (box.isEmpty()) return;
     const size = box.getSize(new THREE.Vector3());
     // Aim part-way back to the house centre so the neighbouring labels stay in frame.
-    const centre = box.getCenter(new THREE.Vector3()).lerp(new THREE.Vector3(5.6, 2.9, -PARAMS.depth / 2 + 1.2), 0.45);
+    const centre = box.getCenter(new THREE.Vector3()).lerp(new THREE.Vector3(5.6, 2.9, -MODEL_DEPTH / 2 + 1.2), 0.45);
     // Keep the current viewing direction, but never look from behind the house.
     const off = camera.position.clone().sub(controls.target);
     const s = new THREE.Spherical().setFromVector3(off);
@@ -438,11 +442,11 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
     if (!hit) return null;
     if (hit.object.userData.isZone) return hit.object.userData.unit;
     // A wall was hit: probe a little further along the ray into the zone behind it.
-    const visibleZones = zones.filter((z) => APT.has(z.unit) && zoneGroups[z.floor].visible);
+    const visibleZones = aptObjects.filter((o) => zoneGroups[o.zone.floor].visible);
     for (const s of [0.05, 0.2, 0.45, 0.8, 1.2]) {
       const p = hit.point.clone().addScaledVector(raycaster.ray.direction, s);
-      const zone = M.zoneAt(visibleZones, p.x, p.y, p.z);
-      if (zone) return zone.unit;
+      const zone = visibleZones.find((o) => o.bounds.containsPoint(p));
+      if (zone) return zone.unit.id;
     }
     return null;
   }
@@ -603,8 +607,6 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
     io?.disconnect();
     for (const off of listeners) off();
     controls?.dispose();
-    // The procedural textures are shared by all viewers (build.js), so they stay.
-    const sharedTex = new Set(Object.values(materials.tex || {}));
     const release = () => {
       const mats = new Set();
       scene.traverse((o) => {
@@ -614,11 +616,10 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
         for (const m of [].concat(o.material || [])) mats.add(m);
       });
       for (const m of mats) {
-        if (!sharedTex.has(m.map)) m.map?.dispose();
+        m.map?.dispose();
         m.alphaMap?.dispose();
         m.dispose();
       }
-      for (const m of [...materials.clippable, ...Object.values(materials.mats)]) m.dispose();
     };
     reused?.release(); // disposed before its first frame: the renderer is ours, the old scene is not
     if (lost) destroy({ renderer, release });
@@ -660,9 +661,8 @@ function createScene(root, { hero, S, selected, floor, onSelect }) {
 
 function addLights(scene) {
   scene.add(new THREE.HemisphereLight('#f2f7fc', '#a39a78', 1.25));
-  // Late-afternoon sun as in the owner's photo 20210720_171634 (front lit), using the inferred orientation.
-  const facade = M.feasibleFacadeAzimuths();
-  const dir = new THREE.Vector3(...M.sunDirectionModel(facade.observations[0].sun, facade.mid)).normalize();
+  // Presentation lighting: the architectural sheets do not establish compass north.
+  const dir = new THREE.Vector3(-9, 26, 12).normalize();
   const sun = new THREE.DirectionalLight('#fff1dc', 2.6);
   const centre = new THREE.Vector3(6, 2, -2);
   sun.position.copy(centre).addScaledVector(dir, 45);
@@ -695,6 +695,36 @@ function makeGround() {
   mesh.receiveShadow = true;
   mesh.renderOrder = -1;
   return mesh;
+}
+
+// Selection volumes follow the same calibrated apartment polygons as the model.
+function buildApartmentZones(cache) {
+  return floors.flatMap((floor, index) => floor.regions.flatMap((region) => {
+    const id = region.unit.replace('app', 'apt');
+    if (!APT.has(id)) return [];
+    const poly = region.poly.map(([x, z]) => {
+      const p = point(floor.id, x, z);
+      return [12.71 - p[0], -p[1]];
+    });
+    const level = PLINTH + index * LEVEL;
+    const shape = new THREE.Shape();
+    poly.forEach(([x, z], i) => i ? shape.lineTo(x, -z) : shape.moveTo(x, -z));
+    shape.closePath();
+    const geometry = new THREE.ExtrudeGeometry(shape, { depth: WALL_HEIGHT, bevelEnabled: false });
+    geometry.rotateX(-Math.PI / 2);
+    geometry.translate(0, level, 0);
+    geometry.computeBoundingBox();
+    const bounds = geometry.boundingBox;
+    const center = bounds.getCenter(new THREE.Vector3());
+    const unit = { id, color: APT.get(id).color };
+    const material = zoneMaterialsFor(cache, unit, 'interior');
+    const mesh = new THREE.Mesh(geometry, material.fill);
+    mesh.userData = { isZone: true, unit: id };
+    const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geometry), material.edge);
+    mesh.add(edges);
+    const zone = { floor: index ? 'upper' : 'ground', kind: 'interior', level, height: WALL_HEIGHT, center: [center.x, center.z] };
+    return [{ unit, zone, mesh, edges, bounds }];
+  }));
 }
 
 function zoneMaterialsFor(cache, unit, kind) {

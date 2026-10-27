@@ -1,160 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="Interactive, evidence-labelled 3D reconstruction of Apartments Napros (Sabunike, Privlaka, Croatia) built from 16 supplied photographs." />
-    <title>Apartments Napros · digital twin (photo-based reconstruction)</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1 8 8 2l7 6v7H1z' fill='%231d5fa8'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./src/twin/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#panel">Skip to building information</a>
-    <div class="app" id="app">
-      <header class="topbar">
-        <a class="btn ghost back-link" href="./index.html#villa" aria-label="Back to Apartments Napros"><span aria-hidden="true">←</span><span class="back-text" aria-hidden="true"> Back to Apartments Napros</span></a>
-        <div class="brand">
-          <h1>Apartments Napros <span class="tag">digital twin</span></h1>
-          <p>Put kandelica 60, Sabunike · rebuilt from 16 photos · <strong>schematic, not a survey</strong></p>
-        </div>
-        <div class="top-actions">
-          <button type="button" id="btn-help" class="btn ghost" aria-haspopup="dialog" title="Keyboard shortcuts (?)">Keys</button>
-          <button type="button" id="btn-panel" class="btn ghost" aria-controls="panel" aria-expanded="true">Info</button>
-        </div>
-      </header>
-
-      <main class="viewport" id="viewport">
-        <canvas id="scene" tabindex="0" aria-describedby="scene-desc" aria-label="3D model of the building"></canvas>
-        <p id="scene-desc" class="visually-hidden">
-          3D reconstruction. Drag or use the arrow keys to orbit, scroll, pinch or press plus/minus to zoom, shift plus arrows to pan.
-          Click a part of the building to select the unit behind it. All units can also be selected from the Units list in the information panel.
-        </p>
-        <div id="labels" class="labels-layer"></div>
-        <img id="photo-overlay" class="photo-overlay" alt="" hidden />
-        <div class="compass" id="compass" aria-hidden="true" title="North arrow (inferred from sun and shadows)">
-          <svg viewBox="-20 -20 40 40" width="46" height="46">
-            <circle r="18" class="compass-ring" />
-            <g id="compass-needle"><path d="M0 -15 L5 2 L0 -1 L-5 2 Z" class="needle-n" /><path d="M0 15 L5 2 L0 -1 L-5 2 Z" class="needle-s" /></g>
-          </svg>
-          <span>N<br /><small>inferred</small></span>
-        </div>
-        <div class="sel-chip" id="sel-chip" hidden>
-          <span class="dot" aria-hidden="true"></span><span id="sel-name"></span>
-          <button type="button" class="btn small" id="sel-details">Details</button>
-          <button type="button" class="btn small ghost" id="sel-clear" aria-label="Clear selection">✕</button>
-        </div>
-        <div class="legend" id="legend" hidden>
-          <strong>Evidence colours</strong>
-          <span><i class="sw observed"></i>Observed in photos</span>
-          <span><i class="sw inferred"></i>Inferred / estimated</span>
-          <span><i class="sw assumed"></i>Assumed (no evidence)</span>
-        </div>
-        <div class="overlay-bar" id="overlay-bar" hidden>
-          <span id="overlay-name">Photo overlay</span>
-          <label>Opacity <input type="range" id="overlay-opacity" min="0" max="1" step="0.05" value="0.5" /></label>
-          <button type="button" class="btn small" id="overlay-close">Close overlay</button>
-        </div>
-        <div class="banner" id="banner" role="status" hidden></div>
-        <div class="gl-error" id="gl-error" role="alert" hidden>
-          <h2>3D view unavailable</h2>
-          <p id="gl-error-msg">The browser could not start WebGL&nbsp;2.</p>
-          <p>Try enabling hardware acceleration or using a current Chrome, Edge, Firefox or Safari. The units, the evidence notes and all source photos are still available in the information panel.</p>
-          <details><summary>Technical details</summary><pre id="gl-error-detail"></pre></details>
-          <button type="button" class="btn" id="gl-error-photos">Open source photos</button>
-        </div>
-        <p class="status visually-hidden" id="status" role="status" aria-live="polite"></p>
-      </main>
-
-      <nav class="toolbar" id="toolbar" aria-label="View controls">
-        <div class="tgroup" role="group" aria-label="Camera">
-          <button type="button" class="btn" data-view="home" title="3D overview (H)">3D</button>
-          <button type="button" class="btn" data-view="front" title="Front view (F)">Front</button>
-          <button type="button" class="btn" data-view="top" title="Overhead view (T)">Top</button>
-        </div>
-        <div class="tgroup" role="group" aria-label="Floor isolation">
-          <button type="button" class="btn" data-floor="all" aria-pressed="true" title="All floors (0)">All</button>
-          <button type="button" class="btn" data-floor="ground" aria-pressed="false" title="Ground floor only (1)">Ground</button>
-          <button type="button" class="btn" data-floor="upper" aria-pressed="false" title="Upper floor only (2)">Upper</button>
-        </div>
-        <div class="tgroup" role="group" aria-label="Model toggles">
-          <button type="button" class="btn" id="t-roof" aria-pressed="true" title="Show or remove the roof and attic (R)">Roof</button>
-          <button type="button" class="btn" id="t-cut" aria-pressed="false" aria-controls="cut-controls" title="Interior cutaway (C)">Cutaway</button>
-          <span class="cut-controls" id="cut-controls" hidden>
-            <button type="button" class="btn small" id="t-cut-axis" title="Switch section direction (X)">Front→back</button>
-            <label class="range"><span class="visually-hidden">Section position</span><input type="range" id="cut-pos" min="-10.7" max="1.5" step="0.1" value="-1.2" /></label>
-          </span>
-        </div>
-        <div class="tgroup" role="group" aria-label="Overlays">
-          <button type="button" class="btn" id="t-evidence" aria-pressed="false" title="Colour by evidence (E)">Evidence</button>
-          <button type="button" class="btn" id="t-labels" aria-pressed="true" title="Unit labels (L)">Labels</button>
-          <button type="button" class="btn" id="t-dims" aria-pressed="false" title="Key dimensions (D)">Dims</button>
-          <button type="button" class="btn" id="t-markers" aria-pressed="true" title="Photo viewpoints (P)">Photo spots</button>
-          <button type="button" class="btn" id="t-trees" aria-pressed="false" title="Garden trees (G)">Trees</button>
-        </div>
-      </nav>
-
-      <aside class="panel" id="panel" aria-label="Building information" tabindex="-1">
-        <div class="tabs" role="tablist" aria-label="Information sections">
-          <button type="button" role="tab" id="tab-units" aria-controls="pane-units" aria-selected="true">Units</button>
-          <button type="button" role="tab" id="tab-photos" aria-controls="pane-photos" aria-selected="false" tabindex="-1">Photos</button>
-          <button type="button" role="tab" id="tab-evidence" aria-controls="pane-evidence" aria-selected="false" tabindex="-1">Evidence</button>
-        </div>
-        <section class="pane" id="pane-units" role="tabpanel" aria-labelledby="tab-units">
-          <p class="hint">Unit positions are <span class="chip inferred">inferred</span> from the photos. No floor plan was supplied. Areas and room counts are the owner's <span class="chip stated">stated</span> figures.</p>
-          <ul class="unit-list" id="unit-list"></ul>
-          <h2 class="sub">Building sections</h2>
-          <ul class="unit-list sections" id="section-list"></ul>
-          <div class="detail" id="detail" aria-live="polite"></div>
-        </section>
-        <section class="pane" id="pane-photos" role="tabpanel" aria-labelledby="tab-photos" hidden>
-          <p class="hint">All 16 supplied photographs. Open one for its evidence notes, the original full-resolution file and (where estimated) its viewpoint in 3D.</p>
-          <ul class="photo-grid" id="photo-grid"></ul>
-          <p class="hint small" id="dup-note"></p>
-        </section>
-        <section class="pane" id="pane-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
-          <div id="evidence-content"></div>
-        </section>
-      </aside>
-    </div>
-
-    <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-title">
-      <div class="dlg-head">
-        <h2 id="photo-title">Photo</h2>
-        <button type="button" class="btn ghost" id="photo-close" aria-label="Close photo">✕</button>
-      </div>
-      <figure>
-        <img id="photo-img" alt="" />
-        <figcaption id="photo-meta"></figcaption>
-      </figure>
-      <ul id="photo-evidence" class="evidence-list"></ul>
-      <div class="dlg-actions">
-        <button type="button" class="btn" id="photo-prev" aria-label="Previous photo">‹ Prev</button>
-        <a class="btn" id="photo-original" target="_blank" rel="noopener">Open original file</a>
-        <button type="button" class="btn primary" id="photo-match">Show viewpoint in 3D</button>
-        <button type="button" class="btn" id="photo-next" aria-label="Next photo">Next ›</button>
-      </div>
-    </dialog>
-
-    <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
-      <div class="dlg-head">
-        <h2 id="help-title">Keyboard &amp; touch</h2>
-        <button type="button" class="btn ghost" id="help-close" aria-label="Close help">✕</button>
-      </div>
-      <dl class="keys">
-        <dt>Arrow keys</dt><dd>Orbit (focus the 3D view first: click it or Tab to it)</dd>
-        <dt>Shift + arrows</dt><dd>Pan</dd>
-        <dt>+ / −</dt><dd>Zoom</dd>
-        <dt>H / F / T</dt><dd>3D overview / front view / overhead view</dd>
-        <dt>0 / 1 / 2</dt><dd>All floors / ground floor / upper floor</dd>
-        <dt>R</dt><dd>Roof on/off</dd>
-        <dt>C, X, [ and ]</dt><dd>Cutaway on/off, switch direction, move section</dd>
-        <dt>E / L / D / P / G</dt><dd>Evidence colours / labels / dimensions / photo spots / trees</dd>
-        <dt>N / Shift+N</dt><dd>Select next / previous unit</dd>
-        <dt>Esc</dt><dd>Clear selection or close overlay</dd>
-        <dt>Touch</dt><dd>One finger orbits, two fingers pan and pinch-zoom, tap selects</dd>
-      </dl>
-    </dialog>
-
-    <script type="module" src="./src/twin/main.js"></script>
-  </body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#eeede6"><meta name="description" content="Explore Apartments Napros in Sabunike: a drawing-based 3D reconstruction with apartment layouts, floor plans and source photos."><title>Napros — A building, explored</title><link rel="stylesheet" href="./src/twin/style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="./index.html#villa" aria-label="Back to Apartments Napros"><span class="brand-mark">n<span>°</span></span><span>NAPROS<span class="brand-sub">SPATIAL ARCHIVE</span></span></a><div class="location"><span class="location-dot"></span> SABUNIKE, CROATIA <span class="divider">/</span> PUT KANDELICA 60</div><button class="source-button" id="sources"><span aria-hidden="true">▧</span> Source library <span class="pill">22</span></button></header>
+<main>
+<aside class="sidebar" aria-label="Building explorer">
+ <div class="intro"><span class="eyebrow">RESIDENTIAL · 01</span><h1>A building,<br><em>explored.</em></h1><p>Five apartments. Two levels.<br>A closer look at Apartments Napros.</p></div>
+ <div class="building-stats"><div><b>05</b><span>APARTMENTS</span></div><div><b>02</b><span>LEVELS</span></div><div><b>02</b><span>STAIR SYSTEMS</span></div></div>
+ <div class="section-heading"><h2>Explore the spaces</h2><span>SELECT TO INSPECT</span></div>
+ <button class="space-card all active" data-unit="all"><span class="space-icon">⌂</span><span><strong>Entire building</strong><small>The complete reconstruction</small></span><span class="card-arrow">↗</span></button>
+ <div class="floor-label">00 <span>GROUND FLOOR</span></div>
+ <button class="space-card" data-unit="app1"><span class="unit-dot ochre"></span><span><strong>Apartment 1</strong><small>Two bedrooms · terrace</small></span><span class="card-number">01</span></button>
+ <button class="space-card" data-unit="app5"><span class="unit-dot rose"></span><span><strong>Apartment 5</strong><small>Bedroom · kitchen · bathroom</small></span><span class="card-number">05</span></button>
+ <button class="space-card" data-unit="garage"><span class="unit-dot teal"></span><span><strong>Garage</strong><small>As labeled on the plan</small></span><span class="card-number">G</span></button>
+ <div class="floor-label">01 <span>UPPER FLOOR</span></div>
+ <button class="space-card" data-unit="app2"><span class="unit-dot ochre"></span><span><strong>Apartment 2</strong><small>Two bedrooms · terrace</small></span><span class="card-number">02</span></button>
+ <button class="space-card" data-unit="app3"><span class="unit-dot rose"></span><span><strong>Apartment 3</strong><small>Bedroom · living space</small></span><span class="card-number">03</span></button>
+ <button class="space-card" data-unit="app4"><span class="unit-dot teal"></span><span><strong>Apartment 4</strong><small>Long wing · front balcony</small></span><span class="card-number">04</span></button>
+ <div class="evidence-note"><span class="evidence-dot"></span><div><strong>Drawing-led reconstruction</strong><p>Plan geometry, with provisional heights.<br>Dimensions conflict on the upper sheet.</p><button id="read-notes">Read interpretation <span>↗</span></button></div></div>
+</aside>
+<section class="viewport" aria-label="Interactive three-dimensional building">
+ <div id="scene"><div id="loading" role="status"><span class="loader"></span>Preparing the reconstruction…</div><div id="graphics-error" role="alert" hidden></div><div id="labels"></div></div>
+ <div class="scene-heading"><span class="eyebrow">THE DIGITAL TWIN</span><div><span class="live-dot"></span><span id="scene-title">Entire building</span></div></div>
+ <div class="scene-badge"><span>01 / NAPROS</span><small>PLAN-BASED MODEL</small></div>
+ <div class="floor-switch" role="group" aria-label="Visible floor"><button class="active" data-floor="all" title="Show both floors (F)">All levels</button><button data-floor="0">00 <span>Ground</span></button><button data-floor="1">01 <span>Upper</span></button></div>
+ <div class="layers"><span class="eyebrow">LAYERS</span><button id="roof" aria-pressed="true" title="Toggle the inferred roof (R)"><span class="layer-symbol">⌃</span>Roof<span class="toggle on"></span></button><button id="cutaway" aria-pressed="false" title="Lower walls to reveal interiors (C)"><span class="layer-symbol">◩</span>Cutaway<span class="toggle"></span></button><button id="furniture" aria-pressed="true"><span class="layer-symbol">▤</span>Furnishings<span class="toggle on"></span></button><span class="layer-note">Roof & heights inferred</span></div>
+ <div class="selection-panel" id="selection" hidden><button class="close-selection" id="clear-selection" aria-label="Clear selection">×</button><span class="eyebrow" id="unit-source"></span><h2 id="unit-name"></h2><div id="unit-area"></div><p id="unit-description"></p><small id="unit-note"></small><button id="unit-plan">View source plan <span>↗</span></button></div>
+ <div class="compare-panel" id="compare-panel" hidden><div><b>Drawing overlay</b><button id="close-compare" aria-label="Close drawing comparison">×</button></div><p id="compare-source"></p><label for="opacity">Source opacity <output id="opacity-value">45%</output></label><input id="opacity" type="range" min="0" max="100" value="45"><small>Matching plan orientation · calibrated in metres<br>Upper width annotations remain inconsistent.</small></div>
+ <div class="canvas-bottom"><button class="compare-button" id="compare"><span>▱</span> Compare with plan <span>↗</span></button><div class="view-tools" role="group" aria-label="Camera views"><button class="active" data-view="perspective" title="Perspective view (3)">◈ <span>Perspective</span></button><button data-view="front" title="Front view (1)">▱ <span>Front</span></button><button data-view="overhead" title="Overhead view (2)">⊞ <span>Overhead</span></button><span class="tool-divider"></span><button id="zoom-in" aria-label="Zoom in" title="Zoom in (+)">+</button><button id="zoom-out" aria-label="Zoom out" title="Zoom out (−)">−</button><button id="reset" aria-label="Reset view" title="Reset view">↺</button></div><div class="orientation"><span>↑</span>DRAWING TOP<small>Not compass north</small></div></div>
+ <div class="interaction-hint"><span>↔</span> Drag to orbit <i>·</i> Scroll to zoom <i>·</i> Click a space <button id="help" aria-label="Show keyboard shortcuts">?</button></div>
+</section>
+</main>
+<footer><span><span class="status-dot"></span> LOCAL EVIDENCE ONLY</span><span>Architectural plans → geometry <span class="footer-separator">/</span> Photographs → appearance</span><button id="assumptions">Assumptions & source conflicts ↗</button></footer>
+<dialog id="library" aria-labelledby="library-title"><div class="dialog-header"><div><span class="eyebrow">THE EVIDENCE</span><h2 id="library-title">Source library</h2></div><button class="dialog-close" id="close-library" aria-label="Close source library">×</button></div><div class="library-tabs" role="group" aria-label="Source type"><button data-tab="plans" class="active">Architectural plans <span>02</span></button><button data-tab="photos">Photographs <span>16</span></button><button data-tab="notes">Interpretation</button></div><div id="library-content"></div></dialog>
+<dialog id="help-dialog"><div class="dialog-header"><h2>Explore with your keyboard</h2><button id="close-help" class="dialog-close" aria-label="Close keyboard help">×</button></div><p>Focus the model to use arrow keys to orbit. Drag with one finger to orbit; pinch to zoom, or use two fingers to pan.</p><dl><dt>1 / 2 / 3</dt><dd>Front / overhead / perspective</dd><dt>+ / −</dt><dd>Zoom in / out</dd><dt>F</dt><dd>Cycle visible floors</dd><dt>R / C</dt><dd>Toggle roof / cutaway</dd><dt>S</dt><dd>Open source library</dd><dt>Escape</dt><dd>Close dialog or clear selection</dd></dl></dialog>
+<script type="module" src="./src/twin/main.js"></script>
+</body></html>
