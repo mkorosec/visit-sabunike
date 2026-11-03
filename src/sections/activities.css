@@ -78,7 +78,7 @@
   border-radius: var(--radius-pill);
   background: var(--c);
   color: var(--brand-ink);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.8125rem;
 }
 .act-pick-body {
@@ -182,7 +182,7 @@
   align-items: start;
 }
 .act-flabel {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.875rem;
   padding-top: 9px;
   color: var(--ink-2);
@@ -263,7 +263,7 @@
 }
 .act-count {
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* ---------- cards */
@@ -305,7 +305,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
 }
@@ -323,7 +323,7 @@
   border-radius: var(--radius-pill);
   background: var(--surface);
   color: var(--ink);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.75rem;
 }
 .act-flag-warn {
@@ -351,7 +351,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--ink);
 }
 /* 44 px hit area; the negative margin keeps the 24 px footprint in the line. */
@@ -396,7 +396,7 @@
 }
 .act-off {
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--warn);
 }
 .act-desc {
@@ -582,7 +582,7 @@
   position: relative;
 }
 .act-stop time {
-  font-weight: 700;
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
   font-size: 0.95rem;
 }
@@ -602,7 +602,7 @@
   margin: 0;
 }
 .act-stop-name {
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.35;
 }
 .act-stop-tools {
@@ -641,7 +641,7 @@
 }
 .act-plan-sum dd {
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 .act-warn {
   list-style: none;

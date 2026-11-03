@@ -6,7 +6,7 @@
   --bg: #fbfaf7;
   --surface: #ffffff;
   --surface-2: #f3efe6; /* sand */
-  --surface-3: #e7f1f6; /* shallow water */
+  --surface-3: #f0f2f0; /* pale coastal stone */
   --ink: #0f1f2a;
   --ink-2: #44535e;
   --line: #d9d4c7;
@@ -15,9 +15,9 @@
   --brand-strong: #084a70;
   --brand-ink: #ffffff;
   --brand-soft: #e3eef5;
-  --accent: #b5451f; /* terracotta roof tiles */
+  --accent: #0b5d8c; /* the same Adriatic ink as the primary action */
   --accent-ink: #ffffff;
-  --accent-soft: #f8e6dd;
+  --accent-soft: #e3eef5;
   --ok: #1d7a4a;
   --warn: #8a5a00;
   --focus: #9a4a00; /* ≥ 5:1 on every light surface; the dark hero overrides it */
@@ -25,13 +25,13 @@
 
   --font-head: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --head-weight: 600;
+  --head-weight: 500;
   --head-tracking: -0.015em;
   --radius: 10px;
-  --radius-lg: 18px;
-  --radius-pill: 999px;
-  --shadow: 0 1px 2px rgb(15 31 42 / 0.06), 0 6px 24px rgb(15 31 42 / 0.08);
-  --shadow-lg: 0 2px 6px rgb(15 31 42 / 0.08), 0 20px 50px rgb(15 31 42 / 0.14);
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow: none;
+  --shadow-lg: 0 8px 24px rgb(15 31 42 / 0.06);
   --hero-overlay: linear-gradient(180deg, rgb(8 25 38 / 0.05) 0%, rgb(8 25 38 / 0.35) 55%, rgb(8 25 38 / 0.72) 100%);
 }
 

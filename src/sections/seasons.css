@@ -26,7 +26,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 10px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
   color: var(--ink);
 }
@@ -75,9 +75,9 @@
   align-items: center;
   gap: 6px;
   font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--ink-2);
   margin-bottom: 4px !important;
 }
@@ -86,7 +86,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 4px 8px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.15rem;
 }
 .lw-val .muted {
@@ -131,7 +131,7 @@
   color: var(--ink-2);
 }
 .lw-day {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.875rem;
 }
 .lw-temps {
@@ -181,7 +181,7 @@
   align-items: center;
   gap: 7px;
   margin: 0 0 8px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
 }
 .ss-picker-head .ss-mini-h {
@@ -223,7 +223,7 @@
   border-color: var(--ink);
 }
 .ss-mname {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
 }
 .ss-mval {
@@ -434,7 +434,7 @@
 .ss-lab {
   position: absolute;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--ink);
   white-space: nowrap;
   pointer-events: none;
@@ -502,7 +502,7 @@
 .ss-subtitle {
   margin: 18px 0 6px 30px;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--ink-2);
 }
 .ss-sun {
@@ -546,7 +546,7 @@
 }
 .ss-rain .is-sel {
   color: var(--ink);
-  font-weight: 700;
+  font-weight: 500;
 }
 .ss-xaxis {
   margin-top: 8px;
@@ -901,7 +901,7 @@
   color: var(--accent);
 }
 .ss-ev-name {
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.35;
 }
 .ss-ev-more {

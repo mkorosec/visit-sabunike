@@ -21,37 +21,33 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 22px 22px 24px;
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  padding: 24px;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line-strong);
   color: var(--ink);
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: border-color 160ms ease-out;
 }
 a.hl-tile:hover {
   color: var(--ink);
-  transform: translateY(-3px);
   border-color: var(--line-strong);
-  box-shadow: var(--shadow-lg);
 }
 .hl-num {
   position: absolute;
-  top: 18px;
+  top: 24px;
   right: 20px;
   font: 600 0.8125rem/1 var(--font-head);
   color: var(--ink-2);
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
 }
 .hl-icon {
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--brand-soft);
-  color: var(--brand);
+  width: 24px;
+  height: 24px;
+  color: var(--ink-2);
   margin-bottom: 12px;
 }
 .hl-tile h3 {
@@ -66,12 +62,12 @@ a.hl-tile:hover {
 }
 .hl-more {
   margin-top: auto;
-  padding-top: 14px;
+  padding-top: 16px;
   color: var(--brand);
-  transition: transform 0.2s ease;
+  transition: color 160ms ease-out;
 }
 a.hl-tile:hover .hl-more {
-  transform: translateX(4px);
+  color: var(--brand-strong);
 }
 @media (min-width: 1100px) {
   .hl-layout {

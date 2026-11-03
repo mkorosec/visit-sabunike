@@ -14,23 +14,21 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 22px 28px;
+  gap: 24px 32px;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
 }
 .direct-benefit {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 14px;
+  gap: 16px;
   align-items: start;
 }
 .direct-benefit-icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius);
-  background: var(--brand-soft);
-  color: var(--brand);
+  width: 24px;
+  height: 24px;
+  color: var(--ink-2);
 }
 .direct-benefit h3 {
   font-size: 1.12rem;
@@ -50,7 +48,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  padding: clamp(20px, 2.6vw, 30px);
+  padding: clamp(24px, 2.6vw, 32px);
 }
 .direct-calc-head {
   display: flex;
@@ -58,7 +56,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px 12px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 .direct-calc-head h3 {
   margin: 0;
@@ -66,7 +64,7 @@
 .direct-calc-form {
   display: grid;
   gap: 16px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .dc-field {
   display: grid;
@@ -79,7 +77,7 @@
   font-size: 0.95rem;
 }
 .dc-field output {
-  font: 700 1.05rem/1 var(--font-head);
+  font: 500 1.05rem/1 var(--font-head);
   font-variant-numeric: tabular-nums;
 }
 .dc-field input[type='range'] {
@@ -104,11 +102,11 @@
   max-width: 180px;
 }
 .dc-money span {
-  font-weight: 700;
+  font-weight: 500;
 }
 .dc-bars {
   display: grid;
-  gap: 18px;
+  gap: 24px;
 }
 .dc-bar-head {
   display: flex;
@@ -118,7 +116,7 @@
   margin-bottom: 6px;
 }
 .dc-bar-head b {
-  font: 700 1.15rem/1 var(--font-head);
+  font: 500 1.15rem/1 var(--font-head);
   font-variant-numeric: tabular-nums;
 }
 .dc-ask {
@@ -141,7 +139,7 @@
 }
 .dc-seg {
   height: 100%;
-  transition: width 0.3s ease;
+  transition: background-color 160ms ease-out;
 }
 .dc-seg-host {
   background: var(--brand);

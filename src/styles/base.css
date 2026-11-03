@@ -51,7 +51,7 @@ h4 {
   font-weight: var(--head-weight);
   letter-spacing: var(--head-tracking);
   line-height: 1.15;
-  margin: 0 0 0.5em;
+  margin: 0 0 16px;
   text-wrap: balance;
 }
 h1 {
@@ -64,7 +64,7 @@ h3 {
   font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
 }
 p {
-  margin: 0 0 1em;
+  margin: 0 0 16px;
   text-wrap: pretty;
 }
 a {
@@ -175,11 +175,11 @@ small,
   gap: 8px;
   font-family: var(--font-body);
   font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .lede {
   font-size: clamp(1.06rem, 1rem + 0.3vw, 1.22rem);
@@ -207,7 +207,7 @@ small,
   justify-content: center;
   gap: 8px;
   min-height: 44px;
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--_bd);
   background: var(--_bg);
@@ -261,15 +261,14 @@ small,
 }
 .btn-lg {
   min-height: 52px;
-  padding: 14px 24px;
+  padding: 16px 24px;
   font-size: 1rem;
 }
-/* Translucent button for use on top of photos. */
+/* Outlined secondary action for use on top of photos. */
 .btn-glass {
-  --_bg: rgb(255 255 255 / 0.14);
+  --_bg: transparent;
   --_fg: #fff;
   --_bd: rgb(255 255 255 / 0.6);
-  backdrop-filter: blur(8px);
 }
 .btn-glass:hover {
   --_bg: rgb(255 255 255 / 0.26);
@@ -294,7 +293,7 @@ small,
   --_bd: var(--line-strong);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   min-height: 44px;
   padding: 5px 12px;
   border-radius: var(--radius-pill);
@@ -373,6 +372,8 @@ small,
   gap: 5px;
 }
 .icon {
+  width: 18px;
+  height: 18px;
   flex: none;
 }
 
@@ -396,9 +397,8 @@ small,
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 10px max(16px, calc((100% - 1200px) / 2));
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: saturate(1.4) blur(10px);
+  padding: 12px max(24px, calc((100% - 1200px) / 2));
+  background: var(--bg);
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -440,7 +440,7 @@ small,
   justify-content: safe center; /* links that do not fit move into "More" (main.js fitNav) */
 }
 .site-nav a {
-  padding: 8px 11px;
+  padding: 8px 12px;
   border-radius: var(--radius-pill);
   color: var(--ink-2);
   text-decoration: none;
@@ -460,7 +460,7 @@ small,
 .nav-more summary {
   list-style: none;
   cursor: pointer;
-  padding: 8px 11px;
+  padding: 8px 12px;
   border-radius: var(--radius-pill);
   color: var(--ink-2);
   font-weight: 600;
@@ -496,6 +496,7 @@ small,
   min-height: 44px;
 }
 .nav-toggle {
+  min-width: 44px;
   display: none;
 }
 .header-actions {
@@ -565,7 +566,7 @@ small,
 /* Forms */
 .field {
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 .field label,
 .field .label {

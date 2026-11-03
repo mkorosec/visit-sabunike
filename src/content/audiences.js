@@ -49,11 +49,11 @@ export const AUDIENCES = [
     hero: {
       kicker: { en: 'Sabunike · Nin · Zadar', de: 'Sabunike · Nin · Zadar', sl: 'Sabunike · Nin · Zadar', hr: 'Sabunike · Nin · Zadar', it: 'Sabunike · Nin · Zadar' },
       title: {
-        en: 'Four apartments, a six-minute walk from shallow sandy beaches',
-        de: 'Vier Apartments, sechs Gehminuten von flachen Sandstränden',
-        sl: 'Štirje apartmaji, šest minut hoje do plitvih peščenih plaž',
-        hr: 'Četiri apartmana, šest minuta hoda do plitkih pješčanih plaža',
-        it: 'Quattro appartamenti a sei minuti a piedi da spiagge di sabbia con acqua bassa',
+        en: 'Four apartments, six minutes from the sand',
+        de: 'Vier Apartments, sechs Minuten zum Sandstrand',
+        sl: 'Štirje apartmaji, šest minut do peščene plaže',
+        hr: 'Četiri apartmana, šest minuta do pješčane plaže',
+        it: 'Quattro appartamenti, a sei minuti dalla sabbia',
       },
       subtitle: {
         en: 'A house on a quiet lane in Sabunike, with the Velebit mountains across the water. Book directly with us: no platform in between taking its commission.',

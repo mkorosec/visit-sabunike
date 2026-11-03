@@ -16,41 +16,30 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  padding: clamp(18px, 3vw, 36px);
+  padding: clamp(24px, 3vw, 32px);
   scroll-margin-top: 96px;
 }
 .inq-form.is-flash {
-  animation: inq-flash 1.6s ease-out;
-}
-@keyframes inq-flash {
-  0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 55%, transparent), var(--shadow-lg);
-  }
-  40% {
-    box-shadow: 0 0 0 10px color-mix(in srgb, var(--brand) 18%, transparent), var(--shadow-lg);
-  }
-  100% {
-    box-shadow: 0 0 0 0 transparent, var(--shadow-lg);
-  }
+  border-color: var(--brand);
 }
 .inq-group {
   border: 0;
   margin: 0;
-  padding: 0 0 26px;
+  padding: 0 0 24px;
   min-width: 0;
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 .inq-group + .inq-group {
   border-top: 1px solid var(--line);
-  padding-top: 22px;
+  padding-top: 24px;
 }
 .inq-group > legend {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font: var(--head-weight) 1.2rem/1.2 var(--font-head);
   letter-spacing: var(--head-tracking);
   float: left; /* lets the legend sit inside the padding box like a heading */
@@ -67,7 +56,7 @@
   border-radius: 50%;
   background: var(--brand);
   color: var(--brand-ink);
-  font: 700 0.85rem/1 var(--font-body);
+  font: 500 0.85rem/1 var(--font-body);
   flex: none;
 }
 [data-theme='editorial'] .inq-num {
@@ -149,7 +138,7 @@
   width: 56px;
   border: 0;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.05rem;
   padding: 8px 0;
   border-radius: 0;
@@ -402,7 +391,7 @@
 }
 .inq-card h3 {
   font-size: 1.25rem;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .inq-steps {
   list-style: none;
@@ -410,7 +399,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 .inq-steps li {
   counter-increment: step;
@@ -430,7 +419,7 @@
   border-radius: 50%;
   border: 1.5px solid var(--brand);
   color: var(--brand);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.85rem;
 }
 .inq-steps li:not(:last-child)::after {
@@ -458,7 +447,7 @@
   overflow: hidden;
   background: var(--map-water);
   border: 1px solid var(--line);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .inq-map-tiles {
   position: absolute;
@@ -498,7 +487,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px 16px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font-weight: 600;
   font-size: 0.95rem;
 }

@@ -147,10 +147,10 @@ const ICONS = {
   mountain: '<path d="m3 20 6-11 4 6 3-4 5 9z"/>',
   fish: '<path d="M2 12c3-4 7-6 11-6 4 0 7 3 9 6-2 3-5 6-9 6-4 0-8-2-11-6zM2 12l-1 4M2 12 1 8"/><circle cx="16" cy="11" r="1"/>',
 };
-export function icon(name, { size = 20, label } = {}) {
+export function icon(name, { size = 18, label } = {}) {
   const body = ICONS[name] || ICONS.info;
   const a11y = label ? `role="img" aria-label="${esc(label)}"` : 'aria-hidden="true"';
-  return `<svg class="icon icon-${name}" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ${a11y}>${body}</svg>`;
+  return `<svg class="icon icon-${name}" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ${a11y}>${body}</svg>`;
 }
 
 // Observe an element once it is close to the viewport, then run fn once.

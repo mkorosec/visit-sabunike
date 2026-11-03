@@ -52,7 +52,7 @@ function tile(item, ctx, i) {
   const attrs = linked ? ` href="${esc(item.href)}"` : '';
   return `<${tag} class="hl-tile"${attrs}>
     <span class="hl-num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
-    <span class="hl-icon">${icon(item.icon, { size: 26 })}</span>
+    <span class="hl-icon">${icon(item.icon)}</span>
     <h3>${esc(ctx.t(item.title))}${item.todo ? ` ${ownerTodo(item.todo)}` : ''}</h3>
     <p>${esc(ctx.t(item.text))}</p>
     ${linked ? `<span class="hl-more" aria-hidden="true">${icon('arrow', { size: 18 })}</span>` : ''}

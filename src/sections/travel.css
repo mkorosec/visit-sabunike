@@ -283,7 +283,7 @@
 }
 .tr-q-label {
   display: block;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.875rem;
   margin-bottom: 6px;
 }
@@ -469,7 +469,7 @@
   background: var(--surface);
   min-height: 44px;
   padding: 10px 14px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   border-bottom: 1px solid var(--line);
 }
@@ -486,9 +486,9 @@
   margin: 0;
   padding: 10px 8px 4px;
   background: var(--surface);
-  font: 700 0.8125rem/1.2 var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: 500 0.8125rem/1.2 var(--font-body);
+  letter-spacing: 0;
+  text-transform: none;
 }
 .tr-cty ul,
 .tr-rts,
@@ -528,8 +528,8 @@
   white-space: nowrap;
 }
 .tr-rt-iata {
-  font: 700 0.8125rem/1 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-  letter-spacing: 0.06em;
+  font: 500 0.8125rem/1 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  letter-spacing: 0;
   padding: 4px 6px;
   border-radius: 4px;
   background: var(--surface-2);
@@ -569,9 +569,9 @@
   margin-bottom: 10px;
 }
 .tr-intro h4 {
-  font: 700 0.8125rem/1.2 var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: 500 0.8125rem/1.2 var(--font-body);
+  letter-spacing: 0;
+  text-transform: none;
   margin: 4px 0 4px;
 }
 .tr-intro .tr-rt:hover {
@@ -698,8 +698,8 @@
   background: rgb(255 255 255 / 0.92);
   color: #0f1f2a;
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
-  font: 700 11px/1.4 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-  letter-spacing: 0.04em;
+  font: 500 11px/1.4 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  letter-spacing: 0;
 }
 .tr-iata.leaflet-tooltip::before {
   display: none;
@@ -765,8 +765,8 @@
   align-items: center;
   gap: 8px;
   font: 800 1.35rem/1.1 var(--font-body);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 .tr-board-top span {
   color: var(--ink-2);
@@ -777,8 +777,8 @@
   justify-items: end;
 }
 .tr-clock b {
-  font: 700 1.5rem/1 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-  letter-spacing: 0.08em;
+  font: 500 1.5rem/1 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  letter-spacing: 0;
 }
 .tr-board-scroll {
   max-height: 640px;
@@ -808,9 +808,9 @@
   border: 0;
   background: transparent;
   color: var(--ink-2);
-  font: 700 0.75rem/1.1 var(--font-body);
+  font: 500 0.75rem/1.1 var(--font-body);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: none;
   cursor: pointer;
   text-align: left;
 }
@@ -847,7 +847,7 @@
   border: 0;
   background: transparent;
   color: var(--ink);
-  font: 700 1rem/1.25 var(--font-body);
+  font: 500 1rem/1.25 var(--font-body);
   text-align: left;
   cursor: pointer;
 }
@@ -984,7 +984,7 @@
   }
   .tr-board thead button {
     padding: 8px 6px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0;
   }
   .tr-flap > span {
     width: 1.3em;
@@ -1026,7 +1026,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 22px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tr-route-end {
   display: inline-flex;
@@ -1100,7 +1100,7 @@
   border-radius: 50%;
   background: var(--brand);
   color: var(--brand-ink);
-  font: 700 1.1rem/1 var(--font-body);
+  font: 500 1.1rem/1 var(--font-body);
 }
 .tr-step h4 {
   font-size: 1.15rem;
@@ -1183,7 +1183,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 .tr-bars {
@@ -1247,7 +1247,7 @@
   padding: 1px 6px;
   border-radius: 4px;
   border: 1px solid var(--line-strong);
-  font: 700 0.75rem/1.4 var(--font-body);
+  font: 500 0.75rem/1.4 var(--font-body);
   color: var(--ink);
 }
 .tr-toll i {
@@ -1302,9 +1302,9 @@
 }
 .tr-sub {
   margin-top: 14px !important;
-  font: 700 0.8125rem/1.2 var(--font-body) !important;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: 500 0.8125rem/1.2 var(--font-body) !important;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--ink-2);
 }
 .tr-local {
@@ -1387,7 +1387,7 @@
 }
 .tr-alt-code {
   font: 800 0.9rem/1 ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   padding: 6px 7px;
   border-radius: 4px;
   background: var(--surface-2);
